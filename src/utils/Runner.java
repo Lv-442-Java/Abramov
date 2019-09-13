@@ -55,6 +55,9 @@ public class Runner {
             case "task560":
                 runTask560();
                 break;
+            case "task226":
+                runTask226();
+                break;
             default:
                 System.out.println("Wrong task number");
         }
@@ -116,5 +119,9 @@ public class Runner {
     
     static void runTask560() {
     	IntegerNumbers.task560();
+    }
+
+    static void runTask226(){
+        System.out.println(LoopsAndBranch.task226(5,10));
     }
 }
