@@ -1,7 +1,5 @@
 package utils;
 
-import static chapter.one.NestedLoops.task329;
-
 import java.util.Scanner;
 
 import chapter.one.LoopsAndBranch;
@@ -101,7 +99,7 @@ public class Runner {
     }
 
     static void runTask329(){
-        System.out.println(task329(37,36));
+        System.out.println(NestedLoops.task329(37,36));
     }
     
     static void runTask88a() {
