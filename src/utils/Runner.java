@@ -17,11 +17,9 @@ public class Runner {
             case "task88":
                 runTask88();
                 break;
-
             case "task88c":
                 runTask88_c();
                 break;
-
             case "task86a":
                 runTask86a();
                 break;
@@ -81,5 +79,9 @@ public class Runner {
 
     static void runTask329(){
         System.out.println(task329(37,36));
+    }
+    
+    static void runTask88a() {
+    	System.out.println(SimpleLoops.task88a(66));
     }
 }

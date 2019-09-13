@@ -1,5 +1,8 @@
 package chapter.one;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SimpleLoops {
     public static int task88(int n) {
         int reverse = 0;
@@ -67,5 +70,18 @@ public class SimpleLoops {
             System.out.println("Wrong input");
         return result;
     }
+    
+    public static boolean task88a(int number) {
+		return getNumeralsFromNumber(number * number).contains(3);
+	}
+
+	private static List<Integer> getNumeralsFromNumber(int number) {
+		List<Integer> numerals = new ArrayList<Integer>();
+		do {
+			numerals.add(number % 10);
+			number /= 10;
+		} while (number != 0);
+		return numerals;
+	}
 
 }
