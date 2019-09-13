@@ -37,4 +37,26 @@ public class IntegerNumbers {
 		return sum;
 	}
 
+	public static List<Integer> task559(int n){
+		List<Integer> result = new ArrayList<>();
+		boolean[] prime=new boolean[n + 1];
+		for (int i = 0; i <= n; i++) {
+			prime[i] = true;
+		}
+		for (int p = 2; p * p <= n; p++) {
+			if (prime[p]) {
+				for (int i = p * 2; i <= n; i += p) {
+					prime[i] = false;
+				}
+			}
+		}
+		for (int k = 2; (( 1 << k) - 1) <= n; k++) {
+			int num = ( 1 << k) - 1;
+			if (prime[(int)(num)]) {
+				result.add(num);
+			}
+		}
+		return result;
+	}
+
 }
