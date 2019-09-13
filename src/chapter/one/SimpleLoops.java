@@ -45,6 +45,7 @@ public class SimpleLoops {
 
         }
     }
+
     public static int task87(long n, int m) {
         int sum = 0;
         for (int i = 0; i < m; i++) {
@@ -53,4 +54,18 @@ public class SimpleLoops {
         }
         return sum;
     }
+
+    public static int task107(int m) {
+        int result = 0;
+        if (m > 1) {
+            int k = 0;
+            while (Math.pow(4, k) < m) {
+                k++;
+            }
+            result = --k;
+        } else
+            System.out.println("Wrong input");
+        return result;
+    }
+
 }
