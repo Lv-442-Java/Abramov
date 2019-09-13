@@ -1,12 +1,13 @@
 package utils;
 
-import chapter.one.SimpleLoops;
-import chapter.one.LoopsAndBranch;
-import chapter.one.NestedLoops;
+import static chapter.one.NestedLoops.task329;
 
 import java.util.Scanner;
 
-import static chapter.one.NestedLoops.task329;
+import chapter.one.LoopsAndBranch;
+import chapter.one.NestedLoops;
+import chapter.one.SimpleLoops;
+import chapter.two.IntegerNumbers;
 
 public class Runner {
 
@@ -50,6 +51,9 @@ public class Runner {
                 break;
             case "task330":
                 runTask330();
+                break;
+            case "task560":
+                runTask560();
                 break;
             default:
                 System.out.println("Wrong task number");
@@ -108,5 +112,9 @@ public class Runner {
     
     static void runTask330() {
     	System.out.println(NestedLoops.task330(100));
+    }
+    
+    static void runTask560() {
+    	IntegerNumbers.task560();
     }
 }
