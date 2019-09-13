@@ -22,6 +22,8 @@ public class Runner {
             case "task86a":
                 runTask86a();
 
+            case "task107":
+                runTask107();
             default:
                 System.out.println("Wrong task number");
 
@@ -42,5 +44,10 @@ public class Runner {
     static void runTask88_c() {
         SimpleLoops simpleLoops = new SimpleLoops();
         SimpleLoops.task88_c(125);
+    }
+
+    static void runTask107() {
+        System.out.println("Write number m>1");
+        System.out.println(SimpleLoops.task107(42));
     }
 }

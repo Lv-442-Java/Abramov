@@ -45,4 +45,17 @@ public class SimpleLoops {
 
         }
     }
+
+    public static int task107(int m) {
+        if (m > 1) {
+            int k = 0;
+            while (Math.pow(4, k) < m) {
+                k++;
+            }
+            return k--;
+        } else {
+            System.out.println("Wrong input");
+        }
+    }
+
 }
