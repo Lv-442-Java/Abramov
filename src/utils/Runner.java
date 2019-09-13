@@ -5,6 +5,8 @@ import chapter.one.LoopsAndBranch;
 
 import java.util.Scanner;
 
+import static chapter.one.NestedLoops.task329;
+
 public class Runner {
 
     public static void menu() {
@@ -34,6 +36,9 @@ public class Runner {
                 break;
             case "task178b":
                 runTask178b();
+                break;
+            case "task329":
+                runTask329();
                 break;
             default:
                 System.out.println("Wrong task number");
@@ -74,4 +79,7 @@ public class Runner {
         System.out.println(LoopsAndBranch.task178b(6, mas));
     }
 
+    static void runTask329(){
+        System.out.println(task329(37,36));
+    }
 }
