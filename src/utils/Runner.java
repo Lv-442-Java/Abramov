@@ -12,15 +12,26 @@ public class Runner {
         String taskNumber = sc.nextLine();
         switch (taskNumber) {
             case "task88":
-                rutTask88();
+                runTask88();
+                break;
+
+            case "task88c":
+                runTask88_c();
                 break;
             default:
                 System.out.println("Wrong task number");
+
+
         }
     }
 
-    static void rutTask88() {
+    static void runTask88() {
         SimpleLoops simpleLoops = new SimpleLoops();
         System.out.println(simpleLoops.task88(5569));
+    }
+
+    static void runTask88_c() {
+        SimpleLoops simpleLoops = new SimpleLoops();
+        simpleLoops.task88_c(125);
     }
 }
