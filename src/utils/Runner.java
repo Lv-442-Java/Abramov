@@ -34,4 +34,7 @@ public class Runner {
         SimpleLoops simpleLoops = new SimpleLoops();
         simpleLoops.task88_c(125);
     }
+    static void runTask87(){
+        SimpleLoops.task87(3,123456);
+    }
 }

@@ -40,4 +40,12 @@ public class SimpleLoops {
 
         }
     }
+    public static int task87(long n, int m) {
+        int sum = 0;
+        for (int i = 0; i < m; i++) {
+            sum += n % 10;
+            n /= 10;
+        }
+        return sum;
+    }
 }
