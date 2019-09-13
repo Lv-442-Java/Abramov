@@ -7,7 +7,6 @@ public class SimpleLoop {
             reverse = reverse * 10;
             reverse = reverse + n % 10;
             n = n / 10;
-
         }
         return reverse;
     }
