@@ -1,6 +1,6 @@
 package utils;
 
-import chapter.one.SimpleLoop;
+import chapter.one.SimpleLoops;
 
 import java.util.Scanner;
 
@@ -20,7 +20,7 @@ public class Runner {
     }
 
     static void rutTask88() {
-        SimpleLoop simpleLoop = new SimpleLoop();
-        System.out.println(simpleLoop.task88(5569));
+        SimpleLoops simpleLoops = new SimpleLoops();
+        System.out.println(simpleLoops.task88(5569));
     }
 }
