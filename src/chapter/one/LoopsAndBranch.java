@@ -2,6 +2,8 @@ package chapter.one;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class LoopsAndBranch {
     public static ArrayList task224(int n) {
@@ -45,5 +47,29 @@ public class LoopsAndBranch {
 		} else {
 			return false;
 		}
+	}
+	
+	public static List<Integer> task227(int firstNumber, int secondNumber) {
+		if (Math.abs(firstNumber) < Math.abs(secondNumber)) {
+			return findDividers(Math.abs(firstNumber), Math.abs(secondNumber));
+		} else {
+			return findDividers(Math.abs(secondNumber), Math.abs(firstNumber));
+		}
+	}
+
+	private static List<Integer> findDividers(int lessNumber, int moreNumber) {
+		List<Integer> dividers = new ArrayList<Integer>();
+		for (int i = 1; i <= lessNumber / 2; i++) {
+			if (lessNumber % i == 0 && moreNumber % i == 0) {
+				dividers.add(i);
+				dividers.add(-i);
+			}
+		}
+		if (moreNumber % lessNumber == 0) {
+			dividers.add(lessNumber);
+			dividers.add(-lessNumber);
+		}
+		Collections.sort(dividers);
+		return dividers;
 	}
 }

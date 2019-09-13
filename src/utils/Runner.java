@@ -44,6 +44,9 @@ public class Runner {
             case "task178c":
                 runTask178c();
                 break;
+            case "task227":
+                runTask227();
+                break;
             default:
                 System.out.println("Wrong task number");
         }
@@ -93,5 +96,9 @@ public class Runner {
     
     static void runTask178c() {
     	System.out.println(LoopsAndBranch.task178c(66,36,23,16,12,57,64));
+    }
+    
+    static void runTask227() {
+    	System.out.println(LoopsAndBranch.task227(100,134));
     }
 }
