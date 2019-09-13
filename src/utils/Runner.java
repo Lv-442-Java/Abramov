@@ -1,6 +1,7 @@
 package utils;
 
 import chapter.one.SimpleLoops;
+import chapter.one.LoopsAndBranch;
 
 import java.util.Scanner;
 
@@ -26,6 +27,9 @@ public class Runner {
                 runTask87();
             case "task 107":
                 runTask107();
+
+            case "task 224":
+                runTask224();
             default:
                 System.out.println("Wrong task number");
 
@@ -56,4 +60,11 @@ public class Runner {
         System.out.println("Write number m>1");
         System.out.println(SimpleLoops.task107(42));
     }
+
+    static void runTask224(){
+        System.out.println("This task show you all divisors for number 26");
+        System.out.println(LoopsAndBranch.task224(26));
+    }
+
+
 }
