@@ -1,6 +1,6 @@
 package chapter.one;
 
-public class SimpleLoop {
+public class SimpleLoops {
     public static int task88(int n) {
         int reverse = 0;
         while (n != 0) {
