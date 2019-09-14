@@ -41,9 +41,9 @@ public class LoopsAndBranch {
         return amount;
     }
 
-    public static int task178c(int... numbers) throws NumberFormatException {
+    public static int task178c(int n, int... numbers) throws NumberFormatException {
         int count = 0;
-        for (int i = 0; i < numbers.length; i++) {
+        for (int i = 0; i < n; i++) {
             int element = numbers[i];
             if (isNaturalNumber(element)) {
                 if (Math.sqrt(element) % 2 == 0) {
