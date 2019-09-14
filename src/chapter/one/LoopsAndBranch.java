@@ -42,11 +42,7 @@ public class LoopsAndBranch {
     }
 
     private static boolean isNaturalNumber(int number) {
-        if (number > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return number > 0;
     }
 
     public static List<Integer> task227(int firstNumber, int secondNumber) {
@@ -83,6 +79,27 @@ public class LoopsAndBranch {
                 break;
             if (toCheck % smaller == 0) {
                 result.add(toCheck);
+            }
+        }
+        return result;
+    }
+
+    public static String task243a(int n) {
+        String result = "";
+        int x;
+        int y;
+        for (x = 1; x < n * n; x++) {
+            int z = x * x + 1;
+            if (z > n) {
+                break;
+            }
+            for (y = 1; y < n * n; y++) {
+                z = x * x + y * y;
+                if (z == n) {
+                    result = result + "x: " + x + " y: " + y + "\n";
+                } else if (z > n) {
+                    break;
+                }
             }
         }
         return result;

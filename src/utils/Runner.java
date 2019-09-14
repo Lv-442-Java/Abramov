@@ -1,11 +1,11 @@
 package utils;
 
-import java.util.Scanner;
-
 import chapter.one.LoopsAndBranch;
 import chapter.one.NestedLoops;
 import chapter.one.SimpleLoops;
 import chapter.two.IntegerNumbers;
+
+import java.util.Scanner;
 
 public class Runner {
 
@@ -59,6 +59,9 @@ public class Runner {
             case "task559":
                 runTask559();
                 break;
+            case "task243a":
+                runTask243a();
+                break;
             default:
                 System.out.println("Wrong task number");
         }
@@ -88,45 +91,49 @@ public class Runner {
         System.out.println(SimpleLoops.task107(42));
     }
 
-    static void runTask224(){
+    static void runTask224() {
         System.out.println("This task show you all divisors for number 26");
         System.out.println(LoopsAndBranch.task224(26));
     }
 
-    static void runTask178b(){
-        int [] mas = {3,4,5,15,30,9};
+    static void runTask178b() {
+        int[] mas = {3, 4, 5, 15, 30, 9};
         System.out.println(LoopsAndBranch.task178b(6, mas));
     }
 
-    static void runTask329(){
-        System.out.println(NestedLoops.task329(37,36));
+    static void runTask329() {
+        System.out.println(NestedLoops.task329(37, 36));
     }
-    
+
     static void runTask88a() {
-    	System.out.println(SimpleLoops.task88a(66));
+        System.out.println(SimpleLoops.task88a(66));
     }
-    
+
     static void runTask178c() {
-    	System.out.println(LoopsAndBranch.task178c(66,36,23,16,12,57,64));
+        System.out.println(LoopsAndBranch.task178c(66, 36, 23, 16, 12, 57, 64));
     }
-    
+
     static void runTask227() {
-    	System.out.println(LoopsAndBranch.task227(100,134));
+        System.out.println(LoopsAndBranch.task227(100, 134));
     }
-    
+
     static void runTask330() {
-    	System.out.println(NestedLoops.task330(100));
+        System.out.println(NestedLoops.task330(100));
     }
-    
+
     static void runTask560() {
-    	IntegerNumbers.task560();
+        IntegerNumbers.task560();
     }
 
-    static void runTask226(){
-        System.out.println(LoopsAndBranch.task226(5,10));
+    static void runTask226() {
+        System.out.println(LoopsAndBranch.task226(5, 10));
     }
 
-    static void runTask559(){
+    static void runTask559() {
         System.out.println(IntegerNumbers.task559(31));
+    }
+
+    static void runTask243a() {
+        System.out.println(LoopsAndBranch.task243a(100));
     }
 }
