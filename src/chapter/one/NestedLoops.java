@@ -20,41 +20,62 @@ public class NestedLoops {
         }
         return result;
     }
-    
+
     public static List<Integer> task330(int number) throws NumberFormatException {
-		List<Integer> perfectNumbers = new ArrayList<Integer>();
-		if (!isNaturalNumber(number)) {
-			throw new NumberFormatException("Incorrect data!!!The number isn`t natural!!!");
-		}
-		for (int i = 1; i < number; i++) {
-			if (isPerfect(i)) {
-				perfectNumbers.add(i);
-			}
-		}
-		return perfectNumbers;
-	}
+        List<Integer> perfectNumbers = new ArrayList<Integer>();
+        if (!isNaturalNumber(number)) {
+            throw new NumberFormatException("Incorrect data!!!The number isn`t natural!!!");
+        }
+        for (int i = 1; i < number; i++) {
+            if (isPerfect(i)) {
+                perfectNumbers.add(i);
+            }
+        }
+        return perfectNumbers;
+    }
 
-	private static boolean isPerfect(int number) {
-		int sum = 0;
-		for (int i = 1; i < number; i++) {
-			if (number % i == 0) {
-				sum += i;
-			}
-			if (sum > number) {
-				return false;
-			}
-		}
-		if (sum == number) {
-			return true;
-		}
-		return false;
-	}
+    private static boolean isPerfect(int number) {
+        int sum = 0;
+        for (int i = 1; i < number; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
+            if (sum > number) {
+                return false;
+            }
+        }
+        return sum == number;
+    }
 
-	private static boolean isNaturalNumber(int number) {
-		if (number > 0) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+    private static boolean isNaturalNumber(int number) {
+        return number > 0;
+    }
+
+    public static String task331a(int n) {
+        String result = "";
+        int x, y, z;
+        for (x = 1; x < n * n; x++) {
+            int s = x * x + 1;
+            if (s > n) {
+                break;
+            }
+            for (y = 1; y < n * n; y++) {
+                s = x * x + y * y + 1;
+                if (s > n) {
+                    break;
+                }
+                for (z = 1; z < n * n; z++) {
+                    s = x * x + y * y + z * z;
+                    if (s == n) {
+                        result = result + "x: " + x + " y: " + y + " z: " + z +"\n";
+                    }
+                    else if(s > n) {
+                        break;
+                    }
+
+                }
+            }
+        }
+        return result;
+    }
 }
