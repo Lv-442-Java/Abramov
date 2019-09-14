@@ -67,9 +67,8 @@ public class NestedLoops {
                 for (z = 1; z < n * n; z++) {
                     s = x * x + y * y + z * z;
                     if (s == n) {
-                        result = result + "x: " + x + " y: " + y + " z: " + z +"\n";
-                    }
-                    else if(s > n) {
+                        result = result + "x: " + x + " y: " + y + " z: " + z + "\n";
+                    } else if (s > n) {
                         break;
                     }
 
@@ -78,4 +77,22 @@ public class NestedLoops {
         }
         return result;
     }
+
+    public static int GCD(int a, int b) {
+        if (b == 0) return a;
+        return GCD(b, a % b);
+    }
+
+    public static List<Integer> task323(int n) {
+        int nature = 1;
+        List<Integer> taskResult = new ArrayList<>();
+        while (nature < n) {
+            if (GCD(nature, n) == 1) {
+                taskResult.add(nature);
+            }
+            nature++;
+        }
+        return taskResult;
+    }
+
 }
