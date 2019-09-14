@@ -65,9 +65,16 @@ public class Runner {
             case "task561":
                 runTask561();
                 break;
+            case "task331a":
+                runTask331a();
+                break;
             default:
                 System.out.println("Wrong task number");
         }
+    }
+
+    private static void runTask331a() {
+        System.out.println(NestedLoops.task331a(500));
     }
 
     static void runTask86a() {
