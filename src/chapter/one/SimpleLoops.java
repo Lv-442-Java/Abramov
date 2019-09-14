@@ -3,6 +3,8 @@ package chapter.one;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Integer.parseInt;
+
 public class SimpleLoops {
     public static int task88(int n) {
         int reverse = 0;
@@ -49,6 +51,20 @@ public class SimpleLoops {
         }
     }
 
+    public static void task88g(int n) {
+        // add "1" before and after number "n"
+        if (n > 0) {
+
+            String number = Integer.toString(n);
+
+            number = "1" + number + "1";
+            int newN = parseInt(number);
+
+            System.out.println(newN);
+        } else System.out.println("Wrong input values");
+    }
+
+
     public static int task87(long n, int m) {
         int sum = 0;
         for (int i = 0; i < m; i++) {
@@ -70,18 +86,18 @@ public class SimpleLoops {
             System.out.println("Wrong input");
         return result;
     }
-    
-    public static boolean task88a(int number) {
-		return getNumeralsFromNumber(number * number).contains(3);
-	}
 
-	private static List<Integer> getNumeralsFromNumber(int number) {
-		List<Integer> numerals = new ArrayList<Integer>();
-		do {
-			numerals.add(number % 10);
-			number /= 10;
-		} while (number != 0);
-		return numerals;
-	}
+    public static boolean task88a(int number) {
+        return getNumeralsFromNumber(number * number).contains(3);
+    }
+
+    private static List<Integer> getNumeralsFromNumber(int number) {
+        List<Integer> numerals = new ArrayList<Integer>();
+        do {
+            numerals.add(number % 10);
+            number /= 10;
+        } while (number != 0);
+        return numerals;
+    }
 
 }

@@ -23,13 +23,16 @@ public class Runner {
             case "task86a":
                 runTask86a();
                 break;
-            case "task 87":
+            case "task87":
                 runTask87();
                 break;
-            case "task 107":
+            case "task88g":
+                runTask88g();
+                break;
+            case "task107":
                 runTask107();
                 break;
-            case "task 224":
+            case "task224":
                 runTask224();
                 break;
             case "task178b":
@@ -68,6 +71,11 @@ public class Runner {
             default:
                 System.out.println("Wrong task number");
         }
+    }
+
+    static void runTask88g() {
+        SimpleLoops simpleLoops = new SimpleLoops();
+        SimpleLoops.task88g(99);
     }
 
     static void runTask86a() {
