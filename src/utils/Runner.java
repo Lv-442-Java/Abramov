@@ -62,6 +62,8 @@ public class Runner {
             case "task559":
                 runTask559();
                 break;
+            case "task 323":
+                runTask323();
             case "task243a":
                 runTask243a();
                 break;
@@ -150,5 +152,10 @@ public class Runner {
 
     static void runTask561() {
         System.out.println(IntegerNumbers.task561(1000));
+    }
+
+    static void runTask323() {
+        System.out.println("Get all coprime integers <50");
+        System.out.println(NestedLoops.task330(50));
     }
 }
