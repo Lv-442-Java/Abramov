@@ -1,5 +1,8 @@
 package chapter.one;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SimpleLoops {
     public static int task88(int n) {
         int reverse = 0;
@@ -10,4 +13,75 @@ public class SimpleLoops {
         }
         return reverse;
     }
+
+    public static int task86a(int number) {
+        int amount;
+        for (amount = 0; number != 0; amount++) {
+            number /= 10;
+        }
+        return amount;
+    }
+
+    public static void task88_c(int n) {
+
+        int[] digitArray;
+        int decimal = 0;
+        int tmp = n;
+
+        while (n > 0) {
+            decimal++;
+            n /= 10;
+        }
+        digitArray = new int[decimal];
+        n = tmp;
+        for (int i = 0; i < decimal; i++) {
+            digitArray[i] = n % 10;
+            n /= 10;
+        }
+        tmp = digitArray[0];
+        digitArray[0] = digitArray[decimal - 1];
+        digitArray[decimal - 1] = tmp;
+
+        for (int i = decimal - 1; i >= 0; i--) {
+            System.out.print(digitArray[i]);
+
+
+        }
+    }
+
+    public static int task87(long n, int m) {
+        int sum = 0;
+        for (int i = 0; i < m; i++) {
+            sum += n % 10;
+            n /= 10;
+        }
+        return sum;
+    }
+
+    public static int task107(int m) {
+        int result = 0;
+        if (m > 1) {
+            int k = 0;
+            while (Math.pow(4, k) < m) {
+                k++;
+            }
+            result = --k;
+        } else
+            System.out.println("Wrong input");
+        return result;
+    }
+    
+    public static boolean task88a(int number) {
+		return getNumeralsFromNumber(number * number).contains(3);
+	}
+
+	private static List<Integer> getNumeralsFromNumber(int number) {
+		List<Integer> numerals = new ArrayList<Integer>();
+		do {
+			numerals.add(number % 10);
+			number /= 10;
+		} while (number != 0);
+		return numerals;
+	}
+
 }
