@@ -43,7 +43,7 @@ public class LoopsAndBranch {
 
     public static int task178c(int n, int... numbers) throws NumberFormatException {
         int count = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n && n <= numbers.length; i++) {
             int element = numbers[i];
             if (isNaturalNumber(element)) {
                 if (Math.sqrt(element) % 2 == 0) {
