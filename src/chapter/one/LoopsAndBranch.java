@@ -119,4 +119,14 @@ public class LoopsAndBranch {
         }
         return result;
     }
+
+    public static int task178h(int n, double... arg) {
+        int amount = 0;
+        for (int i = 1; i < n + 1 && n + 1 < arg.length; i++) {
+            if (arg[i] < (arg[i - 1] + arg[i + 1]) / 2) {
+                amount = amount + 1;
+            }
+        }
+        return amount;
+    }
 }

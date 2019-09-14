@@ -65,9 +65,6 @@ public class Runner {
             case "task559":
                 runTask559();
                 break;
-            case "task 323":
-                runTask323();
-                break;
             case "task243a":
                 runTask243a();
                 break;
@@ -79,9 +76,15 @@ public class Runner {
                 break;
             case "task323":
                 runTask323();
+            case "task178h":
+                runTask178h();
             default:
                 System.out.println("Wrong task number");
         }
+    }
+
+    private static void runTask178h() {
+        System.out.println(LoopsAndBranch.task178h(7, 2, 4, 7, 11, 12, 15, 84, 8, 7));
     }
 
     static void runTask331a() {
@@ -174,6 +177,6 @@ public class Runner {
 
     static void runTask323() {
         System.out.println("Get all coprime integers <50");
-        System.out.println(NestedLoops.task330(50));
+        System.out.println(NestedLoops.task323(50));
     }
 }
