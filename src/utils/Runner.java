@@ -67,22 +67,31 @@ public class Runner {
                 break;
             case "task 323":
                 runTask323();
+                break;
             case "task243a":
                 runTask243a();
                 break;
             case "task561":
                 runTask561();
                 break;
+            case "task331a":
+                runTask331a();
+                break;
+            case "task323":
+                runTask323();
             default:
                 System.out.println("Wrong task number");
         }
+    }
+
+    static void runTask331a() {
+        System.out.println(NestedLoops.task331a(500));
     }
 
     static void runTask182() {
         LoopsAndBranch loopsAndBranch = new LoopsAndBranch();
         loopsAndBranch.task182(-10, 10);
     }
-
 
     static void runTask88g() {
         SimpleLoops simpleLoops = new SimpleLoops();
