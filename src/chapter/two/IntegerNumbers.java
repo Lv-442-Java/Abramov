@@ -59,4 +59,16 @@ public class IntegerNumbers {
 		return result;
 	}
 
+	public static String task561(int n) {
+		String result = "";
+		for (int i = 1; i <= n; i++) {
+			int square = i * i;
+			int last = square % 10;
+			if (i == last) {
+				result = result + i + "\n";
+			}
+		}
+		return result;
+	}
+
 }
