@@ -16,6 +16,21 @@ public class LoopsAndBranch {
         return array;
     }
 
+    public static void task182(int a, int n) {
+        int sum = 0;
+        int count = 0;
+        if ((a <= 0) && (n > 0)) {
+            for (int i = a; i < n; i++) {
+                if (((i % 5) == 0) & (i % 7 != 0)) {
+                    sum += i;
+                    count++;
+                }
+            }
+            System.out.println("sum is : " + sum + "  " + "count is : " + count);
+        } else System.out.println(" Wrong input values");
+    }
+
+
     public static int task178b(int n, int[] sequence) {
         int amount = 0;
         for (int i = 0; i < n; i++) {
