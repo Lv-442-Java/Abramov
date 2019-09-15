@@ -23,6 +23,9 @@ public class Runner {
             case "task86a":
                 runTask86a();
                 break;
+            case "task86b":
+                runTask86b();
+                break;
             case "task87":
                 runTask87();
                 break;
@@ -108,6 +111,10 @@ public class Runner {
         System.out.println(SimpleLoops.task86a(666));
     }
 
+    static void runTask86b() {
+        System.out.println(SimpleLoops.task86b(12300456));
+    }
+
     static void runTask88() {
         SimpleLoops simpleLoops = new SimpleLoops();
         System.out.println(SimpleLoops.task88(5569));
@@ -180,7 +187,7 @@ public class Runner {
     static void runTask178d()
     {
         int array [] = {1, 2, 3, 4, 5, 6};
-        System.out.plintln(LoopsAndBranch.task178d(array, 6));
+        System.out.println(LoopsAndBranch.task178d(array, 6));
         
     }
 

@@ -129,7 +129,6 @@ public class LoopsAndBranch {
         }
         return amount;
     }
-}
 
     public static int task178d(int[] array, int n){
 
@@ -137,9 +136,10 @@ public class LoopsAndBranch {
         int k = 0;
         for (int i = 0; i<n; i++){
             result *= i;
-            if (pow(2, i) > array[i] && array[i] < result ) {
+            if (Math.pow(2, i) > array[i] && array[i] < result ) {
                 k++;
             }
         }
         return k;
     }
+}
