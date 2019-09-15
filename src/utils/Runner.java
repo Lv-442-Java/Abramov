@@ -180,7 +180,7 @@ public class Runner {
     static void runTask178d()
     {
         int array [] = {1, 2, 3, 4, 5, 6};
-        System.out.plintln(LoopsAndBranch.task178d(array, 6));
+        System.out.println(LoopsAndBranch.task178d(array, 6));
         
     }
 
