@@ -103,6 +103,8 @@ public class Runner {
                 break;
             case "task331b":
                 runTask331b();
+            case "task562":
+                runTask562();
 
                 default:
                 System.out.println("Wrong task number");
@@ -233,4 +235,5 @@ public class Runner {
     static void runTask331b(){
         System.out.println(NestedLoops.task331b(50));
     }
+    static void runTask562(){IntegerNumbers.task562();}
 }
