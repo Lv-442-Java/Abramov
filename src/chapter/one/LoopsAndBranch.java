@@ -84,6 +84,29 @@ public class LoopsAndBranch {
         return dividers;
     }
 
+    public static ArrayList<Integer> task225(int n) {
+
+        if (n <= 0) {
+            System.err.println("n must be greater than zero");
+            return null;
+        }
+
+        ArrayList<Integer> result = new ArrayList<Integer>();
+
+        int end = (int) Math.floor(Math.sqrt(n));
+
+        for (int i = 2; i <= end; i++) {
+
+            if (n % (i*i) == 0 && n % (i*i*i) != 0) {
+                result.add(i);
+            }
+
+        }
+
+        if (result.size() == 0) return null;
+        return result;
+    }
+
     public static List<Integer> task226(int m, int n) {
         List<Integer> result = new ArrayList<>();
         int bigger = m > n ? m : n;
@@ -136,31 +159,35 @@ public class LoopsAndBranch {
         int k = 0;
         for (int i = 0; i<n; i++){
             result *= i;
-            if (pow(2, i) > array[i] && array[i] < result ) {
+            if (Math.pow(2, i) > array[i] && array[i] < result ) {
                 k++;
             }
         }
         return k;
     }
-    public static void task243b(int n){
 
-        // boolean check = true;
+    public static void task243b(int n){
+      
         int x = 0;
         int y = 0;
-        for (int i = 1; i<n*n; i++)
+        for (int i = 1; i<n*n; i++){
             for (int j = 1; j< n*n; j++){
                 if (n == i*i + j*j){
 
-                    x = i*i;
-                    y = j*j;
+                  x = i*i;
+                  y = j*j;
 
-                    if (i*i + j*j > n){
-                        break;
+                 if (i*i + j*j > n){
+                     break;
                     }
-                    System.out.println(x + "+" + y);
+                   
+                  System.out.println(x + "+" + y);
                 }
-            }
+           }
     }
+
+}
+
 
 }
 

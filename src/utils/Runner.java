@@ -5,6 +5,7 @@ import chapter.one.NestedLoops;
 import chapter.one.SimpleLoops;
 import chapter.two.IntegerNumbers;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Runner {
@@ -23,6 +24,9 @@ public class Runner {
             case "task86a":
                 runTask86a();
                 break;
+            case "task86b":
+                runTask86b();
+                break;
             case "task87":
                 runTask87();
                 break;
@@ -31,6 +35,9 @@ public class Runner {
                 break;
             case "task107":
                 runTask107();
+                break;
+            case "task108":
+                runTask108();
                 break;
             case "task224":
                 runTask224();
@@ -59,8 +66,14 @@ public class Runner {
             case "task560":
                 runTask560();
                 break;
+            case "task225":
+                runTask225();
+                break;
             case "task226":
                 runTask226();
+                break;
+            case "task555":
+                runTask555();
                 break;
             case "task559":
                 runTask559();
@@ -76,12 +89,21 @@ public class Runner {
                 break;
             case "task323":
                 runTask323();
+                break;
+            case "task325":
+                runTask325();
+                break;
             case "task178h":
                 runTask178h();
+                break;
             case "task178d":
                 runTask178d();
+
             case "task243b":
                 runTask243b();
+
+                break;
+
             default:
                 System.out.println("Wrong task number");
         }
@@ -110,6 +132,10 @@ public class Runner {
         System.out.println(SimpleLoops.task86a(666));
     }
 
+    static void runTask86b() {
+        System.out.println(SimpleLoops.task86b(12300456));
+    }
+
     static void runTask88() {
         SimpleLoops simpleLoops = new SimpleLoops();
         System.out.println(SimpleLoops.task88(5569));
@@ -127,6 +153,10 @@ public class Runner {
     static void runTask107() {
         System.out.println("Write number m>1");
         System.out.println(SimpleLoops.task107(42));
+    }
+
+    static void runTask108() {
+        System.out.println(SimpleLoops.task108(1000));
     }
 
     static void runTask224() {
@@ -163,8 +193,16 @@ public class Runner {
         IntegerNumbers.task560();
     }
 
+    static void runTask225() {
+        System.out.println(LoopsAndBranch.task225(144));
+    }
+
     static void runTask226() {
         System.out.println(LoopsAndBranch.task226(5, 10));
+    }
+
+    static void runTask555() {
+        System.out.println(Arrays.deepToString(IntegerNumbers.task555(10)));
     }
 
     static void runTask559() {
@@ -179,6 +217,7 @@ public class Runner {
         System.out.println(IntegerNumbers.task561(1000));
     }
 
+
     static void runTask243b(){LoopsAndBranch.task243b(100);}
 
     static void runTask178d() {
@@ -189,5 +228,9 @@ public class Runner {
     static void runTask323() {
         System.out.println("Get all coprime integers <50");
         System.out.println(NestedLoops.task323(50));
+    }
+
+    static void runTask325() {
+        System.out.println(NestedLoops.task325(2001));
     }
 }
