@@ -65,6 +65,9 @@ public class Runner {
             case "task560":
                 runTask560();
                 break;
+            case "task225":
+                runTask225();
+                break;
             case "task226":
                 runTask226();
                 break;
@@ -173,6 +176,10 @@ public class Runner {
 
     static void runTask560() {
         IntegerNumbers.task560();
+    }
+
+    static void runTask225() {
+        System.out.println(LoopsAndBranch.task225(144));
     }
 
     static void runTask226() {
