@@ -24,6 +24,26 @@ public class SimpleLoops {
         return amount;
     }
 
+    public static int task86b(int n) {
+
+        if (n <= 0) {
+            System.err.println("n must be greater than zero");
+            return -1;
+        }
+
+        int n2 = n;
+        int n1 = n;
+        int sum = 0;
+
+        while (n2 > 0) {
+            n1 /= 10;
+            sum += n2 - n1*10;
+            n2 = n1;
+        }
+
+        return sum;
+    }
+
     public static void task88_c(int n) {
 
         int[] digitArray;
@@ -85,6 +105,25 @@ public class SimpleLoops {
         } else
             System.out.println("Wrong input");
         return result;
+    }
+
+    public static int task108(int n) {
+
+        if (n <= 0) {
+            System.err.println("n must be greater than zero");
+            return -1;
+        }
+        if (n == 1) return 1;
+
+        int degree = 1;
+
+        for (int i = 0; i < Integer.bitCount(Integer.MAX_VALUE) - 1; i++) {
+            degree = degree << 1;
+            if (degree > n) return degree;
+        }
+
+        return -1;
+
     }
 
     public static boolean task88a(int number) {
