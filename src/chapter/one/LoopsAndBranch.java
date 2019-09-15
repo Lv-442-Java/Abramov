@@ -43,7 +43,7 @@ public class LoopsAndBranch {
 
     public static int task178c(int n, int... numbers) throws NumberFormatException {
         int count = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n && n <= numbers.length; i++) {
             int element = numbers[i];
             if (isNaturalNumber(element)) {
                 if (Math.sqrt(element) % 2 == 0) {
@@ -84,6 +84,29 @@ public class LoopsAndBranch {
         return dividers;
     }
 
+    public static ArrayList<Integer> task225(int n) {
+
+        if (n <= 0) {
+            System.err.println("n must be greater than zero");
+            return null;
+        }
+
+        ArrayList<Integer> result = new ArrayList<Integer>();
+
+        int end = (int) Math.floor(Math.sqrt(n));
+
+        for (int i = 2; i <= end; i++) {
+
+            if (n % (i*i) == 0 && n % (i*i*i) != 0) {
+                result.add(i);
+            }
+
+        }
+
+        if (result.size() == 0) return null;
+        return result;
+    }
+
     public static List<Integer> task226(int m, int n) {
         List<Integer> result = new ArrayList<>();
         int bigger = m > n ? m : n;
@@ -119,4 +142,52 @@ public class LoopsAndBranch {
         }
         return result;
     }
+
+    public static int task178h(int n, double... arg) {
+        int amount = 0;
+        for (int i = 1; i < n + 1 && n + 1 < arg.length; i++) {
+            if (arg[i] < (arg[i - 1] + arg[i + 1]) / 2) {
+                amount = amount + 1;
+            }
+        }
+        return amount;
+    }
+
+    public static int task178d(int[] array, int n){
+
+        int result  = 1;
+        int k = 0;
+        for (int i = 0; i<n; i++){
+            result *= i;
+            if (Math.pow(2, i) > array[i] && array[i] < result ) {
+                k++;
+            }
+        }
+        return k;
+    }
+
+    public static void task243b(int n){
+      
+        int x = 0;
+        int y = 0;
+        for (int i = 1; i<n*n; i++){
+            for (int j = 1; j< n*n; j++){
+                if (n == i*i + j*j){
+
+                  x = i*i;
+                  y = j*j;
+
+                 if (i*i + j*j > n){
+                     break;
+                    }
+                   
+                  System.out.println(x + "+" + y);
+                }
+           }
+    }
+
 }
+
+
+}
+
