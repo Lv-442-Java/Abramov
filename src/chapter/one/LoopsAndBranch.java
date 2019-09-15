@@ -84,6 +84,29 @@ public class LoopsAndBranch {
         return dividers;
     }
 
+    public static ArrayList<Integer> task225(int n) {
+
+        if (n <= 0) {
+            System.err.println("n must be greater than zero");
+            return null;
+        }
+
+        ArrayList<Integer> result = new ArrayList<Integer>();
+
+        int end = (int) Math.floor(Math.sqrt(n));
+
+        for (int i = 2; i <= end; i++) {
+
+            if (n % (i*i) == 0 && n % (i*i*i) != 0) {
+                result.add(i);
+            }
+
+        }
+
+        if (result.size() == 0) return null;
+        return result;
+    }
+
     public static List<Integer> task226(int m, int n) {
         List<Integer> result = new ArrayList<>();
         int bigger = m > n ? m : n;
