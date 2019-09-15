@@ -80,6 +80,8 @@ public class Runner {
                 runTask178h();
             case "task178d":
                 runTask178d();
+            case "task243b":
+                runTask243b();
             default:
                 System.out.println("Wrong task number");
         }
@@ -177,11 +179,11 @@ public class Runner {
         System.out.println(IntegerNumbers.task561(1000));
     }
 
-    static void runTask178d()
-    {
-        int array [] = {1, 2, 3, 4, 5, 6};
+    static void runTask243b(){LoopsAndBranch.task243b(100);}
+
+    static void runTask178d() {
+        int array[] = {1, 2, 3, 4, 5, 6};
         System.out.plintln(LoopsAndBranch.task178d(array, 6));
-        
     }
 
     static void runTask323() {
