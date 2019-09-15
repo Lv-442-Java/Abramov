@@ -24,6 +24,26 @@ public class SimpleLoops {
         return amount;
     }
 
+    public static int task86b(int n) {
+
+        if (n <= 0) {
+            System.err.println("n must be greater than zero");
+            return -1;
+        }
+
+        int n2 = n;
+        int n1 = n;
+        int sum = 0;
+
+        while (n2 > 0) {
+            n1 /= 10;
+            sum += n2 - n1*10;
+            n2 = n1;
+        }
+
+        return sum;
+    }
+
     public static void task88_c(int n) {
 
         int[] digitArray;
