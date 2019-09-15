@@ -71,6 +71,9 @@ public class Runner {
             case "task226":
                 runTask226();
                 break;
+            case "task555":
+                runTask555();
+                break;
             case "task559":
                 runTask559();
                 break;
@@ -94,8 +97,14 @@ public class Runner {
                 break;
             case "task178d":
                 runTask178d();
+
+            case "task243b":
+                runTask243b();
                 break;
-            default:
+            case "task331b":
+                runTask331b();
+
+                default:
                 System.out.println("Wrong task number");
         }
     }
@@ -204,12 +213,14 @@ public class Runner {
         System.out.println(IntegerNumbers.task561(1000));
     }
 
-    static void runTask178d()
-    {
-        int array [] = {1, 2, 3, 4, 5, 6};
+    static void runTask178d() {
+        int array[] = {1, 2, 3, 4, 5, 6};
         System.out.println(LoopsAndBranch.task178d(array, 6));
-        
     }
+
+
+    static void runTask243b(){LoopsAndBranch.task243b(100);}
+
 
     static void runTask323() {
         System.out.println("Get all coprime integers <50");
@@ -218,5 +229,8 @@ public class Runner {
 
     static void runTask325() {
         System.out.println(NestedLoops.task325(2001));
+    }
+    static void runTask331b(){
+        System.out.println(NestedLoops.task331b(50));
     }
 }

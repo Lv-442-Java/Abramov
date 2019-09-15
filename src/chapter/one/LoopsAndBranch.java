@@ -165,4 +165,29 @@ public class LoopsAndBranch {
         }
         return k;
     }
+
+    public static void task243b(int n){
+      
+        int x = 0;
+        int y = 0;
+        for (int i = 1; i<n*n; i++){
+            for (int j = 1; j< n*n; j++){
+                if (n == i*i + j*j){
+
+                  x = i*i;
+                  y = j*j;
+
+                 if (i*i + j*j > n){
+                     break;
+                    }
+                   
+                  System.out.println(x + "+" + y);
+                }
+           }
+    }
+
 }
+
+
+}
+
