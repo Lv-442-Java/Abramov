@@ -107,6 +107,25 @@ public class SimpleLoops {
         return result;
     }
 
+    public static int task108(int n) {
+
+        if (n <= 0) {
+            System.err.println("n must be greater than zero");
+            return -1;
+        }
+        if (n == 1) return 1;
+
+        int degree = 1;
+
+        for (int i = 0; i < Integer.bitCount(Integer.MAX_VALUE) - 1; i++) {
+            degree = degree << 1;
+            if (degree > n) return degree;
+        }
+
+        return -1;
+
+    }
+
     public static boolean task88a(int number) {
         return getNumeralsFromNumber(number * number).contains(3);
     }

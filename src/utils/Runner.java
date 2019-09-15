@@ -35,6 +35,9 @@ public class Runner {
             case "task107":
                 runTask107();
                 break;
+            case "task108":
+                runTask108();
+                break;
             case "task224":
                 runTask224();
                 break;
@@ -132,6 +135,10 @@ public class Runner {
     static void runTask107() {
         System.out.println("Write number m>1");
         System.out.println(SimpleLoops.task107(42));
+    }
+
+    static void runTask108() {
+        System.out.println(SimpleLoops.task108(1000));
     }
 
     static void runTask224() {
