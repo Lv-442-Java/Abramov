@@ -56,6 +56,8 @@ public class Runner {
             case "task330":
                 runTask330();
                 break;
+            case "task554":
+                runTask554();
             case "task560":
                 runTask560();
                 break;
@@ -150,6 +152,8 @@ public class Runner {
     static void runTask226() {
         System.out.println(LoopsAndBranch.task226(5, 10));
     }
+
+    static void runTask554() { System.out.println("Limit 25");IntegerNumbers.task554(25); }
 
     static void runTask559() {
         System.out.println(IntegerNumbers.task559(31));
