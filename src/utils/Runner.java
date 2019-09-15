@@ -5,6 +5,7 @@ import chapter.one.NestedLoops;
 import chapter.one.SimpleLoops;
 import chapter.two.IntegerNumbers;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Runner {
@@ -70,6 +71,9 @@ public class Runner {
                 break;
             case "task226":
                 runTask226();
+                break;
+            case "task555":
+                runTask555();
                 break;
             case "task559":
                 runTask559();
@@ -190,6 +194,10 @@ public class Runner {
 
     static void runTask226() {
         System.out.println(LoopsAndBranch.task226(5, 10));
+    }
+
+    static void runTask555() {
+        System.out.println(Arrays.deepToString(IntegerNumbers.task555(10)));
     }
 
     static void runTask559() {

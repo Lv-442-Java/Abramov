@@ -71,4 +71,29 @@ public class IntegerNumbers {
 		return result;
 	}
 
+	public static int[][] task555(int n) {
+
+		if (n <= 0) {
+			System.err.println("n must be greater than zero");
+			return null;
+		}
+
+		int[][] triangle = new int[n][];
+
+		triangle[0] = new int[] {1};
+		if (n == 1) return triangle;
+		triangle[1] = new int[] {1, 1};
+		if (n == 2) return triangle;
+
+		for (int i = 2; i < n; i++) {
+			triangle[i] = new int[i + 1];
+			for (int j = 0; j < triangle[i].length; j++) {
+				if (j == 0 || j == triangle[i].length - 1) triangle[i][j] = 1;
+				else triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
+			}
+		}
+
+		return triangle;
+	}
+
 }
