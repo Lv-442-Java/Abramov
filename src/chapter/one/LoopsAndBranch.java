@@ -95,11 +95,10 @@ public class LoopsAndBranch {
         return dividers;
     }
 
-    public static ArrayList<Integer> task225(int n) {
+    public static List<Integer> task225(int n) {
 
         if (n <= 0) {
-            System.err.println("n must be greater than zero");
-            return null;
+            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
         }
 
         ArrayList<Integer> result = new ArrayList<Integer>();
@@ -108,13 +107,9 @@ public class LoopsAndBranch {
 
         for (int i = 2; i <= end; i++) {
 
-            if (n % (i * i) == 0 && n % (i * i * i) != 0) {
-                result.add(i);
-            }
-
+            if (n % (i * i) == 0 && n % (i * i * i) != 0) result.add(i);
         }
 
-        if (result.size() == 0) return null;
         return result;
     }
 

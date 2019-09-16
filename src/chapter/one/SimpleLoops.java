@@ -27,8 +27,7 @@ public class SimpleLoops {
     public static int task86b(int n) {
 
         if (n <= 0) {
-            System.err.println("n must be greater than zero");
-            return -1;
+            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
         }
 
         int n2 = n;
@@ -110,8 +109,7 @@ public class SimpleLoops {
     public static int task108(int n) {
 
         if (n <= 0) {
-            System.err.println("n must be greater than zero");
-            return -1;
+            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
         }
         if (n == 1) return 1;
 
@@ -123,7 +121,6 @@ public class SimpleLoops {
         }
 
         return -1;
-
     }
 
     public static boolean task88a(int number) {
