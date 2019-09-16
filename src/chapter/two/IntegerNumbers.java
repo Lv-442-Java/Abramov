@@ -86,71 +86,66 @@ public class IntegerNumbers {
         }
     }
 
-	public static int[][] task555(int n) {
+    public static int[][] task555(int n) {
 
-		if (n <= 0) {
-			System.err.println("n must be greater than zero");
-			return null;
-		}
+        if (n <= 0) {
+            System.err.println("n must be greater than zero");
+            return null;
+        }
 
-		int[][] triangle = new int[n][];
+        int[][] triangle = new int[n][];
 
-		triangle[0] = new int[] {1};
-		if (n == 1) return triangle;
-		triangle[1] = new int[] {1, 1};
-		if (n == 2) return triangle;
+        triangle[0] = new int[]{1};
+        if (n == 1) return triangle;
+        triangle[1] = new int[]{1, 1};
+        if (n == 2) return triangle;
 
-		for (int i = 2; i < n; i++) {
-			triangle[i] = new int[i + 1];
-			for (int j = 0; j < triangle[i].length; j++) {
-				if (j == 0 || j == triangle[i].length - 1) triangle[i][j] = 1;
-				else triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
-			}
-		}
+        for (int i = 2; i < n; i++) {
+            triangle[i] = new int[i + 1];
+            for (int j = 0; j < triangle[i].length; j++) {
+                if (j == 0 || j == triangle[i].length - 1) triangle[i][j] = 1;
+                else triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
+            }
+        }
 
-		return triangle;
-	}
-
-
+        return triangle;
+    }
 
 
-
-	public static void task562(){
-
-
-		int k = 1;
-		int s = 1;
-		for (int i =10; i<100; i++){
-			k = i;
-			s = k/10 + k%10;
-			if (s*s == i){
-				System.out.println(k);
-			}
-		}
-		for (int i = 100; i<1000; i++){
-			k = i;
-			while (k>0){
-				s = k%10;
-				k= k/10;
-				if (Math.pow(s,3) == i){
-					System.out.println(k);
-				}
-			}
-
-		}
-		for (int i = 1000;i<10000; i++){
-			k = i;
-			while (k>0){
-				s = k%10;
-				k= k/10;
-				if (Math.pow(s,4) == i){
-					System.out.println(k);
-				}
-			}
-
-		}
-
-	}
+    public static void task562() {
 
 
+        int k = 1;
+        int s = 1;
+        for (int i = 10; i < 100; i++) {
+            k = i;
+            s = k / 10 + k % 10;
+            if (s * s == i) {
+                System.out.println(k);
+            }
+        }
+        for (int i = 100; i < 1000; i++) {
+            k = i;
+            while (k > 0) {
+                s = k % 10;
+                k = k / 10;
+                if (Math.pow(s, 3) == i) {
+                    System.out.println(k);
+                }
+            }
+
+        }
+        for (int i = 1000; i < 10000; i++) {
+            k = i;
+            while (k > 0) {
+                s = k % 10;
+                k = k / 10;
+                if (Math.pow(s, 4) == i) {
+                    System.out.println(k);
+                }
+            }
+
+        }
+
+    }
 }
