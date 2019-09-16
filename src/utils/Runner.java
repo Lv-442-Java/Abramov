@@ -73,7 +73,7 @@ public class Runner {
                 runTask225();
                 break;
             case "task226":
-                runTask226();
+                runTask226(sc);
                 break;
             case "task555":
                 runTask555();
@@ -245,8 +245,16 @@ public class Runner {
         System.out.println(LoopsAndBranch.task225(144));
     }
 
-    static void runTask226() {
-        System.out.println(LoopsAndBranch.task226(5, 10));
+    static void runTask226(Scanner sc) {
+        int m = ConsoleReader.inputNaturalNumber(sc);
+        int n = ConsoleReader.inputNaturalNumber(sc);
+        List<Integer> res = LoopsAndBranch.task226(m, n);
+        if (res.isEmpty()) {
+            System.out.println("There are no such numbers, that you need!");
+        } else {
+            System.out.println("result: " + res);
+        }
+
     }
 
     static void runTask554() {
