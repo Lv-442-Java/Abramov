@@ -70,17 +70,14 @@ public class SimpleLoops {
         }
     }
 
-    public static void task88g(int n) {
+    public static int task88g(int n) {
         // add "1" before and after number "n"
-        if (n > 0) {
 
-            String number = Integer.toString(n);
+        String number = Integer.toString(n);
 
-            number = "1" + number + "1";
-            int newN = parseInt(number);
-
-            System.out.println(newN);
-        } else System.out.println("Wrong input values");
+        number = "1" + number + "1";
+        int newN = parseInt(number);
+        return newN;
     }
 
 

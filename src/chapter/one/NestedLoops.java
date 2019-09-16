@@ -6,7 +6,7 @@ import java.util.List;
 public class NestedLoops {
     public static ArrayList<Integer> task329(int n, int m) {
         ArrayList<Integer> result = new ArrayList<>();
-        if(Math.sqrt(m)%1!=0){
+        if (Math.sqrt(m) % 1 != 0) {
             return result;
         }
         int neededSum = (int) Math.sqrt(m);
@@ -24,24 +24,23 @@ public class NestedLoops {
         return result;
     }
 
-    public static void task332(int n) {
+    public static int[] task332(int n) {
 
         int n2 = n;
         int x;
         int y;
         int z;
         int t;
-
-        x = (int) Math.sqrt(n2);
-        n2 = n2 - x * x;
-        y = (int) Math.sqrt(n2);
-        n2 = n2 - y * y;
-        z = (int) Math.sqrt(n2);
-        n2 = n2 - z * z;
-        t = (int) Math.sqrt(n2);
-        n2 = n2 - t * t;
-        System.out.println("x = " + x + " y = " + y + " z = " + z + " t = " + t);
-        System.out.println(n + " = " + x * x + " + " + y * y + " + " + z * z + " + " + t * t);
+        int[] mas = new int[4];
+        mas[0] = (int) Math.sqrt(n2);
+        n2 = n2 - mas[0] * mas[0];
+        mas[1] = (int) Math.sqrt(n2);
+        n2 = n2 - mas[1] * mas[1];
+        mas[2] = (int) Math.sqrt(n2);
+        n2 = n2 - mas[2] * mas[2];
+        mas[3] = (int) Math.sqrt(n2);
+        n2 = n2 - mas[3] * mas[3];
+        return mas;
     }
 
 

@@ -16,7 +16,7 @@ public class LoopsAndBranch {
         return array;
     }
 
-    public void task241(int n, double x) {
+    public double task241(int n, double x) {
         double result = 0.0;
         if (n > 0) {
             for (int i = 1; i <= n; i++) {
@@ -24,21 +24,23 @@ public class LoopsAndBranch {
                 result += result;
                 System.out.println(result);
             }
-        } else System.out.println("Wrong input values");
+        }
+        return result;
     }
 
-    public static void task182(int a, int n) {
+    public static List<Integer> task182(int[] arrayList) {
+        List<Integer> outputList = new ArrayList<>();
         int sum = 0;
         int count = 0;
-        if ((a <= 0) && (n > 0)) {
-            for (int i = a; i < n; i++) {
-                if (((i % 5) == 0) & (i % 7 != 0)) {
-                    sum += i;
-                    count++;
-                }
+        for (int x : arrayList) {
+            if (((x % 5) == 0) & (x % 7 != 0)) {
+                sum += x;
+                count++;
             }
-            System.out.println("sum is : " + sum + "  " + "count is : " + count);
-        } else System.out.println(" Wrong input values");
+        }
+        outputList.add(count);
+        outputList.add(sum);
+        return outputList;
     }
 
 

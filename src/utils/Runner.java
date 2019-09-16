@@ -1,5 +1,6 @@
 package utils;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -31,7 +32,7 @@ public class Runner {
                 runTask87(sc);
                 break;
             case "task88g":
-                runTask88g();
+                runTask88g(sc);
                 break;
             case "task107":
                 runTask107();
@@ -46,7 +47,7 @@ public class Runner {
                 runTask178b(sc);
                 break;
             case "task182":
-                runTask182();
+                runTask182(sc);
                 break;
             case "task329":
                 runTask329(sc);
@@ -109,13 +110,13 @@ public class Runner {
                 runTask331b();
                 break;
             case "task332":
-                runTask332();
+                runTask332(sc);
                 break;
             case "task562":
                 runTask562();
                 break;
             case "task241":
-                runTask241();
+                runTask241(sc);
                 break;
 
             default:
@@ -124,14 +125,16 @@ public class Runner {
         sc.close();
     }
 
-    static void runTask332() {
+    static void runTask332(Scanner sc) {
         NestedLoops nestedLoops = new NestedLoops();
-        nestedLoops.task332(10);
+        for (int x : nestedLoops.task332(ConsoleReader.inputNaturalNumber(sc))) {
+            System.out.println(x);
+        }
     }
 
-    static void runTask241() {
+    static void runTask241(Scanner sc) {
         LoopsAndBranch loopsAndBranch = new LoopsAndBranch();
-        loopsAndBranch.task241(10, 8.8);
+        System.out.println(loopsAndBranch.task241(ConsoleReader.inputNaturalNumber(sc), ConsoleReader.inputDoubleNumber(sc)));
     }
 
     private static void runTask555() {
@@ -146,14 +149,15 @@ public class Runner {
         System.out.println(NestedLoops.task331a(500));
     }
 
-    static void runTask182() {
+    static void runTask182(Scanner sc) {
         LoopsAndBranch loopsAndBranch = new LoopsAndBranch();
-        LoopsAndBranch.task182(-10, 10);
+        System.out.println(loopsAndBranch.task182(ConsoleReader.inputArrayOfNaturalNumbers(sc)));
+        System.out.println("Count" + " " + "Sum ");
     }
 
-    static void runTask88g() {
+    static void runTask88g(Scanner sc) {
         SimpleLoops simpleLoops = new SimpleLoops();
-        SimpleLoops.task88g(99);
+        System.out.println(simpleLoops.task88g(ConsoleReader.inputNaturalNumber(sc)));
     }
 
     static void runTask86a() {
