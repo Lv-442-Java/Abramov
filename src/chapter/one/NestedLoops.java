@@ -195,5 +195,5 @@ public class NestedLoops {
         if(!check)            
             rezult = "Can't find numbers! Please try again!";       
         return rezult;       
-    }
+    } 
 }
