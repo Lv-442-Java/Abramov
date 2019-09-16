@@ -147,5 +147,18 @@ public class SimpleLoops {
             }
             sum+=Math.pow(-1, n);
         return sum;        
-    }   
+    }
+    
+    public static int [] task184(int p,int q, int [] list){        
+        if((p>q)&&(q>=0)){           
+            for(int i=0;i<list.length;i++){
+                if(list[i]%p==q){
+                     list[i]=0;
+                }
+            }             
+        }else {             
+             throw new IllegalArgumentException("Variable < p > must be bigger than < q >  ");
+        }         
+        return list;
+    }  
 }
