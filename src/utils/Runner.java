@@ -51,16 +51,16 @@ public class Runner {
                 runTask329();
                 break;
             case "task88a":
-                runTask88a();
+                runTask88a(sc);
                 break;
             case "task178c":
-                runTask178c();
+                runTask178c(sc);
                 break;
             case "task227":
-                runTask227();
+                runTask227(sc);
                 break;
             case "task330":
-                runTask330();
+                runTask330(sc);
                 break;
             case "task554":
                 runTask554();
@@ -200,20 +200,20 @@ public class Runner {
         System.out.println(NestedLoops.task329(37, 36));
     }
 
-    static void runTask88a() {
-        System.out.println(SimpleLoops.task88a(66));
+    static void runTask88a(Scanner sc) {
+        System.out.println(SimpleLoops.task88a(ConsoleReader.inputNaturalNumber(sc)));
     }
 
-    static void runTask178c() {
-        System.out.println(LoopsAndBranch.task178c(66, 36, 23, 16, 12, 57, 64));
+    static void runTask178c(Scanner sc) {
+        System.out.println(LoopsAndBranch.task178c(ConsoleReader.inputArrayOfNaturalNumbers(sc)));
     }
 
-    static void runTask227() {
-        System.out.println(LoopsAndBranch.task227(100, 134));
+    static void runTask227(Scanner sc) {
+        System.out.println(LoopsAndBranch.task227(ConsoleReader.inputIntegerNumber(sc), ConsoleReader.inputIntegerNumber(sc)));
     }
 
-    static void runTask330() {
-        System.out.println(NestedLoops.task330(100));
+    static void runTask330(Scanner sc) {
+        System.out.println(NestedLoops.task330(ConsoleReader.inputNaturalNumber(sc)));
     }
 
     static void runTask560() {

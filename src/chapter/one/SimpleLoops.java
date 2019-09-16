@@ -124,6 +124,7 @@ public class SimpleLoops {
     }
 
     public static boolean task88a(int number) {
+        //return Arrays.asList(Integer.valueOf(number*number).toString().toCharArray()).contains('3');
         return getNumeralsFromNumber(number * number).contains(3);
     }
 

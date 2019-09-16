@@ -42,11 +42,8 @@ public class NestedLoops {
     }
 
 
-    public static List<Integer> task330(int number) throws NumberFormatException {
+    public static List<Integer> task330(int number) {
         List<Integer> perfectNumbers = new ArrayList<Integer>();
-        if (!isNaturalNumber(number)) {
-            throw new NumberFormatException("Incorrect data!!!The number isn`t natural!!!");
-        }
         for (int i = 1; i < number; i++) {
             if (isPerfect(i)) {
                 perfectNumbers.add(i);
