@@ -42,9 +42,9 @@ public class LoopsAndBranch {
     }
 
 
-    public static int task178b(int n, int[] sequence) {
+    public static int task178b(int[] sequence) {
         int amount = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < sequence.length; i++) {
             if (sequence[i] % 3 == 0 && sequence[i] % 5 != 0) {
                 amount++;
             }
@@ -120,15 +120,23 @@ public class LoopsAndBranch {
 
     public static List<Integer> task226(int m, int n) {
         List<Integer> result = new ArrayList<>();
-        int bigger = m > n ? m : n;
-        int smaller = n > m ? n : m;
-        for (int i = 1; ; i++) {
-            int toCheck = bigger * i;
-            if (toCheck > m * n)
-                break;
+        int bigger;
+        int smaller;
+        if (m > n) {
+            bigger = m;
+            smaller = n;
+        } else {
+            smaller = m;
+            bigger = n;
+        }
+        int i = 1;
+        int toCheck = 0;
+        while (toCheck < m * n) {
+            toCheck = bigger * i;
             if (toCheck % smaller == 0) {
                 result.add(toCheck);
             }
+            i++;
         }
         return result;
     }
