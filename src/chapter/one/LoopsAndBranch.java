@@ -89,10 +89,6 @@ public class LoopsAndBranch {
 
     public static List<Integer> task225(int n) {
 
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
-
         ArrayList<Integer> result = new ArrayList<Integer>();
 
         int end = (int) Math.floor(Math.sqrt(n));

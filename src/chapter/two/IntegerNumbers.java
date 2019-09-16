@@ -89,10 +89,6 @@ public class IntegerNumbers {
 
     public static int[][] task555(int n) {
 
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
-
         int[][] triangle = new int[n][];
 
         triangle[0] = new int[]{1};
