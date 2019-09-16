@@ -1,5 +1,6 @@
 package utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -17,7 +18,7 @@ public class Runner {
         String taskNumber = sc.nextLine();
         switch (taskNumber) {
             case "task88":
-                runTask88();
+                runTask88(sc);
                 break;
             case "task88c":
                 runTask88_c();
@@ -83,10 +84,10 @@ public class Runner {
                 runTask559(sc);
                 break;
             case "task243a":
-                runTask243a();
+                runTask243a(sc);
                 break;
             case "task561":
-                runTask561();
+                runTask561(sc);
                 break;
             case "task331a":
                 runTask331a();
@@ -98,7 +99,7 @@ public class Runner {
                 runTask325(sc);
                 break;
             case "task178h":
-                runTask178h();
+                runTask178h(sc);
                 break;
             case "task178d":
                 runTask178d();
@@ -144,8 +145,8 @@ public class Runner {
         System.out.println(Arrays.deepToString(IntegerNumbers.task555(num)));
     }
 
-    private static void runTask178h() {
-        System.out.println(LoopsAndBranch.task178h(7, 2, 4, 7, 11, 12, 15, 84, 8, 7));
+    private static void runTask178h(Scanner sc) {
+        System.out.println(LoopsAndBranch.task178h(ConsoleReader.inputArrayOfNaturalNumbers(sc)));
     }
 
     static void runTask331a() {
@@ -176,9 +177,8 @@ public class Runner {
         System.out.println(SimpleLoops.task86b(num));
     }
 
-    static void runTask88() {
-        SimpleLoops simpleLoops = new SimpleLoops();
-        System.out.println(SimpleLoops.task88(5569));
+    static void runTask88(Scanner sc) {
+        System.out.println("Result: " + SimpleLoops.task88(ConsoleReader.inputNaturalNumber(sc)));
     }
 
     static void runTask88_c() {
@@ -221,7 +221,7 @@ public class Runner {
     }
 
     static void runTask178b(Scanner sc) {
-        System.out.println("result: " + LoopsAndBranch.task178b(ConsoleReader.inputArrayOfNaturalNumbers(sc)));
+        System.out.println("Result: " + LoopsAndBranch.task178b(ConsoleReader.inputArrayOfNaturalNumbers(sc)));
     }
 
     static void runTask329(Scanner sc) {
@@ -286,12 +286,26 @@ public class Runner {
         System.out.println("result: " + result);
     }
 
-    static void runTask243a() {
-        System.out.println(LoopsAndBranch.task243a(100));
+    static void runTask243a(Scanner sc) {
+        ArrayList<int[]> result = LoopsAndBranch.task243a(ConsoleReader.inputNaturalNumber(sc));
+        if (result.isEmpty()) {
+            System.out.println("Result not found!");
+        } else {
+            for (int[] array: result) {
+                System.out.println("x: " + array[0] + " y: " + array[1]);
+            }
+        }
     }
 
-    static void runTask561() {
-        System.out.println(IntegerNumbers.task561(1000));
+    static void runTask561(Scanner sc) {
+        ArrayList<Integer> result = IntegerNumbers.task561(ConsoleReader.inputNaturalNumber(sc));
+        if(result.isEmpty()) {
+            System.out.println("Result nit found!");
+        } else {
+            for (int a : result) {
+                System.out.println("Result: " + a);
+            }
+        }
     }
 
     static void runTask178d() {

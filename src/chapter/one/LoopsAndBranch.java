@@ -148,10 +148,10 @@ public class LoopsAndBranch {
         return list;
     }
 
-    public static int task178h(double... arg) {
+    public static int task178h(int[] arg) {
         int amount = 0;
         for (int i = 1; i < arg.length-1; i++) {
-            if (arg[i] < (arg[i - 1] + arg[i + 1]) / 2) {
+            if (arg[i] < (arg[i - 1] + arg[i + 1]) / 2.0) {
                 amount = amount + 1;
             }
         }
