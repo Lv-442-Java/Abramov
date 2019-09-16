@@ -144,17 +144,15 @@ public class IntegerNumbers {
         }
 
     }
-    
-    public static List<Integer> task569(int n){   
-        List<Integer> list = new ArrayList<>();        
-        while(n>0){
-            if((n%2==0)||(n%3==0)&&(n%5==0))
-                list.add(n);             
+
+    public static List<Integer> task569(int n) {
+        List<Integer> list = new ArrayList<>();
+        while (n > 0) {
+            if ((n % 2 == 0) || (n % 3 == 0) && (n % 5 == 0))
+                list.add(n);
             n--;
-        }        
-        Collections.sort(list);            
+        }
+        Collections.sort(list);
         return list;
     }
-
-
 }
