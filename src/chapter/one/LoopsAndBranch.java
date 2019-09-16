@@ -188,7 +188,7 @@ public class LoopsAndBranch {
             }
         }
 
-    }
+    }    
     
     public static String task242(int n){        
         double rezult =0.0;        
@@ -207,6 +207,6 @@ public class LoopsAndBranch {
             }                
             return rezult;        
         }
-    } 
+    }
 }
 
