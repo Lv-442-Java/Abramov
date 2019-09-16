@@ -10,7 +10,7 @@ import chapter.two.IntegerNumbers;
 public class Runner {
 
     public static void menu() {
-    	Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter task number: ");
         String taskNumber = sc.nextLine();
         switch (taskNumber) {
@@ -27,7 +27,7 @@ public class Runner {
                 runTask86b();
                 break;
             case "task87":
-                runTask87();
+                runTask87(sc);
                 break;
             case "task88g":
                 runTask88g();
@@ -122,6 +122,7 @@ public class Runner {
         }
         sc.close();
     }
+
     static void runTask332() {
         NestedLoops nestedLoops = new NestedLoops();
         nestedLoops.task332(10);
@@ -173,8 +174,19 @@ public class Runner {
         SimpleLoops.task88_c(125);
     }
 
-    static void runTask87() {
-        SimpleLoops.task87(123456, 3);
+    static void runTask87(Scanner sc) {
+        Integer n;
+        Integer m;
+        while (true) {
+            n = ConsoleReader.inputNaturalNumber(sc);
+            m = ConsoleReader.inputNaturalNumber(sc);
+            if (n.toString().length() < m) {
+                System.out.println("Second number is too big!");
+            } else {
+                break;
+            }
+        }
+        System.out.println("result: "+SimpleLoops.task87(n, m));
     }
 
     static void runTask107() {
