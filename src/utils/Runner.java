@@ -1,5 +1,6 @@
 package utils;
 
+import java.util.List;
 import java.util.Scanner;
 
 import chapter.one.LoopsAndBranch;
@@ -48,7 +49,7 @@ public class Runner {
                 runTask182();
                 break;
             case "task329":
-                runTask329();
+                runTask329(sc);
                 break;
             case "task88a":
                 runTask88a();
@@ -186,7 +187,7 @@ public class Runner {
                 break;
             }
         }
-        System.out.println("result: "+SimpleLoops.task87(n, m));
+        System.out.println("result: " + SimpleLoops.task87(n, m));
     }
 
     static void runTask107() {
@@ -208,8 +209,16 @@ public class Runner {
         System.out.println(LoopsAndBranch.task178b(mas));
     }
 
-    static void runTask329() {
-        System.out.println(NestedLoops.task329(37, 36));
+    static void runTask329(Scanner sc) {
+        int n = ConsoleReader.inputNaturalNumber(sc);
+        int m = ConsoleReader.inputNaturalNumber(sc);
+        List<Integer> result = NestedLoops.task329(n, m);
+        if (result.isEmpty()) {
+            System.out.println("There are no such numbers!");
+        } else {
+            System.out.println("result: " + result);
+        }
+
     }
 
     static void runTask88a() {
