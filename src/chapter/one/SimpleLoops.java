@@ -37,7 +37,7 @@ public class SimpleLoops {
 
         while (n2 > 0) {
             n1 /= 10;
-            sum += n2 - n1*10;
+            sum += n2 - n1 * 10;
             n2 = n1;
         }
 

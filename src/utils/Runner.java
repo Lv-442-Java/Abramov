@@ -107,10 +107,17 @@ public class Runner {
                 runTask331b();
             case "task562":
                 runTask562();
+            case "task241":
+                runTask241();
 
-                default:
+            default:
                 System.out.println("Wrong task number");
         }
+    }
+
+    static void runTask241() {
+        NestedLoops nestedLoops = new NestedLoops();
+        nestedLoops.task241(10, 8.8);
     }
 
     private static void runTask555() {
@@ -209,7 +216,10 @@ public class Runner {
         System.out.println(LoopsAndBranch.task226(5, 10));
     }
 
-    static void runTask554() { System.out.println("Limit 25");IntegerNumbers.task554(25); }
+    static void runTask554() {
+        System.out.println("Limit 25");
+        IntegerNumbers.task554(25);
+    }
 
     static void runTask559() {
         System.out.println(IntegerNumbers.task559(31));
@@ -229,7 +239,9 @@ public class Runner {
     }
 
 
-    static void runTask243b(){LoopsAndBranch.task243b(100);}
+    static void runTask243b() {
+        LoopsAndBranch.task243b(100);
+    }
 
 
     static void runTask323() {
@@ -240,8 +252,12 @@ public class Runner {
     static void runTask325() {
         System.out.println(NestedLoops.task325(2001));
     }
-    static void runTask331b(){
+
+    static void runTask331b() {
         System.out.println(NestedLoops.task331b(50));
     }
-    static void runTask562(){ IntegerNumbers.task562();}
+
+    static void runTask562() {
+        IntegerNumbers.task562();
+    }
 }

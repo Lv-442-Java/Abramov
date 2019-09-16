@@ -97,7 +97,7 @@ public class LoopsAndBranch {
 
         for (int i = 2; i <= end; i++) {
 
-            if (n % (i*i) == 0 && n % (i*i*i) != 0) {
+            if (n % (i * i) == 0 && n % (i * i * i) != 0) {
                 result.add(i);
             }
 
@@ -153,40 +153,40 @@ public class LoopsAndBranch {
         return amount;
     }
 
-    public static int task178d(int[] array, int n){
+    public static int task178d(int[] array, int n) {
 
-        int result  = 1;
+        int result = 1;
         int k = 0;
-        for (int i = 0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             result *= i;
-            if (Math.pow(2, i) > array[i] && array[i] < result ) {
+            if (Math.pow(2, i) > array[i] && array[i] < result) {
                 k++;
             }
         }
         return k;
     }
 
-    public static void task243b(int n){
-      
+    public static void task243b(int n) {
+
         int x = 0;
         int y = 0;
-        for (int i = 1; i<n*n; i++){
-            for (int j = 1; j< n*n; j++){
-                if (n == i*i + j*j){
+        for (int i = 1; i < n * n; i++) {
+            for (int j = 1; j < n * n; j++) {
+                if (n == i * i + j * j) {
 
-                  x = i*i;
-                  y = j*j;
+                    x = i * i;
+                    y = j * j;
 
-                 if (i*i + j*j > n){
-                     break;
+                    if (i * i + j * j > n) {
+                        break;
                     }
-                   
-                  System.out.println(x + "+" + y);
-                }
-           }
-    }
 
-}
+                    System.out.println(x + "+" + y);
+                }
+            }
+        }
+
+    }
 
 
 }
