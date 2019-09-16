@@ -201,5 +201,24 @@ public class LoopsAndBranch {
         }
 
     }
+    
+    public static String task242(int n){        
+        double rezult =0.0;        
+        for(int k=0;k<n;k++)
+            rezult = (Math.pow((-1), k*(k-1)))/factorial(n);         
+        return  String.format("%.10f", rezult);
+    }
+    
+    public static int factorial(int n){        
+        if(n<0){
+            throw new IllegalArgumentException("Argument " +n+ " les than zero!!!");
+        }else{        
+            int rezult=1;
+            for(int i=n;i>0;i--){                
+               rezult*=i; 
+            }                
+            return rezult;        
+        }
+    } 
 }
 
