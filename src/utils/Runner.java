@@ -1,17 +1,17 @@
 package utils;
 
+import java.util.Scanner;
+
 import chapter.one.LoopsAndBranch;
 import chapter.one.NestedLoops;
 import chapter.one.SimpleLoops;
 import chapter.two.IntegerNumbers;
 
-import java.util.Scanner;
-
 public class Runner {
 
     public static void menu() {
+    	Scanner sc = new Scanner(System.in);
         System.out.println("Enter task number: ");
-        Scanner sc = new Scanner(System.in);
         String taskNumber = sc.nextLine();
         switch (taskNumber) {
             case "task88":
@@ -120,8 +120,8 @@ public class Runner {
             default:
                 System.out.println("Wrong task number");
         }
+        sc.close();
     }
-
     static void runTask332() {
         NestedLoops nestedLoops = new NestedLoops();
         nestedLoops.task332(10);
