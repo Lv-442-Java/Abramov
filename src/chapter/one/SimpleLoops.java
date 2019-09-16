@@ -138,5 +138,4 @@ public class SimpleLoops {
         } while (number != 0);
         return numerals;
     }
-
 }

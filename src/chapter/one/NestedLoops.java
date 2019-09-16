@@ -174,5 +174,3 @@ public class NestedLoops {
         } else System.out.println("Wrong input values");
     }
 }
-
-
