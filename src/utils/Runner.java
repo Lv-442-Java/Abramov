@@ -107,6 +107,9 @@ public class Runner {
             case "task331b":
                 runTask331b();
                 break;
+            case "task332":
+                runTask332();
+                break;
             case "task562":
                 runTask562();
                 break;
@@ -119,9 +122,14 @@ public class Runner {
         }
     }
 
-    static void runTask241() {
+    static void runTask332() {
         NestedLoops nestedLoops = new NestedLoops();
-        nestedLoops.task241(10, 8.8);
+        nestedLoops.task332(10);
+    }
+
+    static void runTask241() {
+        LoopsAndBranch loopsAndBranch = new LoopsAndBranch();
+        loopsAndBranch.task241(10, 8.8);
     }
 
     private static void runTask555() {

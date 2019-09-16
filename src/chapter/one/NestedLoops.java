@@ -21,6 +21,27 @@ public class NestedLoops {
         return result;
     }
 
+    public static void task332(int n) {
+
+        int n2 = n;
+        int x;
+        int y;
+        int z;
+        int t;
+
+        x = (int) Math.sqrt(n2);
+        n2 = n2 - x * x;
+        y = (int) Math.sqrt(n2);
+        n2 = n2 - y * y;
+        z = (int) Math.sqrt(n2);
+        n2 = n2 - z * z;
+        t = (int) Math.sqrt(n2);
+        n2 = n2 - t * t;
+        System.out.println("x = " + x + " y = " + y + " z = " + z + " t = " + t);
+        System.out.println(n + " = " + x * x + " + " + y * y + " + " + z * z + " + " + t * t);
+    }
+
+
     public static List<Integer> task330(int number) throws NumberFormatException {
         List<Integer> perfectNumbers = new ArrayList<Integer>();
         if (!isNaturalNumber(number)) {
@@ -161,16 +182,5 @@ public class NestedLoops {
             }
         }
         return result;
-    }
-
-    public void task241(int n, double x) {
-        double result = 0.0;
-        if (n > 0) {
-            for (int i = 1; i <= n; i++) {
-                result = Math.pow(-1, Math.abs(Math.sqrt(i))) / i * Math.pow(x, i);
-                result += result;
-                System.out.println(result);
-            }
-        } else System.out.println("Wrong input values");
     }
 }
