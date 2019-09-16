@@ -52,23 +52,15 @@ public class LoopsAndBranch {
         return amount;
     }
 
-    public static int task178c(int n, int... numbers) throws NumberFormatException {
+    public static int task178c(int[] numbers) {
         int count = 0;
-        for (int i = 0; i < n && n <= numbers.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             int element = numbers[i];
-            if (isNaturalNumber(element)) {
-                if (Math.sqrt(element) % 2 == 0) {
-                    count++;
-                }
-            } else {
-                throw new NumberFormatException("Incorrect data!!!The sequence contains not a natural numbers!!!");
+            if (Math.sqrt(element) % 2.0 == 0.0) {
+                count++;
             }
         }
         return count;
-    }
-
-    private static boolean isNaturalNumber(int number) {
-        return number > 0;
     }
 
     public static List<Integer> task227(int firstNumber, int secondNumber) {
