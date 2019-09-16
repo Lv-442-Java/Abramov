@@ -193,7 +193,7 @@ public class Runner {
 
     static void runTask178b() {
         int[] mas = {3, 4, 5, 15, 30, 9};
-        System.out.println(LoopsAndBranch.task178b(6, mas));
+        System.out.println(LoopsAndBranch.task178b(mas));
     }
 
     static void runTask329() {
