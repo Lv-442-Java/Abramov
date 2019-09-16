@@ -26,10 +26,6 @@ public class SimpleLoops {
 
     public static int task86b(int n) {
 
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
-
         int n2 = n;
         int n1 = n;
         int sum = 0;
@@ -105,9 +101,6 @@ public class SimpleLoops {
 
     public static int task108(int n) {
 
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
         if (n == 1) return 1;
 
         int degree = 1;
@@ -133,4 +126,30 @@ public class SimpleLoops {
         } while (number != 0);
         return numerals;
     }
+    
+    public static int task86_h(int n){        
+        int sum=0,sign,i=1;        
+            while(n>1){        
+                if(i%2==0){
+                    sign=-1;
+                }else sign=1;
+                sum+= n*sign;
+                n--; i++;
+            }
+            sum+=Math.pow(-1, n);
+        return sum;        
+    }
+    
+    public static int [] task184(int p,int q, int [] list){        
+        if((p>q)&&(q>=0)){           
+            for(int i=0;i<list.length;i++){
+                if(list[i]%p==q){
+                     list[i]=0;
+                }
+            }             
+        }else {             
+             throw new IllegalArgumentException("Variable < p > must be bigger than < q >  ");
+        }         
+        return list;
+    }  
 }

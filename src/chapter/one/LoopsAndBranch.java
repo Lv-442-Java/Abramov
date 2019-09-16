@@ -2,6 +2,7 @@ package chapter.one;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -91,10 +92,6 @@ public class LoopsAndBranch {
 
     public static List<Integer> task225(int n) {
 
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
-
         ArrayList<Integer> result = new ArrayList<Integer>();
 
         int end = (int) Math.floor(Math.sqrt(n));
@@ -130,31 +127,33 @@ public class LoopsAndBranch {
         return result;
     }
 
-    public static String task243a(int n) {
-        String result = "";
+    public static ArrayList<int[]> task243a(double n) {
+        int[] result = new int[2];
+        ArrayList<int[]> list = new ArrayList<int[]>();
         int x;
         int y;
-        for (x = 1; x < n * n; x++) {
-            int z = x * x + 1;
-            if (z > n) {
-                break;
-            }
-            for (y = 1; y < n * n; y++) {
-                z = x * x + y * y;
+        int r = 1;
+        double limit = Math.pow(n,1.0/2.0) - 1;
+        for (x = 1; x < limit; x++) {
+            for (y = r; y < limit; y++) {
+                int z = x * x + y * y;
                 if (z == n) {
-                    result = result + "x: " + x + " y: " + y + "\n";
+                    result[0] = x;
+                    result[1] = y;
+                    list.add(result);
                 } else if (z > n) {
                     break;
                 }
             }
+            r++;
         }
-        return result;
+        return list;
     }
 
-    public static int task178h(int n, double... arg) {
+    public static int task178h(int[] arg) {
         int amount = 0;
-        for (int i = 1; i < n + 1 && n + 1 < arg.length; i++) {
-            if (arg[i] < (arg[i - 1] + arg[i + 1]) / 2) {
+        for (int i = 1; i < arg.length-1; i++) {
+            if (arg[i] < (arg[i - 1] + arg[i + 1]) / 2.0) {
                 amount = amount + 1;
             }
         }
@@ -194,6 +193,25 @@ public class LoopsAndBranch {
             }
         }
 
+    }    
+    
+    public static String task242(int n){        
+        double rezult =0.0;        
+        for(int k=0;k<n;k++)
+            rezult = (Math.pow((-1), k*(k-1)))/factorial(n);         
+        return  String.format("%.10f", rezult);
+    }
+    
+    public static int factorial(int n){        
+        if(n<0){
+            throw new IllegalArgumentException("Argument " +n+ " les than zero!!!");
+        }else{        
+            int rezult=1;
+            for(int i=n;i>0;i--){                
+               rezult*=i; 
+            }                
+            return rezult;        
+        }
     }
 }
 
