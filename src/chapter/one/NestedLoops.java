@@ -132,7 +132,7 @@ public class NestedLoops {
             return null;
         }
 
-        int[] simpleNumbers = erastofen(n/2 + 1);
+        int[] simpleNumbers = erastofen(n / 2 + 1);
         ArrayList<Integer> result = new ArrayList<Integer>();
 
         for (int i = 0; i < simpleNumbers.length; i++) {
@@ -143,25 +143,23 @@ public class NestedLoops {
         return result;
     }
 
-    public static boolean task331b(int n){
-          boolean result = false;
-          for (int i = 1; i<n; i++){
-                for (int j = 1; j<n; j++){
-                    for (int z = 1; z<n; z++){
-                        if (n == i*i + j*j + z*z){
-                            System.out.println(i*i);
-                            System.out.println(j*j);
-                            System.out.println(z*z);
-                            result = true;
-                        }
-                        if ( (i*i + j*j + z*z) > n){
-                            break;
-                        }
+    public static boolean task331b(int n) {
+        boolean result = false;
+        for (int i = 1; i < n; i++) {
+            for (int j = 1; j < n; j++) {
+                for (int z = 1; z < n; z++) {
+                    if (n == i * i + j * j + z * z) {
+                        System.out.println(i * i);
+                        System.out.println(j * j);
+                        System.out.println(z * z);
+                        result = true;
+                    }
+                    if ((i * i + j * j + z * z) > n) {
+                        break;
                     }
                 }
             }
-          return result;
         }
+        return result;
     }
-
-
+}
