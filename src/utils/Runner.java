@@ -120,11 +120,24 @@ public class Runner {
             case "task241":
                 runTask241(sc);
                 break;
-
+            case "task565":
+                runTask565(sc);
+                break;
             default:
                 System.out.println("Wrong task number");
         }
         sc.close();
+    }
+
+    private static void runTask565(Scanner sc) {
+        IntegerNumbers integerNumbers = new IntegerNumbers();
+        System.out.println("Enter number biggest than 1 ");
+        int k = ConsoleReader.inputNaturalNumber(sc);
+        System.out.println("Enter number biggest than k ");
+        int l = ConsoleReader.inputNaturalNumber(sc);
+        System.out.println("Enter third number ");
+        int m = ConsoleReader.inputNaturalNumber(sc);
+        System.out.println(integerNumbers.task565(k, l, m));
     }
 
     static void runTask332(Scanner sc) {
@@ -191,12 +204,12 @@ public class Runner {
     }
 
     static void runTask87(Scanner sc) {
-        Integer n;
-        Integer m;
+        int n;
+        int m;
         while (true) {
             n = ConsoleReader.inputNaturalNumber(sc);
             m = ConsoleReader.inputNaturalNumber(sc);
-            if (n.toString().length() < m) {
+            if (Integer.toString(n).length() < m) {
                 System.out.println("Second number is too big!");
             } else {
                 break;
@@ -295,7 +308,7 @@ public class Runner {
         if (result.isEmpty()) {
             System.out.println("Result not found!");
         } else {
-            for (int[] array: result) {
+            for (int[] array : result) {
                 System.out.println("x: " + array[0] + " y: " + array[1]);
             }
         }
@@ -303,7 +316,7 @@ public class Runner {
 
     static void runTask561(Scanner sc) {
         ArrayList<Integer> result = IntegerNumbers.task561(ConsoleReader.inputNaturalNumber(sc));
-        if(result.isEmpty()) {
+        if (result.isEmpty()) {
             System.out.println("Result nit found!");
         } else {
             for (int a : result) {

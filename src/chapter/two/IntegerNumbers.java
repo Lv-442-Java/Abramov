@@ -155,4 +155,22 @@ public class IntegerNumbers {
         Collections.sort(list);
         return list;
     }
+
+
+    public static boolean task565(int k, int l, int m) {
+        int count = 0;
+        for (int i = k; i <= l; i++) {
+            while (i == 1) {
+                if (i % 2 == 0) {
+                    i = i / 2;
+                    count++;
+                } else {
+                    i = i * 3 + 1;
+                    count++;
+                }
+            }
+        }
+        return count < m ? true : false;
+    }
+
 }
