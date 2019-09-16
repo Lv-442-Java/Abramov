@@ -243,5 +243,5 @@ public class Runner {
     static void runTask331b(){
         System.out.println(NestedLoops.task331b(50));
     }
-    static void runTask562(){ IntegerNumbers.task562(235);}
+    static void runTask562(){ IntegerNumbers.task562();}
 }

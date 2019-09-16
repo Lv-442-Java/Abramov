@@ -111,8 +111,13 @@ public class IntegerNumbers {
 		return triangle;
 	}
 
-	public static void task562(int n){
-		 n = 1;
+
+
+
+
+	public static void task562(){
+
+
 		int k = 1;
 		int s = 1;
 		for (int i =10; i<100; i++){
