@@ -2,6 +2,7 @@ package chapter.one;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -136,30 +137,32 @@ public class LoopsAndBranch {
         return result;
     }
 
-    public static String task243a(int n) {
-        String result = "";
+    public static ArrayList<int[]> task243a(double n) {
+        int[] result = new int[2];
+        ArrayList<int[]> list = new ArrayList<int[]>();
         int x;
         int y;
-        for (x = 1; x < n * n; x++) {
-            int z = x * x + 1;
-            if (z > n) {
-                break;
-            }
-            for (y = 1; y < n * n; y++) {
-                z = x * x + y * y;
+        int r = 1;
+        double limit = Math.pow(n,1.0/2.0) - 1;
+        for (x = 1; x < limit; x++) {
+            for (y = r; y < limit; y++) {
+                int z = x * x + y * y;
                 if (z == n) {
-                    result = result + "x: " + x + " y: " + y + "\n";
+                    result[0] = x;
+                    result[1] = y;
+                    list.add(result);
                 } else if (z > n) {
                     break;
                 }
             }
+            r++;
         }
-        return result;
+        return list;
     }
 
-    public static int task178h(int n, double... arg) {
+    public static int task178h(double... arg) {
         int amount = 0;
-        for (int i = 1; i < n + 1 && n + 1 < arg.length; i++) {
+        for (int i = 1; i < arg.length-1; i++) {
             if (arg[i] < (arg[i - 1] + arg[i + 1]) / 2) {
                 amount = amount + 1;
             }
