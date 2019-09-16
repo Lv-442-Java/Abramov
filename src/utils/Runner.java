@@ -1,5 +1,6 @@
 package utils;
 
+import chapter.one.ConsoleReader;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -8,6 +9,7 @@ import chapter.one.LoopsAndBranch;
 import chapter.one.NestedLoops;
 import chapter.one.SimpleLoops;
 import chapter.two.IntegerNumbers;
+import java.util.Random;
 
 public class Runner {
 
@@ -117,8 +119,23 @@ public class Runner {
                 break;
             case "task241":
                 runTask241();
+                break;                
+            case "task86h":
+                runTask86_h(sc);
                 break;
-
+            case "task184":
+                runTask184(sc);
+                break;
+            case "task242":
+                runTask242(sc);
+                break;
+            case "task340":
+                runTask340(sc);
+                break;
+            case "task569":
+                runTask569(sc);
+                break;
+            
             default:
                 System.out.println("Wrong task number");
         }
@@ -324,5 +341,52 @@ public class Runner {
 
     static void runTask562() {
         IntegerNumbers.task562();
+    }
+    
+    static void runTask86_h(Scanner sc) {
+        int i = ConsoleReader.inputNaturalNumber(sc); 
+        System.out.printf("For n = %d%nRezult = %d%n",i,SimpleLoops.task86_h(i));
+    }
+
+    static void runTask184(Scanner sc) {
+        int p,q;        
+        Random random = new Random(100);
+        int [] list = new int [67];
+        for (int i=0;i<67;i++)
+            list[i] = random.nextInt(400);
+        
+        System.out.println("For this task you need input two numbers (p,q)\n"
+                + "But variable <p> must be bigger than <q>!");
+        while(true){            
+            p = ConsoleReader.inputNaturalNumber(sc);
+            q = ConsoleReader.inputNaturalNumber(sc);                 
+            if(p>q){
+                break;
+            }else{
+                System.out.println("Please try again, because <p> must be bigger than <q>!!!");
+            }                           
+        }
+        System.out.printf("If:%np = %d%nq = %d%nRezult: %s%n",p,q,Arrays.toString(SimpleLoops.task184(p, q,list)));
+        
+    }
+
+    static void runTask242(Scanner sc) {
+        int n = ConsoleReader.inputNaturalNumber(sc);
+        System.out.printf("For n = %d%nRezult: %s%n",n,LoopsAndBranch.task242(n));
+    }
+
+    static void runTask340(Scanner sc) {
+        Random random = new Random();
+        int [] list = new int [20];
+        for (int i=0;i<20;i++)
+            list[i] = random.nextInt(100);
+        int n = ConsoleReader.inputNaturalNumber(sc);
+        System.out.printf("Our array: %s%nFor n = %d%nRezult: %s%n",Arrays.toString(list),n, NestedLoops.task340(n, list));
+        
+    }
+
+    static void runTask569(Scanner sc) {
+        int n = ConsoleReader.inputNaturalNumber(sc);
+        System.out.printf("If n = %s%nRezult: %s%n",n,IntegerNumbers.task569(n));
     }
 }
