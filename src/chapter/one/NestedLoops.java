@@ -146,21 +146,20 @@ public class NestedLoops {
         return result1;
     }
 
-    public static ArrayList<Integer> task325(int n) {
+    public static List<Integer> task325(int n) {
 
         if (n <= 0) {
-            System.err.println("n must be greater than zero");
-            return null;
+            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
         }
 
         int[] simpleNumbers = erastofen(n / 2 + 1);
         ArrayList<Integer> result = new ArrayList<Integer>();
 
         for (int i = 0; i < simpleNumbers.length; i++) {
+
             if (n % simpleNumbers[i] == 0) result.add(simpleNumbers[i]);
         }
 
-        if (result.size() == 0) return null;
         return result;
     }
 
