@@ -16,6 +16,17 @@ public class LoopsAndBranch {
         return array;
     }
 
+    public void task241(int n, double x) {
+        double result = 0.0;
+        if (n > 0) {
+            for (int i = 1; i <= n; i++) {
+                result = Math.pow(-1, Math.abs(Math.sqrt(i))) / i * Math.pow(x, i);
+                result += result;
+                System.out.println(result);
+            }
+        } else System.out.println("Wrong input values");
+    }
+
     public static void task182(int a, int n) {
         int sum = 0;
         int count = 0;
