@@ -100,19 +100,16 @@ public class SimpleLoops {
         return numerals;
     }
     
-    public static int task86_h(int n){        
+      public static int task86_h(int n){        
     int sum=0,sign,i=1;        
         while(n>1){        
             if(i%2==0){
                 sign=-1;
-
             }else sign=1;
-
             sum+= n*sign;
             n--; i++;
         }
         sum+=Math.pow(-1, n);
     return sum;        
-    }  
-
+    } 
 }
