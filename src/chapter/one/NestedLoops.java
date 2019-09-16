@@ -6,6 +6,9 @@ import java.util.List;
 public class NestedLoops {
     public static ArrayList<Integer> task329(int n, int m) {
         ArrayList<Integer> result = new ArrayList<>();
+        if(Math.sqrt(m)%1!=0){
+            return result;
+        }
         int neededSum = (int) Math.sqrt(m);
         for (int i = 0; i < n; i++) {
             int testNumber = i;

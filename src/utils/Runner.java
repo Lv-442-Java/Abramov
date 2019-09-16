@@ -1,5 +1,6 @@
 package utils;
 
+import java.util.List;
 import java.util.Scanner;
 
 import chapter.one.LoopsAndBranch;
@@ -10,7 +11,7 @@ import chapter.two.IntegerNumbers;
 public class Runner {
 
     public static void menu() {
-    	Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter task number: ");
         String taskNumber = sc.nextLine();
         switch (taskNumber) {
@@ -27,7 +28,7 @@ public class Runner {
                 runTask86b();
                 break;
             case "task87":
-                runTask87();
+                runTask87(sc);
                 break;
             case "task88g":
                 runTask88g();
@@ -42,13 +43,13 @@ public class Runner {
                 runTask224();
                 break;
             case "task178b":
-                runTask178b();
+                runTask178b(sc);
                 break;
             case "task182":
                 runTask182();
                 break;
             case "task329":
-                runTask329();
+                runTask329(sc);
                 break;
             case "task88a":
                 runTask88a(sc);
@@ -72,13 +73,13 @@ public class Runner {
                 runTask225();
                 break;
             case "task226":
-                runTask226();
+                runTask226(sc);
                 break;
             case "task555":
                 runTask555();
                 break;
             case "task559":
-                runTask559();
+                runTask559(sc);
                 break;
             case "task243a":
                 runTask243a();
@@ -122,6 +123,7 @@ public class Runner {
         }
         sc.close();
     }
+
     static void runTask332() {
         NestedLoops nestedLoops = new NestedLoops();
         nestedLoops.task332(10);
@@ -173,8 +175,19 @@ public class Runner {
         SimpleLoops.task88_c(125);
     }
 
-    static void runTask87() {
-        SimpleLoops.task87(123456, 3);
+    static void runTask87(Scanner sc) {
+        Integer n;
+        Integer m;
+        while (true) {
+            n = ConsoleReader.inputNaturalNumber(sc);
+            m = ConsoleReader.inputNaturalNumber(sc);
+            if (n.toString().length() < m) {
+                System.out.println("Second number is too big!");
+            } else {
+                break;
+            }
+        }
+        System.out.println("result: " + SimpleLoops.task87(n, m));
     }
 
     static void runTask107() {
@@ -191,13 +204,21 @@ public class Runner {
         System.out.println(LoopsAndBranch.task224(26));
     }
 
-    static void runTask178b() {
-        int[] mas = {3, 4, 5, 15, 30, 9};
-        System.out.println(LoopsAndBranch.task178b(mas));
+    static void runTask178b(Scanner sc) {
+        int[] mas = ConsoleReader.inputArrayOfNaturalNumbers(sc);
+        System.out.println("result: " + LoopsAndBranch.task178b(mas));
     }
 
-    static void runTask329() {
-        System.out.println(NestedLoops.task329(37, 36));
+    static void runTask329(Scanner sc) {
+        int n = ConsoleReader.inputNaturalNumber(sc);
+        int m = ConsoleReader.inputNaturalNumber(sc);
+        List<Integer> result = NestedLoops.task329(n, m);
+        if (result.isEmpty()) {
+            System.out.println("There are no such numbers!");
+        } else {
+            System.out.println("result: " + result);
+        }
+
     }
 
     static void runTask88a(Scanner sc) {
@@ -224,8 +245,16 @@ public class Runner {
         System.out.println(LoopsAndBranch.task225(144));
     }
 
-    static void runTask226() {
-        System.out.println(LoopsAndBranch.task226(5, 10));
+    static void runTask226(Scanner sc) {
+        int m = ConsoleReader.inputNaturalNumber(sc);
+        int n = ConsoleReader.inputNaturalNumber(sc);
+        List<Integer> res = LoopsAndBranch.task226(m, n);
+        if (res.isEmpty()) {
+            System.out.println("There are no such numbers, that you need!");
+        } else {
+            System.out.println("result: " + res);
+        }
+
     }
 
     static void runTask554() {
@@ -233,8 +262,13 @@ public class Runner {
         IntegerNumbers.task554(25);
     }
 
-    static void runTask559() {
-        System.out.println(IntegerNumbers.task559(31));
+    static void runTask559(Scanner sc) {
+        int n = ConsoleReader.inputNaturalNumber(sc);
+        List<Integer> result = IntegerNumbers.task559(n);
+        if (result.isEmpty()) {
+            System.out.println("There are no such numbers,less then n!");
+        }
+        System.out.println("result: " + result);
     }
 
     static void runTask243a() {
