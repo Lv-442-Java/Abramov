@@ -94,5 +94,24 @@ public class NestedLoops {
         }
         return taskResult;
     }
+    
+    public static String task340(){       
+        int m=107;
+        String rezult =null;
+        boolean check = false;       
+        int [] list = {2,50,10,50,45,32,5,54,23,97,100,67,78,34,2,4,1,76,90,43};        
+        for(int i=0;i<list.length;i++){
+            for(int j=i;j<list.length;j++){
+                for(int k =j;k<list.length;k++)
+                    if(list[i] + list[j] + list[k] == m){
+                        check = true;
+                        rezult =  list[i] +" "+ list[j] +" "+ list[k];                                        
+                }                    
+            }
+        }        
+        if(!check)            
+            rezult = "Can't find numbers! Please try again!";       
+        return rezult;       
+    }
 
 }
