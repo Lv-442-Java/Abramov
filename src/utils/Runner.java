@@ -205,14 +205,11 @@ public class Runner {
     }
 
     static void runTask178b(Scanner sc) {
-        int[] mas = ConsoleReader.inputArrayOfNaturalNumbers(sc);
-        System.out.println("result: " + LoopsAndBranch.task178b(mas));
+        System.out.println("result: " + LoopsAndBranch.task178b(ConsoleReader.inputArrayOfNaturalNumbers(sc)));
     }
 
     static void runTask329(Scanner sc) {
-        int n = ConsoleReader.inputNaturalNumber(sc);
-        int m = ConsoleReader.inputNaturalNumber(sc);
-        List<Integer> result = NestedLoops.task329(n, m);
+        List<Integer> result = NestedLoops.task329(ConsoleReader.inputNaturalNumber(sc), ConsoleReader.inputNaturalNumber(sc));
         if (result.isEmpty()) {
             System.out.println("There are no such numbers!");
         } else {
@@ -246,9 +243,7 @@ public class Runner {
     }
 
     static void runTask226(Scanner sc) {
-        int m = ConsoleReader.inputNaturalNumber(sc);
-        int n = ConsoleReader.inputNaturalNumber(sc);
-        List<Integer> res = LoopsAndBranch.task226(m, n);
+        List<Integer> res = LoopsAndBranch.task226(ConsoleReader.inputNaturalNumber(sc), ConsoleReader.inputNaturalNumber(sc));
         if (res.isEmpty()) {
             System.out.println("There are no such numbers, that you need!");
         } else {
@@ -263,8 +258,7 @@ public class Runner {
     }
 
     static void runTask559(Scanner sc) {
-        int n = ConsoleReader.inputNaturalNumber(sc);
-        List<Integer> result = IntegerNumbers.task559(n);
+        List<Integer> result = IntegerNumbers.task559(ConsoleReader.inputNaturalNumber(sc));
         if (result.isEmpty()) {
             System.out.println("There are no such numbers,less then n!");
         }
