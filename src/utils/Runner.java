@@ -388,5 +388,5 @@ public class Runner {
     static void runTask569(Scanner sc) {
         int n = ConsoleReader.inputNaturalNumber(sc);
         System.out.printf("If n = %s%nRezult: %s%n",n,IntegerNumbers.task569(n));
-    }
+    }    
 }
