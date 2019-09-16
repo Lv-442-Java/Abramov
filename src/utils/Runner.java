@@ -191,12 +191,12 @@ public class Runner {
     }
 
     static void runTask87(Scanner sc) {
-        Integer n;
-        Integer m;
+        int n;
+        int m;
         while (true) {
             n = ConsoleReader.inputNaturalNumber(sc);
             m = ConsoleReader.inputNaturalNumber(sc);
-            if (n.toString().length() < m) {
+            if (Integer.toString(n).length() < m) {
                 System.out.println("Second number is too big!");
             } else {
                 break;
