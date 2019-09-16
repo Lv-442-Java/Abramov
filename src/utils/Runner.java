@@ -1,15 +1,15 @@
 package utils;
 
-import chapter.one.ConsoleReader;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Random;
+import java.util.ArrayList;
 
 import chapter.one.LoopsAndBranch;
 import chapter.one.NestedLoops;
 import chapter.one.SimpleLoops;
 import chapter.two.IntegerNumbers;
-import java.util.Random;
 
 public class Runner {
 
