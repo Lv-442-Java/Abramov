@@ -6,6 +6,9 @@ import java.util.List;
 public class NestedLoops {
     public static ArrayList<Integer> task329(int n, int m) {
         ArrayList<Integer> result = new ArrayList<>();
+        if(Math.sqrt(m)%1!=0){
+            return result;
+        }
         int neededSum = (int) Math.sqrt(m);
         for (int i = 0; i < n; i++) {
             int testNumber = i;
@@ -42,11 +45,8 @@ public class NestedLoops {
     }
 
 
-    public static List<Integer> task330(int number) throws NumberFormatException {
+    public static List<Integer> task330(int number) {
         List<Integer> perfectNumbers = new ArrayList<Integer>();
-        if (!isNaturalNumber(number)) {
-            throw new NumberFormatException("Incorrect data!!!The number isn`t natural!!!");
-        }
         for (int i = 1; i < number; i++) {
             if (isPerfect(i)) {
                 perfectNumbers.add(i);
@@ -148,10 +148,6 @@ public class NestedLoops {
 
     public static List<Integer> task325(int n) {
 
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
-
         int[] simpleNumbers = erastofen(n / 2 + 1);
         ArrayList<Integer> result = new ArrayList<Integer>();
 
@@ -182,4 +178,22 @@ public class NestedLoops {
         }
         return result;
     }
+    
+    public static String task340(int m, int []list){          
+        String rezult =null;
+        boolean check = false;        
+        for(int i=0;i<list.length;i++){
+            for(int j=i;j<list.length;j++){
+                for(int k =j;k<list.length;k++){
+                    if(list[i] + list[j] + list[k] == m){
+                        check = true;
+                        rezult =  list[i] +" "+ list[j] +" "+ list[k];                    
+                    }                                       
+                }                    
+            }
+        }        
+        if(!check)            
+            rezult = "Can't find numbers! Please try again!";       
+        return rezult;       
+    } 
 }

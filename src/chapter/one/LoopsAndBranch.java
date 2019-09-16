@@ -53,23 +53,15 @@ public class LoopsAndBranch {
         return amount;
     }
 
-    public static int task178c(int n, int... numbers) throws NumberFormatException {
+    public static int task178c(int[] numbers) {
         int count = 0;
-        for (int i = 0; i < n && n <= numbers.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             int element = numbers[i];
-            if (isNaturalNumber(element)) {
-                if (Math.sqrt(element) % 2 == 0) {
-                    count++;
-                }
-            } else {
-                throw new NumberFormatException("Incorrect data!!!The sequence contains not a natural numbers!!!");
+            if (Math.sqrt(element) % 2.0 == 0.0) {
+                count++;
             }
         }
         return count;
-    }
-
-    private static boolean isNaturalNumber(int number) {
-        return number > 0;
     }
 
     public static List<Integer> task227(int firstNumber, int secondNumber) {
@@ -97,10 +89,6 @@ public class LoopsAndBranch {
     }
 
     public static List<Integer> task225(int n) {
-
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
 
         ArrayList<Integer> result = new ArrayList<Integer>();
 
@@ -203,6 +191,25 @@ public class LoopsAndBranch {
             }
         }
 
+    }    
+    
+    public static String task242(int n){        
+        double rezult =0.0;        
+        for(int k=0;k<n;k++)
+            rezult = (Math.pow((-1), k*(k-1)))/factorial(n);         
+        return  String.format("%.10f", rezult);
+    }
+    
+    public static int factorial(int n){        
+        if(n<0){
+            throw new IllegalArgumentException("Argument " +n+ " les than zero!!!");
+        }else{        
+            int rezult=1;
+            for(int i=n;i>0;i--){                
+               rezult*=i; 
+            }                
+            return rezult;        
+        }
     }
 }
 

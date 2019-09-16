@@ -1,6 +1,7 @@
 package chapter.two;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class IntegerNumbers {
@@ -88,10 +89,6 @@ public class IntegerNumbers {
 
     public static int[][] task555(int n) {
 
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
-
         int[][] triangle = new int[n][];
 
         triangle[0] = new int[]{1};
@@ -146,6 +143,17 @@ public class IntegerNumbers {
 
         }
 
+    }
+    
+    public static List<Integer> task569(int n){   
+        List<Integer> list = new ArrayList<>();        
+        while(n>0){
+            if((n%2==0)||(n%3==0)&&(n%5==0))
+                list.add(n);             
+            n--;
+        }        
+        Collections.sort(list);            
+        return list;
     }
 
 
