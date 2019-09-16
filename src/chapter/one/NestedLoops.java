@@ -148,10 +148,6 @@ public class NestedLoops {
 
     public static List<Integer> task325(int n) {
 
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
-
         int[] simpleNumbers = erastofen(n / 2 + 1);
         ArrayList<Integer> result = new ArrayList<Integer>();
 

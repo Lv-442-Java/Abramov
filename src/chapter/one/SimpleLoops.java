@@ -26,10 +26,6 @@ public class SimpleLoops {
 
     public static int task86b(int n) {
 
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
-
         int n2 = n;
         int n1 = n;
         int sum = 0;
@@ -108,9 +104,6 @@ public class SimpleLoops {
 
     public static int task108(int n) {
 
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
         if (n == 1) return 1;
 
         int degree = 1;
