@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.Integer.parseInt;
+import java.util.Random;
 
 public class SimpleLoops {
     public static int task88(int n) {
@@ -111,5 +112,23 @@ public class SimpleLoops {
         }
         sum+=Math.pow(-1, n);
     return sum;        
-    } 
+    }
+    
+    
+    public static int [] task184(int p,int q){
+        Random random = new Random(100);
+        int [] list = new int [67];
+        if((p>q)&&(q>=0)){         
+            for (int i=0;i<67;i++)
+                 list[i] = random.nextInt(400);
+            for(int i=0;i<list.length;i++){
+                 if(list[i]%p==q){
+                     list[i]=0;
+                }
+            }             
+        }else {             
+             throw new IllegalArgumentException("Variable < p > must be bigger than < q >  ");
+        }         
+        return list;
+    }   
 }
