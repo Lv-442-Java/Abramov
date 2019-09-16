@@ -152,7 +152,7 @@ public class NestedLoops {
                             System.out.println(i*i);
                             System.out.println(j*j);
                             System.out.println(z*z);
-                            reusult = true;
+                            result = true;
                         }
                         if ( (i*i + j*j + z*z) > n){
                             break;
