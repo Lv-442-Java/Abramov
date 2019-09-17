@@ -2,7 +2,6 @@ package utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -25,7 +24,7 @@ public class Runner {
                 runTask88_c();
                 break;
             case "task86a":
-                runTask86a();
+                runTask86a(sc);
                 break;
             case "task86b":
                 runTask86b(sc);
@@ -37,13 +36,13 @@ public class Runner {
                 runTask88g(sc);
                 break;
             case "task107":
-                runTask107();
+                runTask107(sc);
                 break;
             case "task108":
                 runTask108(sc);
                 break;
             case "task224":
-                runTask224();
+                runTask224(sc);
                 break;
             case "task178b":
                 runTask178b(sc);
@@ -67,7 +66,7 @@ public class Runner {
                 runTask330(sc);
                 break;
             case "task554":
-                runTask554();
+                runTask554(sc);
                 break;
             case "task560":
                 runTask560();
@@ -94,7 +93,7 @@ public class Runner {
                 runTask331a();
                 break;
             case "task323":
-                runTask323();
+                runTask323(sc);
                 break;
             case "task325":
                 runTask325(sc);
@@ -180,9 +179,10 @@ public class Runner {
         System.out.println(simpleLoops.task88g(ConsoleReader.inputNaturalNumber(sc)));
     }
 
-    static void runTask86a() {
-        SimpleLoops simpleLoops = new SimpleLoops();
-        System.out.println(SimpleLoops.task86a(666));
+    static void runTask86a(Scanner sc) {
+        int num;
+        num = ConsoleReader.inputNaturalNumber(sc);
+        System.out.println(SimpleLoops.task86a(num));
     }
 
     static void runTask86b(Scanner sc) {
@@ -218,9 +218,10 @@ public class Runner {
         System.out.println("result: " + SimpleLoops.task87(n, m));
     }
 
-    static void runTask107() {
-        System.out.println("Write number m>1");
-        System.out.println(SimpleLoops.task107(42));
+    static void runTask107(Scanner sc) {
+        int num;
+        num = ConsoleReader.inputNaturalNumber(sc);
+        System.out.println(SimpleLoops.task107(num));
     }
 
     static void runTask108(Scanner sc) {
@@ -232,9 +233,11 @@ public class Runner {
         System.out.println(SimpleLoops.task108(num));
     }
 
-    static void runTask224() {
-        System.out.println("This task show you all divisors for number 26");
-        System.out.println(LoopsAndBranch.task224(26));
+    static void runTask224(Scanner sc) {
+        System.out.println("This task show you all divisors for number: ");
+        int num;
+        num = ConsoleReader.inputNaturalNumber(sc);
+        System.out.println(LoopsAndBranch.task224(num));
     }
 
     static void runTask178b(Scanner sc) {
@@ -290,9 +293,13 @@ public class Runner {
 
     }
 
-    static void runTask554() {
-        System.out.println("Limit 25");
-        IntegerNumbers.task554(25);
+    static void runTask554(Scanner sc) {
+        System.out.println("Put the limit number: ");
+        List<ArrayList<Integer>> result = IntegerNumbers.task554(ConsoleReader.inputNaturalNumber(sc));
+        if (result.isEmpty()) {
+            System.out.println("There are no such numbers");
+        }
+        System.out.println(result);
     }
 
     static void runTask559(Scanner sc) {
@@ -335,9 +342,11 @@ public class Runner {
         LoopsAndBranch.task243b(100);
     }
 
-    static void runTask323() {
-        System.out.println("Get all coprime integers <50");
-        System.out.println(NestedLoops.task323(50));
+    static void runTask323(Scanner sc) {
+        System.out.println("Get all coprime integers for number:");
+        int num;
+        num = ConsoleReader.inputNaturalNumber(sc);
+        System.out.println(NestedLoops.task323(num));
     }
 
     static void runTask325(Scanner sc) {

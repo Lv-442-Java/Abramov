@@ -73,18 +73,23 @@ public class IntegerNumbers {
         return result;
     }
 
-    public static void task554(int n) {
+    public static List<ArrayList<Integer>> task554(int n) {
         int a, b, c;
-
+        List<ArrayList<Integer>> pythagoreanTriples = new ArrayList<>();
+        ArrayList<Integer> number = new ArrayList<>();
         for (c = 1; c <= n; c++) {
             for (b = 1; b <= c; b++) {
                 for (a = 1; a <= b; a++) {
                     if ((Math.pow(a, 2) + Math.pow(b, 2)) == Math.pow(c, 2)) {
-                        System.out.println(a + " " + b + " " + c);
+                        number.add(a);
+                        number.add(b);
+                        number.add(c);
+                        pythagoreanTriples.add(number);
                     }
                 }
             }
         }
+        return pythagoreanTriples;
     }
 
     public static int[][] task555(int n) {
