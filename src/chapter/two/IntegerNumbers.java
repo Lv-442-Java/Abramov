@@ -1,6 +1,7 @@
 package chapter.two;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class IntegerNumbers {
@@ -60,37 +61,38 @@ public class IntegerNumbers {
     }
 
 
-    public static String task561(int n) {
-        String result = "";
+    public static ArrayList<Integer> task561(int n) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
         for (int i = 1; i <= n; i++) {
             int square = i * i;
             int last = square % 10;
             if (i == last) {
-                result = result + i + "\n";
+                result.add(i);
             }
         }
         return result;
     }
 
-    public static void task554(int n) {
+    public static List<ArrayList<Integer>> task554(int n) {
         int a, b, c;
-
+        List<ArrayList<Integer>> pythagoreanTriples = new ArrayList<>();
+        ArrayList<Integer> number = new ArrayList<>();
         for (c = 1; c <= n; c++) {
             for (b = 1; b <= c; b++) {
                 for (a = 1; a <= b; a++) {
                     if ((Math.pow(a, 2) + Math.pow(b, 2)) == Math.pow(c, 2)) {
-                        System.out.println(a + " " + b + " " + c);
+                        number.add(a);
+                        number.add(b);
+                        number.add(c);
+                        pythagoreanTriples.add(number);
                     }
                 }
             }
         }
+        return pythagoreanTriples;
     }
 
     public static int[][] task555(int n) {
-
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
 
         int[][] triangle = new int[n][];
 
@@ -160,5 +162,32 @@ public class IntegerNumbers {
         return result;
     }
 
+    public static List<Integer> task569(int n) {
+        List<Integer> list = new ArrayList<>();
+        while (n > 0) {
+            if ((n % 2 == 0) || (n % 3 == 0) && (n % 5 == 0))
+                list.add(n);
+            n--;
+        }
+        Collections.sort(list);
+        return list;
+    }
+
+
+    public static boolean task565(int k, int l, int m) {
+        int count = 0;
+        for (int i = k; i <= l; i++) {
+            while (i == 1) {
+                if (i % 2 == 0) {
+                    i = i / 2;
+                    count++;
+                } else {
+                    i = i * 3 + 1;
+                    count++;
+                }
+            }
+        }
+        return count < m ? true : false;
+    }
 
 }

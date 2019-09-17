@@ -2,6 +2,7 @@ package chapter.one;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class LoopsAndBranch {
         return array;
     }
 
-    public void task241(int n, double x) {
+    public double task241(int n, double x) {
         double result = 0.0;
         if (n > 0) {
             for (int i = 1; i <= n; i++) {
@@ -24,51 +25,45 @@ public class LoopsAndBranch {
                 result += result;
                 System.out.println(result);
             }
-        } else System.out.println("Wrong input values");
+        }
+        return result;
     }
 
-    public static void task182(int a, int n) {
+    public static List<Integer> task182(int[] arrayList) {
+        List<Integer> outputList = new ArrayList<>();
         int sum = 0;
         int count = 0;
-        if ((a <= 0) && (n > 0)) {
-            for (int i = a; i < n; i++) {
-                if (((i % 5) == 0) & (i % 7 != 0)) {
-                    sum += i;
-                    count++;
-                }
+        for (int x : arrayList) {
+            if (((x % 5) == 0) & (x % 7 != 0)) {
+                sum += x;
+                count++;
             }
-            System.out.println("sum is : " + sum + "  " + "count is : " + count);
-        } else System.out.println(" Wrong input values");
+        }
+        outputList.add(count);
+        outputList.add(sum);
+        return outputList;
     }
 
 
     public static int task178b(int[] sequence) {
         int amount = 0;
-        for (int i = 0; i < sequence.length; i++) {
-            if (sequence[i] % 3 == 0 && sequence[i] % 5 != 0) {
+        for (int elem : sequence) {
+            if (elem % 3 == 0 && elem % 5 != 0) {
                 amount++;
             }
         }
         return amount;
     }
 
-    public static int task178c(int n, int... numbers) throws NumberFormatException {
+    public static int task178c(int[] numbers) {
         int count = 0;
-        for (int i = 0; i < n && n <= numbers.length; i++) {
+        for (int i = 0; i < numbers.length; i++) {
             int element = numbers[i];
-            if (isNaturalNumber(element)) {
-                if (Math.sqrt(element) % 2 == 0) {
-                    count++;
-                }
-            } else {
-                throw new NumberFormatException("Incorrect data!!!The sequence contains not a natural numbers!!!");
+            if (Math.sqrt(element) % 2.0 == 0.0) {
+                count++;
             }
         }
         return count;
-    }
-
-    private static boolean isNaturalNumber(int number) {
-        return number > 0;
     }
 
     public static List<Integer> task227(int firstNumber, int secondNumber) {
@@ -96,10 +91,6 @@ public class LoopsAndBranch {
     }
 
     public static List<Integer> task225(int n) {
-
-        if (n <= 0) {
-            throw new IllegalArgumentException("The argument 'int n' cannot be less than one");
-        }
 
         ArrayList<Integer> result = new ArrayList<Integer>();
 
@@ -136,31 +127,33 @@ public class LoopsAndBranch {
         return result;
     }
 
-    public static String task243a(int n) {
-        String result = "";
+    public static ArrayList<int[]> task243a(double n) {
+        int[] result = new int[2];
+        ArrayList<int[]> list = new ArrayList<int[]>();
         int x;
         int y;
-        for (x = 1; x < n * n; x++) {
-            int z = x * x + 1;
-            if (z > n) {
-                break;
-            }
-            for (y = 1; y < n * n; y++) {
-                z = x * x + y * y;
+        int r = 1;
+        double limit = Math.pow(n, 1.0 / 2.0) - 1;
+        for (x = 1; x < limit; x++) {
+            for (y = r; y < limit; y++) {
+                int z = x * x + y * y;
                 if (z == n) {
-                    result = result + "x: " + x + " y: " + y + "\n";
+                    result[0] = x;
+                    result[1] = y;
+                    list.add(result);
                 } else if (z > n) {
                     break;
                 }
             }
+            r++;
         }
-        return result;
+        return list;
     }
 
-    public static int task178h(int n, double... arg) {
+    public static int task178h(int[] arg) {
         int amount = 0;
-        for (int i = 1; i < n + 1 && n + 1 < arg.length; i++) {
-            if (arg[i] < (arg[i - 1] + arg[i + 1]) / 2) {
+        for (int i = 1; i < arg.length - 1; i++) {
+            if (arg[i] < (arg[i - 1] + arg[i + 1]) / 2.0) {
                 amount = amount + 1;
             }
         }
@@ -207,6 +200,25 @@ public class LoopsAndBranch {
 
         return result;
 
+    }
+
+    public static String task242(int n) {
+        double rezult = 0.0;
+        for (int k = 0; k < n; k++)
+            rezult = (Math.pow((-1), k * (k - 1))) / factorial(n);
+        return String.format("%.10f", rezult);
+    }
+
+    public static int factorial(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Argument " + n + " les than zero!!!");
+        } else {
+            int rezult = 1;
+            for (int i = n; i > 0; i--) {
+                rezult *= i;
+            }
+            return rezult;
+        }
     }
 }
 
