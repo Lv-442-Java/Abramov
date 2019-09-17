@@ -43,32 +43,36 @@ public class SimpleLoops {
         return sum;
     }
 
-    public static void task88_c(int n) {
+    public static Integer task88c(int n) {
 
-        int[] digitArray;
-        int decimal = 0;
-        int tmp = n;
 
-        while (n > 0) {
-            decimal++;
-            n /= 10;
+        int z = n;
+        int k = 0;
+        int i = 0;
+        int num1, num2, num3, num4;
+        while (z > 0) {
+            k++;
+            z = z / 10;
         }
-        digitArray = new int[decimal];
-        n = tmp;
-        for (int i = 0; i < decimal; i++) {
-            digitArray[i] = n % 10;
-            n /= 10;
-        }
-        tmp = digitArray[0];
-        digitArray[0] = digitArray[decimal - 1];
-        digitArray[decimal - 1] = tmp;
+        i = n % 10;
 
-        for (int i = decimal - 1; i >= 0; i--) {
-            System.out.print(digitArray[i]);
+        num1 = (int) (i * Math.pow(10, k - 1));
+        num2 = (int) (n / Math.pow(10, k - 1));
+        num3 = num1 + num2;
+        num3 = num3 - i;
+        num4 = (int) (n % Math.pow(10, k - 1));
+        num3 = num3 + num4;
 
+        return num3;
 
-        }
     }
+
+
+
+
+
+
+
 
     public static void task88g(int n) {
         // add "1" before and after number "n"

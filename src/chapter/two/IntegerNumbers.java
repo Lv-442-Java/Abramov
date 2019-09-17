@@ -111,41 +111,53 @@ public class IntegerNumbers {
     }
 
 
-    public static void task562() {
+    public static ArrayList<Integer> task562() {
 
 
-        int k = 1;
-        int s = 1;
+        ArrayList<Integer> result = new ArrayList<>();
+
+
         for (int i = 10; i < 100; i++) {
-            k = i;
-            s = k / 10 + k % 10;
-            if (s * s == i) {
-                System.out.println(k);
+
+            if (check(i, 2)) {
+                result.add(i);
             }
         }
+
         for (int i = 100; i < 1000; i++) {
-            k = i;
-            while (k > 0) {
-                s = k % 10;
-                k = k / 10;
-                if (Math.pow(s, 3) == i) {
-                    System.out.println(k);
-                }
+            if (check(i, 3)) {
+                result.add(i);
             }
-
         }
+
         for (int i = 1000; i < 10000; i++) {
-            k = i;
-            while (k > 0) {
-                s = k % 10;
-                k = k / 10;
-                if (Math.pow(s, 4) == i) {
-                    System.out.println(k);
-                }
+            if (check(i, 4)) {
+                result.add(i);
             }
-
         }
 
+        return result;
+
+    }
+
+
+    private static boolean check(int n, int k) {
+        int tmp = n;
+        int s = 0;
+        int a = 0;
+        int digit = 0;
+        boolean result = false;
+
+        while (tmp > 0) {
+            a = tmp % 10;
+            tmp /= 10;
+            digit++;
+            s += Math.pow(a, k);
+            if (s == n && digit == k) {
+                result = true;
+            }
+        }
+        return result;
     }
 
 

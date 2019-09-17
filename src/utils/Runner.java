@@ -18,7 +18,7 @@ public class Runner {
                 runTask88();
                 break;
             case "task88c":
-                runTask88_c();
+                runTask88c(sc);
                 break;
             case "task86a":
                 runTask86a();
@@ -99,13 +99,13 @@ public class Runner {
                 runTask178h();
                 break;
             case "task178d":
-                runTask178d();
+                runTask178d(sc);
                 break;
             case "task243b":
-                runTask243b();
+                runTask243b(sc);
                 break;
             case "task331b":
-                runTask331b();
+                runTask331b(sc);
                 break;
             case "task332":
                 runTask332();
@@ -168,9 +168,13 @@ public class Runner {
         System.out.println(SimpleLoops.task88(5569));
     }
 
-    static void runTask88_c() {
-        SimpleLoops simpleLoops = new SimpleLoops();
-        SimpleLoops.task88_c(125);
+    static void runTask88c(Scanner sc ) {
+
+        Integer n;
+        n = ConsoleReader.inputNaturalNumber(sc);
+        System.out.println("result: " + SimpleLoops.task88c(n));
+
+
     }
 
     static void runTask87() {
@@ -245,14 +249,29 @@ public class Runner {
         System.out.println(IntegerNumbers.task561(1000));
     }
 
-    static void runTask178d() {
-        int[] array = {1, 2, 3, 4, 5, 6};
-        System.out.println(LoopsAndBranch.task178d(array, 6));
+    static void runTask178d (Scanner sc) {
+
+        Integer n;
+        int [] array;
+        while (true) {
+            n = ConsoleReader.inputNaturalNumber(sc);
+            array = ConsoleReader.inputArrayOfNaturalNumbers(sc);
+
+            if (array.length > n) {
+                System.out.println("Length of array is to big!");
+            }
+            else {
+                break;
+            }
+        }
+        System.out.println("result: " + LoopsAndBranch.task178d(array, n));
     }
 
 
-    static void runTask243b() {
-        LoopsAndBranch.task243b(100);
+    static void runTask243b(Scanner sc) {
+        Integer n = ConsoleReader.inputNaturalNumber(sc);
+        System.out.println("result: " + LoopsAndBranch.task243b(n));
+
     }
 
     static void runTask323() {
@@ -264,11 +283,16 @@ public class Runner {
         System.out.println(NestedLoops.task325(2001));
     }
 
-    static void runTask331b() {
-        System.out.println(NestedLoops.task331b(50));
+    static void runTask331b(Scanner sc) {
+        Integer n = ConsoleReader.inputNaturalNumber(sc);
+        System.out.println("result: " + NestedLoops.task331b(n));
     }
 
     static void runTask562() {
-        IntegerNumbers.task562();
+
+        System.out.println("result: ");
+        System.out.println(IntegerNumbers.task562());
+
+
     }
 }

@@ -163,18 +163,25 @@ public class NestedLoops {
         return result;
     }
 
-    public static boolean task331b(int n) {
-        boolean result = false;
-        for (int i = 1; i < n; i++) {
-            for (int j = 1; j < n; j++) {
-                for (int z = 1; z < n; z++) {
-                    if (n == i * i + j * j + z * z) {
-                        System.out.println(i * i);
-                        System.out.println(j * j);
-                        System.out.println(z * z);
-                        result = true;
+    public static ArrayList<String> task331b(int n) {
+
+
+        ArrayList<String> result = new ArrayList<>();
+        for (int i = 1; i < Math.sqrt(n); i++) {
+            for (int j = 1; j < Math.sqrt(n); j++) {
+                for (int z = 1; z < Math.sqrt(n); z++) {
+
+                    int squareX = i*i;
+                    int squareY = j*j;
+                    int squareZ = z*z;
+
+                    if (n == squareX + squareY + squareZ) {
+
+                        result.add(String.valueOf(squareX) + "+" +  String.valueOf(squareX) + "+" + String.valueOf(squareX));
+
+
                     }
-                    if ((i * i + j * j + z * z) > n) {
+                    if (squareX + squareY + squareZ > n) {
                         break;
                     }
                 }
