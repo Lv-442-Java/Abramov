@@ -173,25 +173,32 @@ public class LoopsAndBranch {
         return k;
     }
 
-    public static void task243b(int n) {
+    public static ArrayList<String> task243b(int n) {
 
         int x = 0;
         int y = 0;
-        for (int i = 1; i < n * n; i++) {
-            for (int j = 1; j < n * n; j++) {
-                if (n == i * i + j * j) {
+        ArrayList<String> result = new ArrayList<>();
 
-                    x = i * i;
-                    y = j * j;
+        for (int i = 1; i < Math.sqrt(n); i++) {
+            for (int j = 1; j < Math.sqrt(n); j++) {
+                int squareX = i*i;
+                int squareY =j*j;
+                if (n == squareX + squareY) {
 
-                    if (i * i + j * j > n) {
+                    x = squareX;
+                    y = squareY;
+
+                    result.add(String.valueOf(x) + "+" + String.valueOf(y));
+
+                    if (squareX + squareY > n) {
                         break;
                     }
 
-                    System.out.println(x + "+" + y);
                 }
             }
         }
+
+        return result;
 
     }
 

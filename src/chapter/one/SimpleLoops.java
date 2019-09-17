@@ -39,117 +39,120 @@ public class SimpleLoops {
         return sum;
     }
 
-    public static void task88_c(int n) {
+    public static Integer task88c(int n) {
 
-        int[] digitArray;
-        int decimal = 0;
-        int tmp = n;
 
-        while (n > 0) {
-            decimal++;
-            n /= 10;
+        int z = n;
+        int k = 0;
+        int i = 0;
+        int num1, num2, num3, num4;
+        while (z > 0) {
+            k++;
+            z = z / 10;
         }
-        digitArray = new int[decimal];
-        n = tmp;
-        for (int i = 0; i < decimal; i++) {
-            digitArray[i] = n % 10;
-            n /= 10;
-        }
-        tmp = digitArray[0];
-        digitArray[0] = digitArray[decimal - 1];
-        digitArray[decimal - 1] = tmp;
+        i = n % 10;
 
-        for (int i = decimal - 1; i >= 0; i--) {
-            System.out.print(digitArray[i]);
+        num1 = (int) (i * Math.pow(10, k - 1));
+        num2 = (int) (n / Math.pow(10, k - 1));
+        num3 = num1 + num2;
+        num3 = num3 - i;
+        num4 = (int) (n % Math.pow(10, k - 1));
+        num3 = num3 + num4;
 
+        return num3;
 
-        }
-    }
-
-    public static int task88g(int n) {
-        // add "1" before and after number "n"
-
-        String number = Integer.toString(n);
-
-        number = "1" + number + "1";
-        int newN = parseInt(number);
-        return newN;
     }
 
 
-    public static int task87(long n, int m) {
-        int sum = 0;
-        for (int i = 0; i < m; i++) {
-            sum += n % 10;
-            n /= 10;
-        }
-        return sum;
-    }
 
-    public static int task107(int m) {
-        int result = 0;
-        if (m > 1) {
-            int k = 0;
-            while (Math.pow(4, k) < m) {
-                k++;
+
+        public static int task88g ( int n){
+
+            // add "1" before and after number "n"
+
+            String number = Integer.toString(n);
+
+            number = "1" + number + "1";
+            int newN = parseInt(number);
+            return newN;
+        }
+
+
+        public static int task87 ( long n, int m){
+            int sum = 0;
+            for (int i = 0; i < m; i++) {
+                sum += n % 10;
+                n /= 10;
             }
-            result = --k;
-        } else
-            System.out.println("Wrong input");
-        return result;
-    }
-
-    public static int task108(int n) {
-
-        if (n == 1) return 1;
-
-        int degree = 1;
-
-        for (int i = 0; i < Integer.bitCount(Integer.MAX_VALUE) - 1; i++) {
-            degree = degree << 1;
-            if (degree > n) return degree;
+            return sum;
         }
 
-        return -1;
-    }
-
-    public static boolean task88a(int number) {
-        //return Arrays.asList(Integer.valueOf(number*number).toString().toCharArray()).contains('3');
-        return getNumeralsFromNumber(number * number).contains(3);
-    }
-
-    private static List<Integer> getNumeralsFromNumber(int number) {
-        List<Integer> numerals = new ArrayList<Integer>();
-        do {
-            numerals.add(number % 10);
-            number /= 10;
-        } while (number != 0);
-        return numerals;
-    }
-    
-    public static int task86_h(int n){        
-        int sum=0,sign,i=1;        
-            while(n>1){        
-                if(i%2==0){
-                    sign=-1;
-                }else sign=1;
-                sum+= n*sign;
-                n--; i++;
-            }
-            sum+=Math.pow(-1, n);
-        return sum;        
-    }
-    
-    public static int [] task184(int p,int q, int [] list){        
-        if((p>q)&&(q>=0)){           
-            for(int i=0;i<list.length;i++){
-                if(list[i]%p==q){
-                     list[i]=0;
+        public static int task107 ( int m){
+            int result = 0;
+            if (m > 1) {
+                int k = 0;
+                while (Math.pow(4, k) < m) {
+                    k++;
                 }
-            }             
-        }else {             
-             throw new IllegalArgumentException("Variable < p > must be bigger than < q >  ");
-        }         
-        return list;
-    }  
-}
+                result = --k;
+            } else
+                System.out.println("Wrong input");
+            return result;
+        }
+
+        public static int task108 ( int n){
+
+            if (n == 1) return 1;
+
+            int degree = 1;
+
+            for (int i = 0; i < Integer.bitCount(Integer.MAX_VALUE) - 1; i++) {
+                degree = degree << 1;
+                if (degree > n) return degree;
+            }
+
+            return -1;
+        }
+
+        public static boolean task88a ( int number){
+            //return Arrays.asList(Integer.valueOf(number*number).toString().toCharArray()).contains('3');
+            return getNumeralsFromNumber(number * number).contains(3);
+        }
+
+        private static List<Integer> getNumeralsFromNumber ( int number){
+            List<Integer> numerals = new ArrayList<Integer>();
+            do {
+                numerals.add(number % 10);
+                number /= 10;
+            } while (number != 0);
+            return numerals;
+        }
+
+        public static int task86_h( int n){
+            int sum = 0, sign, i = 1;
+            while (n > 1) {
+                if (i % 2 == 0) {
+                    sign = -1;
+                } else sign = 1;
+                sum += n * sign;
+                n--;
+                i++;
+            }
+            sum += Math.pow(-1, n);
+            return sum;
+        }
+
+        public static int[] task184 ( int p, int q, int[] list){
+            if ((p > q) && (q >= 0)) {
+                for (int i = 0; i < list.length; i++) {
+                    if (list[i] % p == q) {
+                        list[i] = 0;
+                    }
+                }
+            } else {
+                throw new IllegalArgumentException("Variable < p > must be bigger than < q >  ");
+            }
+            return list;
+        }
+    }
+
