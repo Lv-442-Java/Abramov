@@ -1,6 +1,7 @@
 package chapter.one;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class NestedLoops {
@@ -71,31 +72,27 @@ public class NestedLoops {
         return number > 0;
     }
 
-    public static String task331a(int n) {
-        String result = "";
+    public static ArrayList<int[]> task331a(int n) {
+        ArrayList<int[]> list = new ArrayList<>();
         int x, y, z;
-        for (x = 1; x < n * n; x++) {
-            int s = x * x + 1;
-            if (s > n) {
-                break;
-            }
-            for (y = 1; y < n * n; y++) {
-                s = x * x + y * y + 1;
-                if (s > n) {
-                    break;
-                }
-                for (z = 1; z < n * n; z++) {
-                    s = x * x + y * y + z * z;
+        double limit = Math.pow(n,1.0/2.0) + 1;
+        for (x = 1; x < limit; x++) {
+            for (y = 1; y < limit; y++) {
+                for (z = 1; z < limit; z++) {
+                    int s = x * x + y * y + z * z;
                     if (s == n) {
-                        result = result + "x: " + x + " y: " + y + " z: " + z + "\n";
+                        int[] result = new int[3];
+                        result[0] = x;
+                        result[1] = y;
+                        result[2] = z;
+                        list.add(result);
                     } else if (s > n) {
                         break;
                     }
-
                 }
             }
         }
-        return result;
+        return list;
     }
 
     private static int GCD(int a, int b) {
