@@ -89,7 +89,7 @@ public class Runner {
                 runTask561();
                 break;
             case "task331a":
-                runTask331a();
+                runTask331a(sc);
                 break;
             case "task323":
                 runTask323();
@@ -178,8 +178,16 @@ public class Runner {
         System.out.println(LoopsAndBranch.task178h(consoleReader.inputArrayOfNaturalNumbers()));
     }
 
-    static void runTask331a() {
-        System.out.println(NestedLoops.task331a(500));
+    static void runTask331a(Scanner sc) {
+        ArrayList<int[]> result = NestedLoops.task331a(ConsoleReader.inputNaturalNumber(sc));
+        if (result.isEmpty()) {
+            System.out.println("Result not found!");
+        } else {
+            System.out.println(result.size());
+            for (int[] array : result) {
+                System.out.println("x: " + array[0] + " y: " + array[1] + " z: " + array[2]);
+            }
+        }
     }
 
     static void runTask182() {
