@@ -3,8 +3,12 @@ package utils;
 import java.util.Scanner;
 
 public class ConsoleReader {
+	private Scanner sc;
+	public ConsoleReader(Scanner sc) {
+		this.sc = sc;
+	}
 
-	public static int inputNaturalNumber(Scanner sc) {
+	public int inputNaturalNumber() {
 		while (true) {
 			System.out.println("Input natural number:");
 			if (sc.hasNextInt()) {
@@ -18,18 +22,18 @@ public class ConsoleReader {
 		}
 	}
 
-	public static int[] inputArrayOfNaturalNumbers(Scanner sc) {
+	public int[] inputArrayOfNaturalNumbers() {
 		System.out.println("Input size of array:");
-		int n = inputNaturalNumber(sc);
+		int n = inputNaturalNumber();
 		int[] arr = new int[n];
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println("Input arr[" + i + "]:");
-			arr[i] = inputNaturalNumber(sc);
+			arr[i] = inputNaturalNumber();
 		}
 		return arr;
 	}
 
-	public static int inputIntegerNumber(Scanner sc) {
+	public int inputIntegerNumber() {
 		while (true) {
 			System.out.println("Input integer number:");
 			if (sc.hasNextInt()) {
@@ -41,7 +45,7 @@ public class ConsoleReader {
 		}
 	}
 
-	public static double inputDoubleNumber(Scanner sc) {
+	public double inputDoubleNumber() {
 		while (true) {
 			System.out.println("Input double number(use ','):");
 			if (sc.hasNextDouble()) {
@@ -53,7 +57,7 @@ public class ConsoleReader {
 		}
 	}
 
-	private static boolean isNaturalNumber(int n) {
+	private boolean isNaturalNumber(int n) {
 		return n > 0;
 	}
 }
