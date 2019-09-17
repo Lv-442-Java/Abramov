@@ -128,7 +128,6 @@ public class LoopsAndBranch {
     }
 
     public static ArrayList<int[]> task243a(double n) {
-        int[] result = new int[2];
         ArrayList<int[]> list = new ArrayList<int[]>();
         int x;
         int y;
@@ -138,6 +137,7 @@ public class LoopsAndBranch {
             for (y = r; y < limit; y++) {
                 int z = x * x + y * y;
                 if (z == n) {
+                    int[] result = new int[2];
                     result[0] = x;
                     result[1] = y;
                     list.add(result);
