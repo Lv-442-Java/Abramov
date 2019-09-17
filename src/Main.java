@@ -1,5 +1,3 @@
-package src;
-
 import utils.Runner;
 
 public class Main {
