@@ -67,8 +67,20 @@ public class IntegerNumbers {
     public static ArrayList<Integer> task561(int n) {
         ArrayList<Integer> result = new ArrayList<Integer>();
         for (int i = 1; i <= n; i++) {
+            String number = Integer.toString(i);
             int square = i * i;
-            int last = square % 10;
+            int last;
+            int y;
+            String z = "";
+            int j = 0;
+            while(j < number.length())
+            {
+                y = square % 10;
+                z = y + "" +z;
+                square = square / 10;
+                j++;
+            }
+            last = Integer.parseInt(z);
             if (i == last) {
                 result.add(i);
             }
