@@ -2,6 +2,11 @@ package chapter.one;
 
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -25,10 +30,26 @@ class LoopsAndBranchTest {
 
     @Test
     void task178c() {
+        int [] testSequence = {1,4,9,36,49};
+        int actual = LoopsAndBranch.task178c(testSequence);
+        int expected = 2;
+        assertEquals(expected,actual);
     }
 
     @Test
-    void task227() {
+    void task227Positive() {
+        Integer [] result = {-6,-3,-2,-1,1,2,3,6};
+        List<Integer> expected = Arrays.asList(result);
+        List<Integer> actual = LoopsAndBranch.task227(12,18);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void task227Negative() {
+        Integer [] result = {-6,-3,-2,-1,1,2,3,6};
+        List<Integer> expected = Arrays.asList(result);
+        List<Integer> actual = LoopsAndBranch.task227(-12,18);
+        assertEquals(expected,actual);
     }
 
     @Test

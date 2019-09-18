@@ -1,5 +1,6 @@
 package chapter.one;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -42,7 +43,13 @@ class SimpleLoopsTest {
     }
 
     @Test
-    void task88a() {
+    void task88aTrue() {
+        assertTrue(SimpleLoops.task88a(6));
+    }
+
+    @Test
+    void task88aFalse() {
+        assertFalse(SimpleLoops.task88a(4));
     }
 
     @Test
