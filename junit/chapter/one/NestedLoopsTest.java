@@ -2,7 +2,11 @@ package chapter.one;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class NestedLoopsTest {
 
@@ -16,6 +20,10 @@ class NestedLoopsTest {
 
     @Test
     void task330() {
+        Integer[] result = {6,28,496};
+        List<Integer> expected = Arrays.asList(result);
+        List<Integer> actual = NestedLoops.task330(512);
+        assertEquals(expected,actual);
     }
 
     @Test
