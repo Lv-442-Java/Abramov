@@ -102,13 +102,13 @@ public class LoopsAndBranch {
             bigger = n;
         }
         int i = 1;
-        int toCheck = 0;
+        int toCheck = bigger*i;
         while (toCheck < m * n) {
-            toCheck = bigger * i;
             if (toCheck % smaller == 0) {
                 result.add(toCheck);
             }
             i++;
+            toCheck = bigger * i;
         }
         return result;
     }
