@@ -54,7 +54,7 @@ public class IntegerNumbers {
                 }
             }
         }
-        for (int k = 2; ((1 << k) - 1) <= n; k++) {
+        for (int k = 2; ((1 << k) - 1) < n; k++) {
             int num = (1 << k) - 1;
             if (prime[num]) {
                 result.add(num);
