@@ -25,6 +25,10 @@ class LoopsAndBranchTest {
 
     @Test
     void task178c() {
+        int [] testSequence = {1,4,9,36,49};
+        int actual = LoopsAndBranch.task178c(testSequence);
+        int expected = 2;
+        assertEquals(expected,actual);
     }
 
     @Test
