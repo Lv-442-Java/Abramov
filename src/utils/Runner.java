@@ -294,7 +294,9 @@ public class Runner {
     }
 
     static void runTask560() {
-        IntegerNumbers.task560();
+        for (int[] arr:IntegerNumbers.task560()) {
+            System.out.println(arr[0]+ " "+ arr[1]);;
+        }
     }
 
     static void runTask225() {
