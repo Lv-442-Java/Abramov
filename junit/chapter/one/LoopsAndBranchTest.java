@@ -2,7 +2,9 @@ package chapter.one;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LoopsAndBranchTest {
 
@@ -39,7 +41,12 @@ class LoopsAndBranchTest {
     }
 
     @Test
-    void task243a() {
+    void task243a() {//?
+        int naturalNumber = 100;
+        ArrayList<int[]> actualResult = LoopsAndBranch.task243a(naturalNumber);
+        for (int[] arr : actualResult) {
+            assertEquals(Math.pow(arr[0], 2) + Math.pow(arr[1], 2), naturalNumber);
+        }
     }
 
     @Test
@@ -48,6 +55,7 @@ class LoopsAndBranchTest {
 
     @Test
     void task178d() {
+
     }
 
     @Test

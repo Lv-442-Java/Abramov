@@ -20,6 +20,9 @@ class NestedLoopsTest {
 
     @Test
     void task331a() {
+        int[] actualResult = NestedLoops.task331a(347);
+        int[] expectedResult = {1,11,15};
+        assertEquals(actualResult, expectedResult);
     }
 
     @Test
