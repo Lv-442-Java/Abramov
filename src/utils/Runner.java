@@ -179,14 +179,11 @@ public class Runner {
     }
 
     static void runTask331a() {
-        ArrayList<int[]> result = NestedLoops.task331a(consoleReader.inputNaturalNumber());
-        if (result.isEmpty()) {
+        int[] result = NestedLoops.task331a(consoleReader.inputNaturalNumber());
+        if (result.length == 0) {
             System.out.println("Result not found!");
         } else {
-            System.out.println(result.size());
-            for (int[] array : result) {
-                System.out.println("x: " + array[0] + " y: " + array[1] + " z: " + array[2]);
-            }
+            System.out.println("x: " + result[0] + " y: " + result[1] + " z: " + result[2]);
         }
     }
 
