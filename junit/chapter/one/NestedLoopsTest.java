@@ -39,6 +39,10 @@ class NestedLoopsTest {
 
     @Test
     void task325() {
+        Integer[] result = {2,3,5};
+        List<Integer> expected = Arrays.asList(result);
+        List<Integer> actual = NestedLoops.task325(30);
+        assertEquals(expected,actual);
     }
 
     @Test

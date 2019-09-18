@@ -39,6 +39,15 @@ class IntegerNumbersTest {
 
     @Test
     void task555() {
+        int[][] expectedResult = new int[4][];
+        expectedResult  [0] = new int [] {1};
+        expectedResult  [1] = new int [] {1,1};
+        expectedResult  [2] = new int [] {1,2,1};
+        expectedResult  [3] = new int [] {1,3,3,1};
+        //int[][] actualResult = new int[4][];
+        int[][] actualResult = IntegerNumbers.task555(4);
+        assertArrayEquals(expectedResult, actualResult);
+        //triangle[0] = new int[]{1};
     }
 
     @Test

@@ -14,12 +14,16 @@ class SimpleLoopsTest {
         assertEquals(expectedResult, actualResult);
     }
 
+
     @Test
     void task86a() {
     }
 
     @Test
     void task86b() {
+        int actualResult = SimpleLoops.task86b(1256);
+        int expectedResult = 14;
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
@@ -40,6 +44,9 @@ class SimpleLoopsTest {
 
     @Test
     void task108() {
+        int actualResult = SimpleLoops.task108(30);
+        int expectedResult = 32;
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test

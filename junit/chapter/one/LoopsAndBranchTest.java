@@ -54,6 +54,10 @@ class LoopsAndBranchTest {
 
     @Test
     void task225() {
+        Integer [] result = {8, 16};
+        List<Integer> expected = Arrays.asList(result);
+        List<Integer> actual = LoopsAndBranch.task225(256);
+        assertEquals(expected,actual);
     }
 
     @Test

@@ -2,7 +2,6 @@ package chapter.one;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -15,18 +14,6 @@ public class LoopsAndBranch {
             }
         }
         return array;
-    }
-
-    public double task241(int n, double x) {
-        double result = 0.0;
-        if (n > 0) {
-            for (int i = 1; i <= n; i++) {
-                result = Math.pow(-1, Math.abs(Math.sqrt(i))) / i * Math.pow(x, i);
-                result += result;
-                System.out.println(result);
-            }
-        }
-        return result;
     }
 
     public static List<Integer> task182(int[] arrayList) {
@@ -43,7 +30,6 @@ public class LoopsAndBranch {
         outputList.add(sum);
         return outputList;
     }
-
 
     public static int task178b(int[] sequence) {
         int amount = 0;
@@ -180,8 +166,8 @@ public class LoopsAndBranch {
 
         for (int i = 1; i < Math.sqrt(n); i++) {
             for (int j = 1; j < Math.sqrt(n); j++) {
-                int squareX = i*i;
-                int squareY =j*j;
+                int squareX = i * i;
+                int squareY = j * j;
                 if (n == squareX + squareY) {
 
                     x = squareX;
@@ -218,6 +204,18 @@ public class LoopsAndBranch {
             }
             return rezult;
         }
+    }
+
+    public double task241(int n, double x) {
+        double result = 0.0;
+        if (n > 0) {
+            for (int i = 1; i <= n; i++) {
+                result = Math.pow(-1, Math.abs(Math.sqrt(i))) / i * Math.pow(x, i);
+                result += result;
+                System.out.println(result);
+            }
+        }
+        return result;
     }
 }
 
