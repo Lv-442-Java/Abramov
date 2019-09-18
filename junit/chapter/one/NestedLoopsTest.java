@@ -2,7 +2,7 @@ package chapter.one;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class NestedLoopsTest {
 
@@ -21,8 +21,8 @@ class NestedLoopsTest {
     @Test
     void task331a() {
         int[] actualResult = NestedLoops.task331a(347);
-        int[] expectedResult = {1,11,15};
-        assertEquals(actualResult, expectedResult);
+        int[] expectedResult = {1, 11, 15};
+        assertArrayEquals(actualResult, expectedResult);
     }
 
     @Test
