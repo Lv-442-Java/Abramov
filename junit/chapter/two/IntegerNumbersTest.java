@@ -16,7 +16,10 @@ class IntegerNumbersTest {
         List<int[]> expected = new ArrayList<>();
         expected.add(friendlyBetween200And300);
         List<int[]> actual = IntegerNumbers.task560();
-        assertEquals(expected,actual);
+        for (int i=0;i<actual.size();i++){
+            assertArrayEquals(expected.get(i),actual.get(i));
+        }
+        assertEquals(expected.size(),actual.size());
     }
 
     @Test
