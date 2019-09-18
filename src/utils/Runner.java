@@ -337,13 +337,11 @@ public class Runner {
     }
 
     static void runTask243a() {
-        ArrayList<int[]> result = LoopsAndBranch.task243a(consoleReader.inputNaturalNumber());
-        if (result.isEmpty()) {
+        int[] result = LoopsAndBranch.task243a(consoleReader.inputNaturalNumber());
+        if (result.length == 0) {
             System.out.println("Result not found!");
         } else {
-            for (int[] array : result) {
-                System.out.println("x: " + array[0] + " y: " + array[1]);
-            }
+            System.out.println("x: " + result[0] + " y: " + result[1]);
         }
     }
 
