@@ -72,27 +72,26 @@ public class NestedLoops {
         return number > 0;
     }
 
-    public static ArrayList<int[]> task331a(int n) {
-        ArrayList<int[]> list = new ArrayList<>();
+    public static int[] task331a(int n) {
         int x, y, z;
+        int[] result = new int[3];
         double limit = Math.pow(n,1.0/2.0) + 1;
         for (x = 1; x < limit; x++) {
             for (y = 1; y < limit; y++) {
                 for (z = 1; z < limit; z++) {
                     int s = x * x + y * y + z * z;
                     if (s == n) {
-                        int[] result = new int[3];
                         result[0] = x;
                         result[1] = y;
                         result[2] = z;
-                        list.add(result);
+                        return result;
                     } else if (s > n) {
                         break;
                     }
                 }
             }
         }
-        return list;
+        return result;
     }
 
     private static int GCD(int a, int b) {
