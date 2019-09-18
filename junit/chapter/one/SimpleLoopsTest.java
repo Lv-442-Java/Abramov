@@ -8,6 +8,9 @@ class SimpleLoopsTest {
 
     @Test
     void task88() {
+        int actualResult = SimpleLoops.task88(1782);
+        int expectedResult = 2871;
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test

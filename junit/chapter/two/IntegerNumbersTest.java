@@ -1,8 +1,10 @@
 package chapter.two;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.Arrays;
+import java.util.List;
 
 class IntegerNumbersTest {
 
@@ -16,6 +18,9 @@ class IntegerNumbersTest {
 
     @Test
     void task561() {
+        List<Integer> actualList = IntegerNumbers.task561(25);
+        List<Integer> expectedList = Arrays.asList(1, 5, 6, 25);
+        Assertions.assertEquals(expectedList, actualList);
     }
 
     @Test
