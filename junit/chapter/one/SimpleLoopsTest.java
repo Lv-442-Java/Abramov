@@ -17,7 +17,10 @@ class SimpleLoopsTest {
 
     @Test
     void task86a() {
-    }
+        int actual = SimpleLoops.task86a(112);
+        int expected = 3;
+        Assertions.assertEquals(expected,actual);
+     }
 
     @Test
     void task86b() {
@@ -66,6 +69,9 @@ class SimpleLoopsTest {
 
     @Test
     void task107() {
+        int actual = SimpleLoops.task107(256);
+        int expected = 3;
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
