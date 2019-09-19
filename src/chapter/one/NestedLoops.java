@@ -155,7 +155,7 @@ public class NestedLoops {
 
                     if (n == squareX + squareY + squareZ) {
 
-                        result.add(String.valueOf(squareX) + "+" +  String.valueOf(squareX) + "+" + String.valueOf(squareX));
+                        result.add(String.valueOf(i) + "+" +  String.valueOf(j) + "+" + String.valueOf(z));
 
 
                     }
