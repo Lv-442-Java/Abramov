@@ -3,27 +3,41 @@ package chapter.one;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LoopsAndBranchTest {
 
     @Test
     void task224() {
+        ArrayList expected = new ArrayList() ;
+        expected.add(0,5);
+        expected.add(1,3);
+        expected.add(2,1);
+        ArrayList actual = LoopsAndBranch.task224(15);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void task241() {
+    double expected = 5.0E-9;
+    double actual = LoopsAndBranch.task241(4, 0.01);
+    assertEquals(expected, actual);
+
+
     }
 
     @Test
     void task182() {
+
+       int [] array = {14, 15, 31, 25, 30, 28};
+        Integer [] result = {3, 70};
+        List<Integer> expected = Arrays.asList(result);
+        List<Integer> actual = LoopsAndBranch.task182(array);
+        assertEquals(expected,actual);
     }
 
     @Test
@@ -52,7 +66,7 @@ class LoopsAndBranchTest {
     }
 
     @Test
-    void task178c() {
+    void task178c_testWithSomeCorrectNums() {
         int[] testSequence = {1, 4, 9, 36, 49};
         int actual = LoopsAndBranch.task178c(testSequence);
         int expected = 2;
@@ -60,7 +74,15 @@ class LoopsAndBranchTest {
     }
 
     @Test
-    void task227Positive() {
+    void task178c_testWithAllIncorrectNums() {
+        int[] testSequence = {1, 3, 9, 7, 49};
+        int actual = LoopsAndBranch.task178c(testSequence);
+        int expected = 0;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void task227_testWithPositiveParameters() {
         Integer[] result = {-6, -3, -2, -1, 1, 2, 3, 6};
         List<Integer> expected = Arrays.asList(result);
         List<Integer> actual = LoopsAndBranch.task227(12, 18);
@@ -68,10 +90,18 @@ class LoopsAndBranchTest {
     }
 
     @Test
-    void task227Negative() {
+    void task227_testWithNegativeAndPositiveParameters() {
         Integer[] result = {-6, -3, -2, -1, 1, 2, 3, 6};
         List<Integer> expected = Arrays.asList(result);
         List<Integer> actual = LoopsAndBranch.task227(-12, 18);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void task227_testWithNegativeParameters() {
+        Integer[] result = {-6, -3, -2, -1, 1, 2, 3, 6};
+        List<Integer> expected = Arrays.asList(result);
+        List<Integer> actual = LoopsAndBranch.task227(-12, -18);
         assertEquals(expected, actual);
     }
 

@@ -7,12 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 class IntegerNumbersTest {
 
     @Test
-    void task560() {
+    void task560_testBetween200And300() {
         int [] friendlyBetween200And300 = {220,284};
         List<int[]> expected = new ArrayList<>();
         expected.add(friendlyBetween200And300);
@@ -73,6 +74,20 @@ class IntegerNumbersTest {
 
     @Test
     void task569() {
+        List<Integer>list = new ArrayList<Integer>() {
+            {
+                add(2);
+                add(3);
+                add(4);
+                add(5);
+                add(6);
+                add(8);
+                add(9);
+                add(10);
+            }
+        };
+        Collections.sort(list);
+        Assertions.assertEquals(list,IntegerNumbers.task569(10));
     }
 
     @Test

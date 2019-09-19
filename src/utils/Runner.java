@@ -122,7 +122,7 @@ public class Runner {
                 runTask565();
                 break;
             case "task86h":
-                runTask86_h();
+                runTask86h();
                 break;
             case "task184":
                 runTask184();
@@ -360,17 +360,13 @@ public class Runner {
 
         Integer n;
         int[] array;
-        while (true) {
-            n = consoleReader.inputNaturalNumber();
+
+
             array = consoleReader.inputArrayOfNaturalNumbers();
 
-            if (array.length > n) {
-                System.out.println("Length of array is to big!");
-            } else {
-                break;
-            }
-        }
-        System.out.println("result: " + LoopsAndBranch.task178d(array, n));
+
+
+        System.out.println("result: " + LoopsAndBranch.task178d(array));
     }
 
 
@@ -409,9 +405,9 @@ public class Runner {
 
     }
 
-    static void runTask86_h() {
+    static void runTask86h() {
         int i = consoleReader.inputNaturalNumber();
-        System.out.printf("For n = %d%nRezult = %d%n", i, SimpleLoops.task86_h(i));
+        System.out.printf("For n = %d%nRezult = %d%n", i, SimpleLoops.task86h(i));
     }
 
     static void runTask184() {

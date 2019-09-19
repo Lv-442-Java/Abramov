@@ -17,7 +17,10 @@ class SimpleLoopsTest {
 
     @Test
     void task86a() {
-    }
+        int actual = SimpleLoops.task86a(112);
+        int expected = 3;
+        Assertions.assertEquals(expected,actual);
+     }
 
     @Test
     void task86b() {
@@ -35,6 +38,9 @@ class SimpleLoopsTest {
 
     @Test
     void task88g() {
+        int actualResult = (SimpleLoops.task88g(205));
+        int expectedREsult = 12051;
+        assertEquals(expectedREsult, actualResult);
     }
 
     @Test
@@ -66,6 +72,9 @@ class SimpleLoopsTest {
 
     @Test
     void task107() {
+        int actual = SimpleLoops.task107(256);
+        int expected = 3;
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
@@ -76,17 +85,18 @@ class SimpleLoopsTest {
     }
 
     @Test
-    void task88aTrue() {
+    void task88a_testWithCorrectNumber() {
         assertTrue(SimpleLoops.task88a(6));
     }
 
     @Test
-    void task88aFalse() {
+    void task88a_testWithIncorrectNumber() {
         assertFalse(SimpleLoops.task88a(4));
     }
 
     @Test
     void task86_h() {
+        assertEquals(3,SimpleLoops.task86h(9));
     }
 
     @Test
