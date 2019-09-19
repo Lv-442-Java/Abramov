@@ -115,7 +115,7 @@ public class SimpleLoops {
         return numerals;
     }
 
-    public static int task86_h(int n) {
+    public static int task86h(int n) {
         int sum = 0, sign, i = 1;
         while (n > 1) {
             if (i % 2 == 0) {

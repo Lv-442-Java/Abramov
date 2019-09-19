@@ -122,7 +122,7 @@ public class Runner {
                 runTask565();
                 break;
             case "task86h":
-                runTask86_h();
+                runTask86h();
                 break;
             case "task184":
                 runTask184();
@@ -409,9 +409,9 @@ public class Runner {
 
     }
 
-    static void runTask86_h() {
+    static void runTask86h() {
         int i = consoleReader.inputNaturalNumber();
-        System.out.printf("For n = %d%nRezult = %d%n", i, SimpleLoops.task86_h(i));
+        System.out.printf("For n = %d%nRezult = %d%n", i, SimpleLoops.task86h(i));
     }
 
     static void runTask184() {

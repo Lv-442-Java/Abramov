@@ -84,6 +84,7 @@ class SimpleLoopsTest {
 
     @Test
     void task86_h() {
+        assertEquals(3,SimpleLoops.task86h(9));
     }
 
     @Test

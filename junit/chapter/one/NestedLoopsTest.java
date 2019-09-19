@@ -20,7 +20,10 @@ class NestedLoopsTest {
         List<Integer> actual = NestedLoops.task329(firstNum, secondNum);
         List<Integer> expected = new ArrayList<Integer>() {
             {
-                add(3); add(12); add(21); add(30);
+                add(3);
+                add(12);
+                add(21);
+                add(30);
             }
         };
         Assertions.assertEquals(expected, actual);
@@ -33,7 +36,9 @@ class NestedLoopsTest {
         List<Integer> actual = NestedLoops.task329(firstNum, secondNum);
         List<Integer> expected = new ArrayList<Integer>() {
             {
-                add(3); add(12); add(21);
+                add(3);
+                add(12);
+                add(21);
             }
         };
         Assertions.assertEquals(expected, actual);
@@ -63,10 +68,10 @@ class NestedLoopsTest {
 
     @Test
     void task330() {
-        Integer[] result = {6,28,496};
+        Integer[] result = {6, 28, 496};
         List<Integer> expected = Arrays.asList(result);
         List<Integer> actual = NestedLoops.task330(512);
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -82,10 +87,10 @@ class NestedLoopsTest {
 
     @Test
     void task325() {
-        Integer[] result = {2,3,5};
+        Integer[] result = {2, 3, 5};
         List<Integer> expected = Arrays.asList(result);
         List<Integer> actual = NestedLoops.task325(30);
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -94,5 +99,9 @@ class NestedLoopsTest {
 
     @Test
     void task340() {
+        int[] list = {18, 23, 11, 4, 66, 786, 124};
+        //String expectedResult = "4 11 18";
+        String expectedResult = "11 11 11";  // In case when values from list can be dublicated
+        assertEquals(expectedResult, NestedLoops.task340(33, list));
     }
 }
