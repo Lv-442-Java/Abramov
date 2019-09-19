@@ -22,17 +22,14 @@ public class SimpleLoops {
     }
 
     public static int task86b(int n) {
-
         int n2 = n;
         int n1 = n;
         int sum = 0;
-
         while (n2 > 0) {
             n1 /= 10;
             sum += n2 - n1 * 10;
             n2 = n1;
         }
-
         return sum;
     }
 
@@ -95,16 +92,12 @@ public class SimpleLoops {
     }
 
     public static int task108(int n) {
-
         if (n == 1) return 1;
-
         int degree = 1;
-
         for (int i = 0; i < Integer.bitCount(Integer.MAX_VALUE) - 1; i++) {
             degree = degree << 1;
             if (degree > n) return degree;
         }
-
         return -1;
     }
 

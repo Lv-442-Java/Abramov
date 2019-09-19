@@ -77,16 +77,11 @@ public class LoopsAndBranch {
     }
 
     public static List<Integer> task225(int n) {
-
         ArrayList<Integer> result = new ArrayList<Integer>();
-
         int end = (int) Math.floor(Math.sqrt(n));
-
         for (int i = 2; i <= end; i++) {
-
             if (n % (i * i) == 0 && n % (i * i * i) != 0) result.add(i);
         }
-
         return result;
     }
 
