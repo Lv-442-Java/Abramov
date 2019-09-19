@@ -54,7 +54,7 @@ public class IntegerNumbers {
                 }
             }
         }
-        for (int k = 2; ((1 << k) - 1) <= n; k++) {
+        for (int k = 2; ((1 << k) - 1) < n; k++) {
             int num = (1 << k) - 1;
             if (prime[num]) {
                 result.add(num);
@@ -108,14 +108,11 @@ public class IntegerNumbers {
     }
 
     public static int[][] task555(int n) {
-
         int[][] triangle = new int[n][];
-
         triangle[0] = new int[]{1};
         if (n == 1) return triangle;
         triangle[1] = new int[]{1, 1};
         if (n == 2) return triangle;
-
         for (int i = 2; i < n; i++) {
             triangle[i] = new int[i + 1];
             for (int j = 0; j < triangle[i].length; j++) {
@@ -123,7 +120,6 @@ public class IntegerNumbers {
                 else triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
             }
         }
-
         return triangle;
     }
 

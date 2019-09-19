@@ -2,7 +2,6 @@ package chapter.one;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -15,18 +14,6 @@ public class LoopsAndBranch {
             }
         }
         return array;
-    }
-
-    public double task241(int n, double x) {
-        double result = 0.0;
-        if (n > 0) {
-            for (int i = 1; i <= n; i++) {
-                result = Math.pow(-1, Math.abs(Math.sqrt(i))) / i * Math.pow(x, i);
-                result += result;
-                System.out.println(result);
-            }
-        }
-        return result;
     }
 
     public static List<Integer> task182(int[] arrayList) {
@@ -43,7 +30,6 @@ public class LoopsAndBranch {
         outputList.add(sum);
         return outputList;
     }
-
 
     public static int task178b(int[] sequence) {
         int amount = 0;
@@ -91,16 +77,11 @@ public class LoopsAndBranch {
     }
 
     public static List<Integer> task225(int n) {
-
         ArrayList<Integer> result = new ArrayList<Integer>();
-
         int end = (int) Math.floor(Math.sqrt(n));
-
         for (int i = 2; i <= end; i++) {
-
             if (n % (i * i) == 0 && n % (i * i * i) != 0) result.add(i);
         }
-
         return result;
     }
 
@@ -116,13 +97,13 @@ public class LoopsAndBranch {
             bigger = n;
         }
         int i = 1;
-        int toCheck = 0;
+        int toCheck = bigger * i;
         while (toCheck < m * n) {
-            toCheck = bigger * i;
             if (toCheck % smaller == 0) {
                 result.add(toCheck);
             }
             i++;
+            toCheck = bigger * i;
         }
         return result;
     }
@@ -180,8 +161,8 @@ public class LoopsAndBranch {
 
         for (int i = 1; i < Math.sqrt(n); i++) {
             for (int j = 1; j < Math.sqrt(n); j++) {
-                int squareX = i*i;
-                int squareY =j*j;
+                int squareX = i * i;
+                int squareY = j * j;
                 if (n == squareX + squareY) {
 
                     x = squareX;
@@ -209,15 +190,23 @@ public class LoopsAndBranch {
     }
 
     public static int factorial(int n) {
-        if (n < 0) {
-            throw new IllegalArgumentException("Argument " + n + " les than zero!!!");
-        } else {
-            int rezult = 1;
-            for (int i = n; i > 0; i--) {
-                rezult *= i;
-            }
-            return rezult;
+        int rezult = 1;
+        for (int i = n; i > 0; i--) {
+            rezult *= i;
         }
+        return rezult;
+    }
+
+    public double task241(int n, double x) {
+        double result = 0.0;
+        if (n > 0) {
+            for (int i = 1; i <= n; i++) {
+                result = Math.pow(-1, Math.abs(Math.sqrt(i))) / i * Math.pow(x, i);
+                result += result;
+                System.out.println(result);
+            }
+        }
+        return result;
     }
 }
 
