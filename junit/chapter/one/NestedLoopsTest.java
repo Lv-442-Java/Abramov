@@ -70,10 +70,25 @@ class NestedLoopsTest {
     }
 
     @Test
-    void task330() {
+    void task330_testWithNotIdealNumber() {
         Integer[] result = {6, 28, 496};
         List<Integer> expected = Arrays.asList(result);
         List<Integer> actual = NestedLoops.task330(512);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void task330_testWithIdealNumber() {
+        Integer[] result = {6, 28};
+        List<Integer> expected = Arrays.asList(result);
+        List<Integer> actual = NestedLoops.task330(496);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void task330_testWithLessThenFirstIdealNumber() {
+        List<Integer> expected = new ArrayList<>();
+        List<Integer> actual = NestedLoops.task330(5);
         assertEquals(expected, actual);
     }
 

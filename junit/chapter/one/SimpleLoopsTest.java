@@ -76,12 +76,12 @@ class SimpleLoopsTest {
     }
 
     @Test
-    void task88aTrue() {
+    void task88a_testWithCorrectNumber() {
         assertTrue(SimpleLoops.task88a(6));
     }
 
     @Test
-    void task88aFalse() {
+    void task88a_testWithIncorrectNumber() {
         assertFalse(SimpleLoops.task88a(4));
     }
 
