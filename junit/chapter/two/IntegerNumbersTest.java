@@ -13,7 +13,7 @@ import java.util.List;
 class IntegerNumbersTest {
 
     @Test
-    void task560() {
+    void task560_testBetween200And300() {
         int [] friendlyBetween200And300 = {220,284};
         List<int[]> expected = new ArrayList<>();
         expected.add(friendlyBetween200And300);
