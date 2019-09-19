@@ -97,5 +97,8 @@ class SimpleLoopsTest {
 
     @Test
     void task184() {
+        int[] list = {11, 15, 8, 7, 6};
+        int[] expectedResult = {0, 0, 8, 0, 6};
+        assertArrayEquals(expectedResult, SimpleLoops.task184(4, 3, list));
     }
 }
