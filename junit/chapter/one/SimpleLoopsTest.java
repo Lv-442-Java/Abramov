@@ -41,11 +41,8 @@ class SimpleLoopsTest {
     void task87_testWithDefaultInput() {
         int firstNum = 123456;
         int secondNum = 4;
-
         int actual = SimpleLoops.task87(firstNum, secondNum);
-
         int expected = 18;
-
         Assertions.assertEquals(expected, actual);
     }
 
@@ -53,11 +50,8 @@ class SimpleLoopsTest {
     void task87_testWhenSecondNumIsBiggerThanFirstOne() {
         int firstNum = 123456;
         int secondNum = 8;
-
         int actual = SimpleLoops.task87(firstNum, secondNum);
-
         int expected = 21;
-
         Assertions.assertEquals(expected, actual);
     }
 
@@ -65,11 +59,8 @@ class SimpleLoopsTest {
     void task87_testWithOneBillionFirstNum() {
         int firstNum = 1000000000;
         int secondNum = 8;
-
         int actual = SimpleLoops.task87(firstNum, secondNum);
-
         int expected = 0;
-
         Assertions.assertEquals(expected, actual);
     }
 
@@ -100,5 +91,8 @@ class SimpleLoopsTest {
 
     @Test
     void task184() {
+        int[] list = {11, 15, 8, 7, 6};
+        int[] expectedResult = {0, 0, 8, 0, 6};
+        assertArrayEquals(expectedResult, SimpleLoops.task184(4, 3, list));
     }
 }

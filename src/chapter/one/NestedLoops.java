@@ -114,43 +114,30 @@ public class NestedLoops {
 
     private static int[] erastofen(int base) {
         int baseLength = base;
-
         int[] result = new int[baseLength];
-
         int length = 0;
-
         for (int i = 2; i < baseLength; i++) {
             if (result[i] == -1) continue;
             length++;
-
             for (int j = i + i; j < baseLength; j += i) {
                 result[j] = -1;
             }
-
         }
-
         int[] result1 = new int[length];
-
         for (int i = 2, j = 0; i < baseLength; i++) {
             if (result[i] == -1) continue;
-
             result1[j] = i;
             j++;
         }
-
         return result1;
     }
 
     public static List<Integer> task325(int n) {
-
         int[] simpleNumbers = erastofen(n / 2 + 1);
         ArrayList<Integer> result = new ArrayList<Integer>();
-
         for (int i = 0; i < simpleNumbers.length; i++) {
-
             if (n % simpleNumbers[i] == 0) result.add(simpleNumbers[i]);
         }
-
         return result;
     }
 
