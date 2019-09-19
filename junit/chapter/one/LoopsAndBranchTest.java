@@ -3,14 +3,11 @@ package chapter.one;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LoopsAndBranchTest {
 
@@ -20,10 +17,21 @@ class LoopsAndBranchTest {
 
     @Test
     void task241() {
+    double expected = 5.0E-9;
+    double actual = LoopsAndBranch.task241(4, 0.01);
+    assertEquals(expected, actual);
+
+
     }
 
     @Test
     void task182() {
+
+       int [] array = {14, 15, 31, 25, 30, 28};
+        Integer [] result = {3, 70};
+        List<Integer> expected = Arrays.asList(result);
+        List<Integer> actual = LoopsAndBranch.task182(array);
+        assertEquals(expected,actual);
     }
 
     @Test

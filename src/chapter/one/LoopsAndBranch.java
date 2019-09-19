@@ -140,11 +140,11 @@ public class LoopsAndBranch {
         return amount;
     }
 
-    public static int task178d(int[] array, int n) {
+    public static int task178d(int[] array) {
 
         int result = 1;
         int k = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < array.length; i++) {
             result *= i;
             if (Math.pow(2, i) > array[i] && array[i] < result) {
                 k++;
@@ -165,8 +165,8 @@ public class LoopsAndBranch {
                 int squareY = j * j;
                 if (n == squareX + squareY) {
 
-                    x = squareX;
-                    y = squareY;
+                    x = i;
+                    y = j;
 
                     result.add(String.valueOf(x) + "+" + String.valueOf(y));
 
@@ -197,13 +197,13 @@ public class LoopsAndBranch {
         return rezult;
     }
 
-    public double task241(int n, double x) {
+    public static double task241(int n, double x) {
         double result = 0.0;
         if (n > 0) {
             for (int i = 1; i <= n; i++) {
                 result = Math.pow(-1, Math.abs(Math.sqrt(i))) / i * Math.pow(x, i);
                 result += result;
-                System.out.println(result);
+                //System.out.println(result);
             }
         }
         return result;
