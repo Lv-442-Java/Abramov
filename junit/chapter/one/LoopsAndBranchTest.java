@@ -13,6 +13,12 @@ class LoopsAndBranchTest {
 
     @Test
     void task224() {
+        ArrayList expected = new ArrayList() ;
+        expected.add(0,5);
+        expected.add(1,3);
+        expected.add(2,1);
+        ArrayList actual = LoopsAndBranch.task224(15);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test

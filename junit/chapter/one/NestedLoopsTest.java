@@ -86,6 +86,13 @@ class NestedLoopsTest {
 
     @Test
     void task323() {
+        List<Integer> actual =  NestedLoops.task323(5);
+        List<Integer> expected = new ArrayList<>();
+        expected.add(0,1);
+        expected.add(1,2);
+        expected.add(2,3);
+        expected.add(3,4);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
