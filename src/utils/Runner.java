@@ -359,17 +359,13 @@ public class Runner {
 
         Integer n;
         int[] array;
-        while (true) {
-            n = consoleReader.inputNaturalNumber();
+
+
             array = consoleReader.inputArrayOfNaturalNumbers();
 
-            if (array.length > n) {
-                System.out.println("Length of array is to big!");
-            } else {
-                break;
-            }
-        }
-        System.out.println("result: " + LoopsAndBranch.task178d(array, n));
+
+
+        System.out.println("result: " + LoopsAndBranch.task178d(array));
     }
 
 

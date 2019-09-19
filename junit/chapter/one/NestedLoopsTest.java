@@ -71,6 +71,9 @@ class NestedLoopsTest {
 
     @Test
     void task332() {
+        int[] expected = {6, 3, 1, 0};
+        int [] actual = NestedLoops.task332(46);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
