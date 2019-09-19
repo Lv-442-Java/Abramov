@@ -97,7 +97,7 @@ public class LoopsAndBranch {
             bigger = n;
         }
         int i = 1;
-        int toCheck = bigger*i;
+        int toCheck = bigger * i;
         while (toCheck < m * n) {
             if (toCheck % smaller == 0) {
                 result.add(toCheck);
@@ -190,15 +190,11 @@ public class LoopsAndBranch {
     }
 
     public static int factorial(int n) {
-        if (n < 0) {
-            throw new IllegalArgumentException("Argument " + n + " les than zero!!!");
-        } else {
-            int rezult = 1;
-            for (int i = n; i > 0; i--) {
-                rezult *= i;
-            }
-            return rezult;
+        int rezult = 1;
+        for (int i = n; i > 0; i--) {
+            rezult *= i;
         }
+        return rezult;
     }
 
     public double task241(int n, double x) {

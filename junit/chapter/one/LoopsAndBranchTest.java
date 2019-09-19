@@ -28,7 +28,7 @@ class LoopsAndBranchTest {
 
     @Test
     void task178b_testWithDefaultInput() {
-        int[] numbers = new int[] {3, 4, 5, 9, 12, 15, 17, 18, 20, 21, 30};
+        int[] numbers = new int[]{3, 4, 5, 9, 12, 15, 17, 18, 20, 21, 30};
         int actual = LoopsAndBranch.task178b(numbers);
         int expected = 5;
         Assertions.assertEquals(expected, actual);
@@ -36,7 +36,7 @@ class LoopsAndBranchTest {
 
     @Test
     void task178b_testWithAllCorrectNums() {
-        int[] numbers = new int[] {3, 6, 9, 12, 18, 21};
+        int[] numbers = new int[]{3, 6, 9, 12, 18, 21};
         int actual = LoopsAndBranch.task178b(numbers);
         int expected = 6;
         Assertions.assertEquals(expected, actual);
@@ -44,7 +44,8 @@ class LoopsAndBranchTest {
 
     @Test
     void task178b_testWithAllIncorrectNums() {
-        int[] numbers = new int[] {15, 30, 45, 60, 75};
+        int[] numbers = new int[]{15, 30, 45, 60, 75};
+
         int actual = LoopsAndBranch.task178b(numbers);
         int expected = 0;
         Assertions.assertEquals(expected, actual);
@@ -52,34 +53,34 @@ class LoopsAndBranchTest {
 
     @Test
     void task178c() {
-        int [] testSequence = {1,4,9,36,49};
+        int[] testSequence = {1, 4, 9, 36, 49};
         int actual = LoopsAndBranch.task178c(testSequence);
         int expected = 2;
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     void task227Positive() {
-        Integer [] result = {-6,-3,-2,-1,1,2,3,6};
+        Integer[] result = {-6, -3, -2, -1, 1, 2, 3, 6};
         List<Integer> expected = Arrays.asList(result);
-        List<Integer> actual = LoopsAndBranch.task227(12,18);
-        assertEquals(expected,actual);
+        List<Integer> actual = LoopsAndBranch.task227(12, 18);
+        assertEquals(expected, actual);
     }
 
     @Test
     void task227Negative() {
-        Integer [] result = {-6,-3,-2,-1,1,2,3,6};
+        Integer[] result = {-6, -3, -2, -1, 1, 2, 3, 6};
         List<Integer> expected = Arrays.asList(result);
-        List<Integer> actual = LoopsAndBranch.task227(-12,18);
-        assertEquals(expected,actual);
+        List<Integer> actual = LoopsAndBranch.task227(-12, 18);
+        assertEquals(expected, actual);
     }
 
     @Test
     void task225() {
-        Integer [] result = {8, 16};
+        Integer[] result = {8, 16};
         List<Integer> expected = Arrays.asList(result);
         List<Integer> actual = LoopsAndBranch.task225(256);
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -89,9 +90,15 @@ class LoopsAndBranchTest {
         List<Integer> actual = LoopsAndBranch.task226(firstNum, secondNum);
         List<Integer> expected = new ArrayList<Integer>() {
             {
-                add(30); add(60); add(90);
-                add(120); add(150); add(180);
-                add(210); add(240); add(270);
+                add(30);
+                add(60);
+                add(90);
+                add(120);
+                add(150);
+                add(180);
+                add(210);
+                add(240);
+                add(270);
             }
         };
         Assertions.assertEquals(expected, actual);
@@ -122,8 +129,11 @@ class LoopsAndBranchTest {
         List<Integer> actual = LoopsAndBranch.task226(firstNum, secondNum);
         List<Integer> expected = new ArrayList<Integer>() {
             {
-                add(6); add(12); add(18);
-                add(24); add(30);
+                add(6);
+                add(12);
+                add(18);
+                add(24);
+                add(30);
             }
         };
         Assertions.assertEquals(expected, actual);
@@ -154,6 +164,7 @@ class LoopsAndBranchTest {
 
     @Test
     void task242() {
+        assertEquals(720, LoopsAndBranch.factorial(6));
+        //assertEquals(0.0013888889,LoopsAndBranch.task242(6));
     }
-
 }
