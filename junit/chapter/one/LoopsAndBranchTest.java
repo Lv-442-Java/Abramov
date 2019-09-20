@@ -188,12 +188,17 @@ class LoopsAndBranchTest {
     void task178d() {
         int [] arr = {14,15,16,17,35,45,95,45};
         int expected = 2;
-        int actuat = LoopsAndBranch.task178d(arr);
-        assertEquals(expected,actuat);
+        int actual = LoopsAndBranch.task178d(arr);
+        assertEquals(expected,actual);
     }
 
     @Test
     void task243b() {
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("6+8");
+        expected.add("8+6");
+        ArrayList<String> actual = LoopsAndBranch.task243b(100);
+        assertEquals(expected,actual);
     }
 
     @Test
