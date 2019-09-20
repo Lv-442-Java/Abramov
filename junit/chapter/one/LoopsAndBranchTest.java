@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LoopsAndBranchTest {
 
@@ -185,14 +186,21 @@ class LoopsAndBranchTest {
     }
 
     @Test
-    void task243a() {
+    void task243a_testIfWeCanRepresent() {
         int[] actualResult = LoopsAndBranch.task243a(100);
         int[] expectedResult = {6, 8};
         assertArrayEquals(actualResult, expectedResult);
     }
 
     @Test
-    void task178h() {
+    void task243a_testIfWeCanNotRepresent() {
+        int[] actualResult = LoopsAndBranch.task243a(9);
+        int[] expectedResult = {0, 0};
+        assertArrayEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    void task178h_testWithRandomNaturalSequence() {
         int[] arr = {1, 4, 10, 8, 17, 5, 4, 8};
         int actualResult = LoopsAndBranch.task178h(arr);
         int expectedResult = 4;

@@ -3,12 +3,12 @@ package chapter.two;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class IntegerNumbersTest {
 
@@ -45,7 +45,7 @@ class IntegerNumbersTest {
     }
 
     @Test
-    void task561() {
+    void task561_testWithRandomNaturalNumber() {
         List<Integer> actualList = IntegerNumbers.task561(25);
         List<Integer> expectedList = Arrays.asList(1, 5, 6, 25);
         Assertions.assertEquals(expectedList, actualList);

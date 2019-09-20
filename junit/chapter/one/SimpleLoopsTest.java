@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SimpleLoopsTest {
 
     @Test
-    void task88() {
+    void task88_testIfReturnReverseNumber() {
         int actualResult = SimpleLoops.task88(1782);
         int expectedResult = 2871;
         assertEquals(expectedResult, actualResult);
