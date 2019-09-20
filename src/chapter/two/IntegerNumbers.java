@@ -6,27 +6,30 @@ import java.util.List;
 
 public class IntegerNumbers {
 
-    public static void task560() {
-        // for not repeating numbers
-        List<Integer> friendNumbers = new ArrayList<Integer>();
+    public static List<int[]> task560() {
+        List<int[]> friendNumbers = new ArrayList<int[]>();
         for (int i = 200; i <= 300; i++) {
-            //
-            if (friendNumbers.contains(i)) {
-                continue;
-            }
-            //
             int maybeFriend = sumOfDividers(i);
             if (maybeFriend >= 200 && maybeFriend <= 300) {
                 if (sumOfDividers(maybeFriend) == i) {
-                    //
-                    friendNumbers.add(i);
-                    friendNumbers.add(maybeFriend);
-                    //
-                    System.out.println(i + " " + maybeFriend);
+                    boolean isInList = false;
+                    for (int[] arrayFromList : friendNumbers) {
+                        if (arrayFromList[0] == maybeFriend && arrayFromList[1] == i) ;
+                        isInList = true;
+                        break;
+                    }
+                    if (!isInList) {
+                        int[] array = new int[2];
+                        array[0] = i;
+                        array[1] = maybeFriend;
+                        friendNumbers.add(array);
+                    }
                 }
             }
         }
+        return friendNumbers;
     }
+
 
     private static int sumOfDividers(int number) {
         int sum = 0;
@@ -51,7 +54,7 @@ public class IntegerNumbers {
                 }
             }
         }
-        for (int k = 2; ((1 << k) - 1) <= n; k++) {
+        for (int k = 2; ((1 << k) - 1) < n; k++) {
             int num = (1 << k) - 1;
             if (prime[num]) {
                 result.add(num);
@@ -64,8 +67,20 @@ public class IntegerNumbers {
     public static ArrayList<Integer> task561(int n) {
         ArrayList<Integer> result = new ArrayList<Integer>();
         for (int i = 1; i <= n; i++) {
+            String number = Integer.toString(i);
             int square = i * i;
-            int last = square % 10;
+            int last;
+            int y;
+            String z = "";
+            int j = 0;
+            while(j < number.length())
+            {
+                y = square % 10;
+                z = y + "" +z;
+                square = square / 10;
+                j++;
+            }
+            last = Integer.parseInt(z);
             if (i == last) {
                 result.add(i);
             }
@@ -93,14 +108,11 @@ public class IntegerNumbers {
     }
 
     public static int[][] task555(int n) {
-
         int[][] triangle = new int[n][];
-
         triangle[0] = new int[]{1};
         if (n == 1) return triangle;
         triangle[1] = new int[]{1, 1};
         if (n == 2) return triangle;
-
         for (int i = 2; i < n; i++) {
             triangle[i] = new int[i + 1];
             for (int j = 0; j < triangle[i].length; j++) {
@@ -108,7 +120,6 @@ public class IntegerNumbers {
                 else triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
             }
         }
-
         return triangle;
     }
 
@@ -165,7 +176,7 @@ public class IntegerNumbers {
     public static List<Integer> task569(int n) {
         List<Integer> list = new ArrayList<>();
         while (n > 0) {
-            if ((n % 2 == 0) || (n % 3 == 0) && (n % 5 == 0))
+            if ((n % 2 == 0) || (n % 3 == 0) ||(n % 5 == 0))
                 list.add(n);
             n--;
         }

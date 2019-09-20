@@ -1,7 +1,6 @@
 package chapter.one;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class NestedLoops {
@@ -75,7 +74,7 @@ public class NestedLoops {
     public static int[] task331a(int n) {
         int x, y, z;
         int[] result = new int[3];
-        double limit = Math.pow(n,1.0/2.0) + 1;
+        double limit = Math.pow(n, 1.0 / 2.0) + 1;
         for (x = 1; x < limit; x++) {
             for (y = 1; y < limit; y++) {
                 for (z = 1; z < limit; z++) {
@@ -114,43 +113,30 @@ public class NestedLoops {
 
     private static int[] erastofen(int base) {
         int baseLength = base;
-
         int[] result = new int[baseLength];
-
         int length = 0;
-
         for (int i = 2; i < baseLength; i++) {
             if (result[i] == -1) continue;
             length++;
-
             for (int j = i + i; j < baseLength; j += i) {
                 result[j] = -1;
             }
-
         }
-
         int[] result1 = new int[length];
-
         for (int i = 2, j = 0; i < baseLength; i++) {
             if (result[i] == -1) continue;
-
             result1[j] = i;
             j++;
         }
-
         return result1;
     }
 
     public static List<Integer> task325(int n) {
-
         int[] simpleNumbers = erastofen(n / 2 + 1);
         ArrayList<Integer> result = new ArrayList<Integer>();
-
         for (int i = 0; i < simpleNumbers.length; i++) {
-
             if (n % simpleNumbers[i] == 0) result.add(simpleNumbers[i]);
         }
-
         return result;
     }
 
@@ -162,13 +148,13 @@ public class NestedLoops {
             for (int j = 1; j < Math.sqrt(n); j++) {
                 for (int z = 1; z < Math.sqrt(n); z++) {
 
-                    int squareX = i*i;
-                    int squareY = j*j;
-                    int squareZ = z*z;
+                    int squareX = i * i;
+                    int squareY = j * j;
+                    int squareZ = z * z;
 
                     if (n == squareX + squareY + squareZ) {
 
-                        result.add(String.valueOf(squareX) + "+" +  String.valueOf(squareX) + "+" + String.valueOf(squareX));
+                        result.add(String.valueOf(i) + "+" + String.valueOf(j) + "+" + String.valueOf(z));
 
 
                     }
@@ -180,22 +166,22 @@ public class NestedLoops {
         }
         return result;
     }
-    
-    public static String task340(int m, int []list){          
-        String rezult =null;
-        boolean check = false;        
-        for(int i=0;i<list.length;i++){
-            for(int j=i;j<list.length;j++){
-                for(int k =j;k<list.length;k++){
-                    if(list[i] + list[j] + list[k] == m){
+
+    public static String task340(int m, int[] list) {
+        String rezult = null;
+        boolean check = false;
+        for (int i = 0; i < list.length; i++) {
+            for (int j = i; j < list.length; j++) {
+                for (int k = j; k < list.length; k++) {
+                    if (list[i] + list[j] + list[k] == m) {
                         check = true;
-                        rezult =  list[i] +" "+ list[j] +" "+ list[k];                    
-                    }                                       
-                }                    
+                        rezult = list[i] + " " + list[j] + " " + list[k];
+                    }
+                }
             }
-        }        
-        if(!check)            
-            rezult = "Can't find numbers! Please try again!";       
-        return rezult;       
-    } 
+        }
+        if (!check)
+            rezult = "Can't find numbers! Please try again!";
+        return rezult;
+    }
 }
