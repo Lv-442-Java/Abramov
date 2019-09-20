@@ -22,19 +22,34 @@ class LoopsAndBranchTest {
     }
 
     @Test
-    void task241() {
+    void task241_testWithDefaultInput() {
     double expected = 5.0E-9;
     double actual = LoopsAndBranch.task241(4, 0.01);
     assertEquals(expected, actual);
-
-
     }
 
     @Test
-    void task182() {
+    void task241_testWithZero() {
+        double expected = -0.00;
+        double actual = LoopsAndBranch.task241(1, 0.00);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void task182_testWithDefaultInput() {
 
        int [] array = {14, 15, 31, 25, 30, 28};
         Integer [] result = {3, 70};
+        List<Integer> expected = Arrays.asList(result);
+        List<Integer> actual = LoopsAndBranch.task182(array);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void task182_testWithIncorrectNumbs() {
+
+        int [] array = {14, 13, 31, 26, 34, 28};
+        Integer [] result = {0, 0};
         List<Integer> expected = Arrays.asList(result);
         List<Integer> actual = LoopsAndBranch.task182(array);
         assertEquals(expected,actual);

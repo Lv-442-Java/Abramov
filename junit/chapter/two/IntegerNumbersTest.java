@@ -101,6 +101,20 @@ class IntegerNumbersTest {
     }
 
     @Test
-    void task565() {
+    void task565_testWithPositiveOutput() {
+
+       boolean actual =  IntegerNumbers.task565(2, 5, 3);
+       assertTrue(actual);
+
     }
+
+    @Test
+    void task565_testWithNegativeOutput() {
+
+        boolean actual =  IntegerNumbers.task565(21, 22, 2);
+        assertFalse(actual);
+
+    }
+
+
 }
