@@ -3,11 +3,10 @@ package chapter.one;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -101,9 +100,16 @@ class NestedLoopsTest {
     }
 
     @Test
-    void task331a() {
+    void task331a_testIfWeCanRepresent() {
         int[] actualResult = NestedLoops.task331a(347);
         int[] expectedResult = {1, 11, 15};
+        assertArrayEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    void task331a_testIfWeCanNotRepresent() {
+        int[] actualResult = NestedLoops.task331a(10);
+        int[] expectedResult = {0, 0, 0};
         assertArrayEquals(actualResult, expectedResult);
     }
 
