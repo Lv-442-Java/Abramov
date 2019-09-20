@@ -31,6 +31,9 @@ class SimpleLoopsTest {
 
     @Test
     void task88c() {
+        int expected = 76523;
+        int actual = SimpleLoops.task88c(36527);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test

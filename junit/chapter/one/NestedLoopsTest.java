@@ -120,6 +120,21 @@ class NestedLoopsTest {
 
     @Test
     void task331b() {
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("3+4+15");
+        expected.add("3+15+4");
+        expected.add("4+3+15");
+        expected.add("4+15+3");
+        expected.add("5+9+12");
+        expected.add("5+12+9");
+        expected.add("9+5+12");
+        expected.add("9+12+5");
+        expected.add("12+5+9");
+        expected.add("12+9+5");
+        expected.add("15+3+4");
+        expected.add("15+4+3");
+        ArrayList<String> actual = NestedLoops.task331b(250);
+        assertEquals(expected,actual);
     }
 
     @Test
