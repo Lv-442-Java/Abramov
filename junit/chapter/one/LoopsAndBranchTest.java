@@ -186,6 +186,10 @@ class LoopsAndBranchTest {
 
     @Test
     void task178d() {
+        int [] arr = {14,15,16,17,35,45,95,45};
+        int expected = 2;
+        int actuat = LoopsAndBranch.task178d(arr);
+        assertEquals(expected,actuat);
     }
 
     @Test

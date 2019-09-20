@@ -145,8 +145,8 @@ public class LoopsAndBranch {
         int result = 1;
         int k = 0;
         for (int i = 0; i < array.length; i++) {
-            result *= i;
-            if (Math.pow(2, i) > array[i] && array[i] < result) {
+            result *= i+1;
+            if (Math.pow(2, i+1) < array[i] && array[i] < result) {
                 k++;
             }
         }
