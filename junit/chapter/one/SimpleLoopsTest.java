@@ -37,10 +37,17 @@ class SimpleLoopsTest {
     }
 
     @Test
-    void task88g() {
+    void task88g_testWithDefaultInput() {
         int actualResult = (SimpleLoops.task88g(205));
-        int expectedREsult = 12051;
-        assertEquals(expectedREsult, actualResult);
+        int expectedResult = 12051;
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void task88g_testWithSameDigits() {
+        int actualResult = (SimpleLoops.task88g(111));
+        int expectedResult = 11111;
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test

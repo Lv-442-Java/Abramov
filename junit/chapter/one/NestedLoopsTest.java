@@ -63,11 +63,19 @@ class NestedLoopsTest {
     }
 
     @Test
-    void task332() {
+    void task332_testWithDefaultInput() {
         int[] expected = {6, 3, 1, 0};
         int [] actual = NestedLoops.task332(46);
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    void task332_testWithZeros() {
+        int[] expected = {2, 0, 0, 0};
+        int [] actual = NestedLoops.task332(4);
+        assertArrayEquals(expected, actual);
+    }
+
 
     @Test
     void task330_testWithNotIdealNumber() {
