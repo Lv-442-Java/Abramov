@@ -70,6 +70,16 @@ class IntegerNumbersTest {
 
     @Test
     void task562() {
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(153);
+        expected.add(370);
+        expected.add(371);
+        expected.add(407);
+        expected.add(1634);
+        expected.add(8208);
+        expected.add(9474);
+        ArrayList<Integer> actual = IntegerNumbers.task562();
+        assertEquals(expected,actual);
     }
 
     @Test
