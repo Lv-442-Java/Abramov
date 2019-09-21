@@ -152,7 +152,7 @@ class NestedLoopsTest {
     }
 
     @Test
-    void task340() {
+    void task340_testWithExpectedListOfNumber() {
         int[] list = {18, 23, 11, 4, 66, 786, 124};
         //String expectedResult = "4 11 18";
         String expectedResult = "11 11 11";  // In case when values from list can be dublicated
