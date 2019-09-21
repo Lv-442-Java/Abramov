@@ -83,7 +83,7 @@ class IntegerNumbersTest {
     }
 
     @Test
-    void task569() {
+    void task569_testWithRandomNaturalNumber() {
         List<Integer>list = new ArrayList<Integer>() {
             {
                 add(2);
