@@ -102,12 +102,12 @@ class SimpleLoopsTest {
     }
 
     @Test
-    void task86_h() {
+    void task86_h_testWithRandomNaturalNumber() {
         assertEquals(3,SimpleLoops.task86h(9));
     }
 
     @Test
-    void task184() {
+    void task184_testWithRandomNaturalNumber() {
         int[] list = {11, 15, 8, 7, 6};
         int[] expectedResult = {0, 0, 8, 0, 6};
         assertArrayEquals(expectedResult, SimpleLoops.task184(4, 3, list));

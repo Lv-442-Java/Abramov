@@ -225,7 +225,7 @@ class LoopsAndBranchTest {
     }
 
     @Test
-    void task242() {
+    void task242_testWithExpectedResult() {
         assertEquals(720, LoopsAndBranch.factorial(6));
         //assertEquals(0.0013888889,LoopsAndBranch.task242(6));
     }
