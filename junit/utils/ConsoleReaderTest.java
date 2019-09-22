@@ -5,8 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 class ConsoleReaderTest {
 
@@ -22,6 +21,12 @@ class ConsoleReaderTest {
 
     @Test
     void inputArrayOfNaturalNumbers() {
+        Scanner mockedSc = mock(Scanner.class);
+        ConsoleReader consoleReader = spy(new ConsoleReader(mockedSc));
+        doReturn(5,2,6,7,8,1).when(consoleReader).inputNaturalNumber();
+        int [] expected = {2,6,7,8,1};
+        int [] actual = consoleReader.inputArrayOfNaturalNumbers();
+        assertArrayEquals(expected,actual);
     }
 
     @Test
