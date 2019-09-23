@@ -53,6 +53,15 @@ class IntegerNumbersTest {
 
     @Test
     void task554() {
+        int n = 9;
+        ArrayList <Integer> arrayList  = new ArrayList<>();
+        arrayList.add(0,3);
+        arrayList.add(1,4);
+        arrayList.add(2,5);
+        List<ArrayList<Integer>> actual = IntegerNumbers.task554(n);
+        List<ArrayList<Integer>> expected  = new ArrayList<>();
+        expected.add(0, arrayList);
+        Assertions.assertEquals(expected,actual);
     }
 
     @Test
