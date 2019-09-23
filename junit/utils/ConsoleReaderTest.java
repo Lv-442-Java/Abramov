@@ -40,7 +40,6 @@ class ConsoleReaderTest {
 
     }
 
-
     @Test
     void inputDoubleNumber() {
         Scanner sc = mock(Scanner.class);
