@@ -319,10 +319,10 @@ public class Runner {
     }
 
     static void runTask554() {
-        System.out.println("Put the limit number: ");
-        List<ArrayList<Integer>> result = IntegerNumbers.task554(consoleReader.inputNaturalNumber());
-        if (result.isEmpty()) {
-            System.out.println("There are no such numbers");
+        System.out.println("Natural number is limit ");
+       List<ArrayList<Integer>> result = IntegerNumbers.task554(consoleReader.inputNaturalNumber());
+       if (result.isEmpty()) {
+            System.out.println("There tare no such numbers");
         }
         System.out.println(result);
     }
