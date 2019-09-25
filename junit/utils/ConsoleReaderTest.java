@@ -16,7 +16,7 @@ class ConsoleReaderTest {
         when(sc.nextInt()).thenReturn(5);
         ConsoleReader cr = new ConsoleReader(sc);
         Integer expect = 5;
-        assertEquals(expect,cr.inputIntegerNumber());
+        assertEquals(expect,cr.inputNaturalNumber());
     }
 
     @Test
