@@ -73,10 +73,9 @@ public class IntegerNumbers {
             int y;
             String z = "";
             int j = 0;
-            while(j < number.length())
-            {
+            while (j < number.length()) {
                 y = square % 10;
-                z = y + "" +z;
+                z = y + "" + z;
                 square = square / 10;
                 j++;
             }
@@ -176,7 +175,7 @@ public class IntegerNumbers {
     public static List<Integer> task569(int n) {
         List<Integer> list = new ArrayList<>();
         while (n > 0) {
-            if ((n % 2 == 0) || (n % 3 == 0) ||(n % 5 == 0))
+            if ((n % 2 == 0) || (n % 3 == 0) || (n % 5 == 0))
                 list.add(n);
             n--;
         }
@@ -187,8 +186,10 @@ public class IntegerNumbers {
 
     public static boolean task565(int k, int l, int m) {
         int count = 0;
-        for (int i = k; i <= l; i++) {
-            while (i == 1) {
+        boolean value = true;
+        while (k <= l) {
+            int i = k;
+            while (i != 1) {
                 if (i % 2 == 0) {
                     i = i / 2;
                     count++;
@@ -197,8 +198,10 @@ public class IntegerNumbers {
                     count++;
                 }
             }
+            value = (value && count < m ? true : false);
+            k++;
+            count = 0;
         }
-        return count < m ? true : false;
+        return value;
     }
-
 }

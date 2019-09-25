@@ -14,14 +14,14 @@ class IntegerNumbersTest {
 
     @Test
     void task560_testBetween200And300() {
-        int [] friendlyBetween200And300 = {220,284};
+        int[] friendlyBetween200And300 = {220, 284};
         List<int[]> expected = new ArrayList<>();
         expected.add(friendlyBetween200And300);
         List<int[]> actual = IntegerNumbers.task560();
-        for (int i=0;i<actual.size();i++){
-            assertArrayEquals(expected.get(i),actual.get(i));
+        for (int i = 0; i < actual.size(); i++) {
+            assertArrayEquals(expected.get(i), actual.get(i));
         }
-        assertEquals(expected.size(),actual.size());
+        assertEquals(expected.size(), actual.size());
     }
 
     @Test
@@ -30,7 +30,9 @@ class IntegerNumbersTest {
         List<Integer> actual = IntegerNumbers.task559(number);
         List<Integer> expected = new ArrayList<Integer>() {
             {
-                add(3); add(7); add(31);
+                add(3);
+                add(7);
+                add(31);
             }
         };
         Assertions.assertEquals(expected, actual);
@@ -54,23 +56,23 @@ class IntegerNumbersTest {
     @Test
     void task554() {
         int n = 9;
-        ArrayList <Integer> arrayList  = new ArrayList<>();
-        arrayList.add(0,3);
-        arrayList.add(1,4);
-        arrayList.add(2,5);
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.add(0, 3);
+        arrayList.add(1, 4);
+        arrayList.add(2, 5);
         List<ArrayList<Integer>> actual = IntegerNumbers.task554(n);
-        List<ArrayList<Integer>> expected  = new ArrayList<>();
+        List<ArrayList<Integer>> expected = new ArrayList<>();
         expected.add(0, arrayList);
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void task555() {
         int[][] expectedResult = new int[4][];
-        expectedResult  [0] = new int [] {1};
-        expectedResult  [1] = new int [] {1,1};
-        expectedResult  [2] = new int [] {1,2,1};
-        expectedResult  [3] = new int [] {1,3,3,1};
+        expectedResult[0] = new int[]{1};
+        expectedResult[1] = new int[]{1, 1};
+        expectedResult[2] = new int[]{1, 2, 1};
+        expectedResult[3] = new int[]{1, 3, 3, 1};
         //int[][] actualResult = new int[4][];
         int[][] actualResult = IntegerNumbers.task555(4);
         assertArrayEquals(expectedResult, actualResult);
@@ -88,12 +90,12 @@ class IntegerNumbersTest {
         expected.add(8208);
         expected.add(9474);
         ArrayList<Integer> actual = IntegerNumbers.task562();
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     void task569_testWithRandomNaturalNumber() {
-        List<Integer>list = new ArrayList<Integer>() {
+        List<Integer> list = new ArrayList<Integer>() {
             {
                 add(2);
                 add(3);
@@ -106,25 +108,22 @@ class IntegerNumbersTest {
             }
         };
         Collections.sort(list);
-        Assertions.assertEquals(list,IntegerNumbers.task569(10));
+        Assertions.assertEquals(list, IntegerNumbers.task569(10));
     }
 
     @Test
     void task565_testWithPositiveOutput() {
-        boolean expected = true;
-       boolean actual =  IntegerNumbers.task565(2, 5, 3);
-     assertEquals(expected, actual);
+
+        boolean actual = IntegerNumbers.task565(12, 13, 10);
+        assertTrue(actual);
 
     }
 
     @Test
     void task565_testWithNegativeOutput() {
 
-        boolean expected = true;
-        boolean actual =  IntegerNumbers.task565(21, 22, 2);
-        assertEquals(expected, actual);
+        boolean actual = IntegerNumbers.task565(10, 11, 10);
+        assertFalse(actual);
 
     }
-
-
 }
