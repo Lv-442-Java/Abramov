@@ -26,23 +26,17 @@ public class NestedLoops {
 
     public static int[] task332(int n) {
 
-        int n2 = n;
-        int x;
-        int y;
-        int z;
-        int t;
         int[] mas = new int[4];
-        mas[0] = (int) Math.sqrt(n2);
-        n2 = n2 - mas[0] * mas[0];
-        mas[1] = (int) Math.sqrt(n2);
-        n2 = n2 - mas[1] * mas[1];
-        mas[2] = (int) Math.sqrt(n2);
-        n2 = n2 - mas[2] * mas[2];
-        mas[3] = (int) Math.sqrt(n2);
-        n2 = n2 - mas[3] * mas[3];
+
+        mas[0] = (int) Math.sqrt(n);
+        n = n - mas[0] * mas[0];
+        mas[1] = (int) Math.sqrt(n);
+        n = n - mas[1] * mas[1];
+        mas[2] = (int) Math.sqrt(n);
+        n = n - mas[2] * mas[2];
+        mas[3] = (int) Math.sqrt(n);
         return mas;
     }
-
 
     public static List<Integer> task330(int number) {
         List<Integer> perfectNumbers = new ArrayList<Integer>();
